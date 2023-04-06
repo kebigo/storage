@@ -10,6 +10,10 @@
 }
 
 /* Reset Styles */
+
+html, body{
+  overflow-x: hidden;
+}
 /* Bootstrap Styles */
 .navbar {
   background-color: var(--background) !important;

@@ -5,6 +5,17 @@
 /* Boostrap Styles */
 
 /* My Styles */
+
+section:not(.hero, .buscador, .newsletter){
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+
+.newsletter{
+  margin-top: 10em;
+  margin-bottom: 15em;
+}
+
 .hero{
     background-color: #f6f4ff;
     height: 40em;
@@ -47,7 +58,7 @@
     margin-left: 3em !important;
 
 }
-.filter:not(:nth-child(4)){
+.filter:not(:nth-child(3)){
     border-right: 2px solid var(--primary);
    
 }
@@ -73,21 +84,6 @@
     color: black;
 }
 
-.servicios, .sobre-nosotros, .transportes, .oferta{
-    height: 40em;
-}
-
-.paquetes{
-    height: 55em;
-}
-
-.transportes{
-    height: 35em;
-}
-
-.destinos, .reseñas{
-    height: 45em;
-}
 
 .servicios-icono {
     font-size: 4em;
@@ -215,6 +211,28 @@
     
   }
 
+  .newsletter{
+    height: 20em;
+    padding: 1em 5em 1em 5em;
+    border-radius: 5em;
+    background-color: #f6f4ff;
+    border: 4px solid var(--primary);
+  }
+
+  .newsletter a{
+    top: 1em;
+    right: 2.5em;
+  }
+ 
+  .newsletter-input input{
+    width: 90%;
+    height: 5em;
+    border: 2px solid var(--secondary);
+  }
+  .newsletter-input input:focus{
+    outline: none;
+  }
+ 
 
 
 
