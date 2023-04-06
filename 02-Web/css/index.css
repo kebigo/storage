@@ -1,0 +1,246 @@
+
+
+/* Reset */
+
+/* Boostrap Styles */
+
+/* My Styles */
+.hero{
+    background-color: #f6f4ff;
+    height: 40em;
+}
+
+
+
+.sub-title{
+    color: var(--secondary);
+}
+
+.title{
+    color: var(--primary);
+    font-size: 40px !important;
+}
+
+.text{
+    font-size: 20px;
+}
+
+
+.info_button{
+    background-color: var(--primary);
+    width: 10em;
+}
+
+.buscador{
+    width: 70em;
+    height: 7em;
+    border: 4px solid var(--secondary);
+    background-color: white;
+    margin-top: -2.7em;
+}
+
+.filter{
+    height: 60%;
+}
+
+.filter:first-child{
+    margin-left: 3em !important;
+
+}
+.filter:not(:nth-child(4)){
+    border-right: 2px solid var(--primary);
+   
+}
+
+.filter:not(:first-child), .filter:not(:last-child){
+    margin-left: 2em;
+}
+
+.label-buscador, .label-icono{
+    color: var(--primary);
+}
+
+.label-icono{
+    font-size: 1em;
+    margin-left: 0.25em;
+}
+.input-buscador:focus{
+    border: none;
+    outline: none;
+}
+
+.input-buscador::placeholder{
+    color: black;
+}
+
+.servicios, .sobre-nosotros, .transportes, .oferta{
+    height: 40em;
+}
+
+.paquetes{
+    height: 55em;
+}
+
+.transportes{
+    height: 35em;
+}
+
+.destinos, .reseñas{
+    height: 45em;
+}
+
+.servicios-icono {
+    font-size: 4em;
+    color: var(--background);
+}
+
+.btn-servicios{
+    background-color: var(--secondary);
+    
+}
+
+.card-title{
+    color: var(--primary);
+}
+
+.destinos-count{
+    padding-left: 10em;
+}
+
+.destinos-count-text{
+    width: 25em;
+    height: fit-content;
+    padding-left: 0.7em;
+    border-left: 0.20em solid var(--primary);
+    line-height: 1.15;
+    margin-top: 0.25em;
+}
+
+.destinos-count-title{
+    color: var(--primary);
+}
+
+
+.card-destino, .card-transporte, .card-paquete{
+    width: 19em;
+    background-color: #f6f4ff;
+    box-shadow: 4px 4px 8px var(--background);
+  }
+
+  .card-transporte{
+    width: 17em;
+  }
+
+  .card-paquete{
+    width: 22em;
+  }
+  
+  
+  .card-review{
+    width: 2.5em;
+    height: 2.5em;
+   background-color: var(--secondary);
+   border-radius: 10px 10px 6px 0px;
+  }
+
+  .btn-destino{
+    background-color: var(--primary);
+    
+  }
+
+  .card-price{
+    font-size: 1.2em;
+    color: var(--background);
+  }
+
+  .card-icono{
+    color: var(--secondary);
+  }
+
+  .destinos-title span, .transportes-info span, .oferta-info span, .paquetes-info span{
+    color: var(--secondary);
+  }
+
+  .destinos-title h2, .transportes-info h2, .oferta-info h2, .paquetes-info h2, .user-info h5{
+ 
+    color: var(--primary);
+  }
+
+  .oferta-image1 img{
+    transform: rotate(-15deg);
+  }
+
+  .paquete-card-info{
+    border-top: 3px solid var(--primary);
+  }
+
+  .oferta-info p, .paquetes-info p{
+    font-size: 1.2em;
+  }
+
+  .reviews-icon{
+    font-size: 0.7em;
+    color: var(--secondary);
+  }
+
+  .paquete-card-price span{
+    color: var(--primary);
+  }
+
+  .reseñas-image img{
+    border-radius: 8em 0em 8em 1em;
+  }
+
+  .reseñas-info .icon{
+    font-size: 5em;
+    color: var(--secondary);
+  }
+
+  .reseñas-bottom{
+    width: 90%;
+  }
+
+  .slider-control button{
+    width: 2em;
+    height: 2em;
+    border: none;
+    background-color: var(--secondary);
+  }
+
+
+  
+  .slider-control button:nth-child(2){
+    background-color: var(--primary);
+    border: none;
+    
+  }
+
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+    
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+   
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+}
