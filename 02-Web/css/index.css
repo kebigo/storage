@@ -4,30 +4,18 @@
 }
 
 section:not(.hero, .buscador, .newsletter){
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .newsletter{
   margin-top: 4em;
-  margin-bottom: 4em;
-}
-
-.info_button, .buscador_boton a{
-  background-color: var(--primary);
+  margin-bottom: 6em;
 }
 
 .card-destino, .card-transporte, .card-paquete{
   background-color: #f6f4ff;
   box-shadow: 4px 4px 8px var(--background);
-}
-
-.title{
-  color: var(--primary);
-}
-
-.info_button{
-  width: 10em;
 }
 
 
@@ -42,9 +30,6 @@ section:not(.hero, .buscador, .newsletter){
   padding: 4em 0em 8em 0em;
 }
 
-.hero .title{
-  font-size: 2.5em;
-}
 
 .hero .image img{
   width: 90%;
@@ -55,55 +40,6 @@ section:not(.hero, .buscador, .newsletter){
 
 /* -------------FIN HERO---------------- */
 
-
-/* -------------INICIO BUSCADOR---------------- */
-
-.buscador{
-  min-height: 7em;
-  border: 4px solid var(--secondary);
-  background-color: white;
-  margin-top: -2.7em;
-  border-radius: 2em;
-}
-
-.buscador-filters{
-  display: grid;
-  width: 90%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-
-.filter{
-  border-bottom: 2px solid var(--primary);
-}
-
-.filter:nth-child(1){
-  grid-column: 1/ span 2;
-}
-
-.buscador_boton{
-  grid-column: 1/ span 2;
-}
-
-.label-buscador, .label-icono{
-  color: var(--primary);
-}
-
-.label-icono{
-  font-size: 1em;
-  margin-left: 0.25em;
-}
-.input-buscador:focus{
-  border: none;
-  outline: none;
-}
-
-.input-buscador::placeholder{
-  color: black;
-}
-
-/* -------------FIN BUSCADOR---------------- */
 
 
 /* --------INICIO SOBRE NOSOTROS-------------- */
@@ -120,10 +56,7 @@ section:not(.hero, .buscador, .newsletter){
 
 /* -----------INICIO TRANSPORTES------------- */
 
-.transportes .transportes-info .info_button{
 
-  width: 10em;
-}
 /* -----------FIN TRANSPORTES------------- */
 
 /* -----------INICIO RESEÑAS--------------- */
@@ -159,44 +92,11 @@ section:not(.hero, .buscador, .newsletter){
 }
 
 /* -------------FIN RESEÑAS-----------------*/
-/* Boostrap Styles */
-
-/* My Styles */
-
-
-
-
-
-
-
-
-.sub-title{
-    color: var(--secondary);
-}
-
-
-
-.text{
-    font-size: 20px;
-}
-
-
-
 
 .servicios-icono {
     font-size: 4em;
     color: var(--background);
 }
-
-.btn-servicios{
-    background-color: var(--secondary);
-
-}
-
-.card-title{
-    color: var(--primary);
-}
-
 
 .destinos-count-text{
     max-width: 25em;
@@ -206,12 +106,6 @@ section:not(.hero, .buscador, .newsletter){
     line-height: 1.15;
     margin-top: 0.25em;
 }
-
-.destinos-count-title{
-    color: var(--primary);
-}
-
-
 
 
   .card-transporte{
@@ -230,10 +124,7 @@ section:not(.hero, .buscador, .newsletter){
    border-radius: 10px 10px 6px 0px;
   }
 
-  .btn-destino{
-    background-color: var(--primary);
 
-  }
 
   .card-price{
     font-size: 1.2em;
@@ -244,22 +135,12 @@ section:not(.hero, .buscador, .newsletter){
     color: var(--secondary);
   }
 
-  .destinos-title span, .transportes-info span, .oferta-info span, .paquetes-info span{
-    color: var(--secondary);
-  }
-
-  .destinos-title h2, .transportes-info h2, .oferta-info h2, .paquetes-info h2, .user-info h5{
-
-    color: var(--primary);
-  }
 
   .paquete-card-info{
     border-top: 3px solid var(--primary);
   }
 
-  .oferta-info p, .paquetes-info p{
-    font-size: 1.2em;
-  }
+
 
   .reviews-icon{
     font-size: 0.7em;
@@ -332,29 +213,6 @@ section:not(.hero, .buscador, .newsletter){
 
 @media (min-width: 992px) {
 
-/* -------------INICIO HERO---------------- */
-
-  .filter:nth-child(2), .filter:nth-child(3){
-    padding-left: 2em;
-
-  }
-
-  .filter{
-    border-bottom: 0;
-  }
-
-  .filter:not(:nth-child(3)){
-    border-right: 2px solid var(--primary);
-  }
-
-/* -------------FIN HERO---------------- */
-
-/* -----------INICIO BUSCADOR-----------*/
-
-.buscador{
-  border-radius: 20em;
-}
-/* -----------FIN BUSCADOR-----------*/
 
 /* ---------INICIO OFERTA----------- */
 .oferta-image1 img{
