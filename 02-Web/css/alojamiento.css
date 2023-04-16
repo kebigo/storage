@@ -1,0 +1,90 @@
+.hero{
+    height: 20em;
+    background-color: #f6f4ff;
+}
+
+
+.contenido{
+    margin-top: 7em;
+}
+
+ .filters{
+    background-color: #f6f4ff;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 1.5em;
+    height: fit-content;
+ }
+
+.filters label{
+    width: fit-content;
+    margin-top: 0.5em;
+}
+
+.filters input[type="checkbox" ]{
+    accent-color: var(--secondary);
+    color: white;
+}
+
+
+article{
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 1em;
+}
+
+.card-review{
+    width: 2.5em;
+    height: 2.5em;
+   background-color: var(--secondary);
+   border-radius: 10px 10px 6px 0px;
+  }
+
+.puntuacion-title{
+    font-size: 1.2em;
+}
+
+.puntuacion-subtitle{
+    font-size: 0.8em;
+    margin-top: -3px;
+}
+
+.puntuacion-subtitle, .puntuacion-title{
+    color: var(--primary);
+}
+
+.slider{
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #ddd;
+}
+
+.slider .progress{
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+
+.input-range{
+    position: relative;
+}
+
+.input-range input{
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: none;
+    appearance: none;
+    pointer-events:none ;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    height: 17px;
+    width: 17px;
+    appearance: none;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    pointer-events: auto;
+}

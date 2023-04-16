@@ -33,7 +33,7 @@ export class HeaderPersonalizado extends HTMLElement {
 
           <li class="py-3 d-flex align-items-center">
             <i class=" icono_mobile bi bi-building fs-2 me-2"></i>
-            <a class="text-decoration-none text-white href="#">Alojamiento</a>
+            <a class="text-decoration-none text-white href="../alojamiento.html">Alojamiento</a>
           </li>
 
           <li class="py-3 d-flex align-items-center">
@@ -78,14 +78,14 @@ export class HeaderPersonalizado extends HTMLElement {
           <div class="collapse navbar-collapse d-md-flex justify-content-md-center " id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sobre nosotros</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Alojamiento</a>
+                <a class="nav-link" href="alojamiento.html">Alojamiento</a>
               </li>
 
               <li class="nav-item">

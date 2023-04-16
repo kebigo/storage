@@ -5,15 +5,9 @@
   --secondary: #F1A208;
   --background: #13293D;
   --white-background: #FFFFFA;
-
-  
 }
 
 /* Reset Styles */
-
-html, body{
-  overflow-x: hidden;
-}
 /* Bootstrap Styles */
 .navbar {
   background-color: var(--background) !important;
@@ -24,7 +18,7 @@ html, body{
 }
 
 .nav-item, .nav-link {
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   font-weight: 500;
 }
@@ -78,7 +72,6 @@ button.navbar-toggler:focus, button:focus:not(:focus-visible) {
   color: var(--primary);
 }
 
-
 /* My Styles */
 .boton_carrito, .boton_favoritos, .boton_favoritos_mobile, .boton_carrito_mobile, .boton_login_mobile {
   background-color: var(--primary);
@@ -115,8 +108,6 @@ button.navbar-toggler:focus, button:focus:not(:focus-visible) {
   border: none;
   background-color: var(--primary);
 }
-
-
 
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
@@ -197,5 +188,100 @@ footer {
 /* Large devices (desktops, 992px and up) */
 /* X-Large devices (large desktops, 1200px and up) */
 /* XX-Large devices (larger desktops, 1400px and up) */
+.buscador {
+  min-height: 7em;
+  border: 4px solid var(--secondary);
+  background-color: white;
+  margin-top: -2.7em;
+  border-radius: 2em;
+}
+
+.buscador-filters {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.filter {
+  border-bottom: 2px solid var(--primary);
+}
+
+.filter:nth-child(1) {
+  grid-column: 1/span 2;
+}
+
+.buscador_boton {
+  grid-column: 1/span 2;
+}
+
+.label-buscador, .label-icono {
+  color: var(--primary);
+}
+
+.label-icono {
+  font-size: 1em;
+  margin-left: 0.25em;
+}
+
+.input-buscador:focus {
+  border: none;
+  outline: none;
+}
+
+.input-buscador::placeholder {
+  color: black;
+}
+
+.buscador_boton a {
+  background-color: var(--primary);
+}
+
+@media (min-width: 992px) {
+  .buscador {
+    border-radius: 20em;
+  }
+
+  .filter:nth-child(2), .filter:nth-child(3) {
+    padding-left: 2em;
+  }
+
+  .filter {
+    border-bottom: 0;
+  }
+
+  .filter:not(:nth-child(3)) {
+    border-right: 2px solid var(--primary);
+  }
+}
+.main-title {
+  font-size: 2.5em;
+  color: var(--primary);
+}
+
+.title {
+  color: var(--primary);
+}
+
+.sub-title {
+  color: var(--secondary);
+}
+
+.info-button {
+  background-color: var(--primary);
+  width: 10em;
+}
+
+.info-button-secondary {
+  background-color: var(--secondary);
+}
+
+.text {
+  font-size: 20px;
+}
+
+.card-text {
+  font-size: 1.1em;
+}
 
 /*# sourceMappingURL=main.css.map */
