@@ -3,6 +3,7 @@ export class HeaderPersonalizado extends HTMLElement {
     super();
     this.innerHTML = `
 
+    <header>
         
         <nav class="navbar navbar-expand-md bg-body-tertiary flex justify-content-center">
         <div class="container-lg">
@@ -75,7 +76,7 @@ export class HeaderPersonalizado extends HTMLElement {
                 <img class= "logo_header" src="./assets/img/logo_header.png" alt="">
             </a>
          </div>
-          <div class="collapse navbar-collapse d-md-flex justify-content-md-center " id="navbarNav">
+          <div class="collapse navbar-collapse d-md-flex justify-content-md-center text-white " id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
@@ -98,18 +99,19 @@ export class HeaderPersonalizado extends HTMLElement {
             </ul>
           </div>
 
-          <a class="boton_login rounded-pill d-flex justify-content-center align-items-center" href="#">
+          <a class="boton_login rounded-pill d-flex justify-content-center text-white align-items-center" href="#">
             <i class="bi bi-person"></i>
           </a>
-          <a class="boton_carrito rounded-pill ms-2 d-flex justify-content-center align-items-center" href="#">
+          <a class="boton_carrito rounded-pill ms-2 d-flex justify-content-center text-white align-items-center" href="#">
             <i class="bi bi-cart"></i>
           </a>
-          <a class="boton_favoritos rounded-pill ms-2 d-flex justify-content-center align-items-center" href="#">
+          <a class="boton_favoritos rounded-pill ms-2 d-flex justify-content-center text-white align-items-center" href="#">
             <i class="bi bi-heart"></i>
           </a>
         </div>
       </nav>
 
+      </header>
     
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>`
   }

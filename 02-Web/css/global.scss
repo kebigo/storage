@@ -1,22 +1,24 @@
-:root {
-    --primary: #028090;
-    --secondary: #F1A208;
-    --background: #13293D;
-    --white-background: #FFFFFA;
-  }
-
-  @import 'header.scss';
-
-  @import 'footer.scss';
-
-  @import 'buscador.scss';
-
-.main-title{
-  font-size: 2.5em;
-  color: var(--primary);
+:root{
+  --primary: #007390;
+  --secondary:#f1a301;
+  --background:#13293e;
 }
 
-.title{
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/* Reset Styles */
+/* Bootstrap Styles */
+
+@import 'header.scss';
+
+@import 'footer.scss';
+
+@import 'buscador.scss';
+
+.main-title{
+font-size: 2.3em;
+}
+
+.title, .main-title{
   color: var(--primary);
 }
 
@@ -24,19 +26,20 @@
   color: var(--secondary);
 }
 
+.text{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.card-text{
+  font-size: 1.1em;
+}
+
 .info-button{
   background-color: var(--primary);
   width: 10em;
 }
 
-.info-button-secondary{
+.info-button-secondary {
   background-color: var(--secondary);
-}
-
-.text{
-  font-size: 20px;
-}
-
-.card-text{
-  font-size: 1.1em;
 }
