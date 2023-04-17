@@ -14,6 +14,20 @@
 
 @import 'buscador.scss';
 
+html, body{
+  overflow-x: hidden;
+}
+
+.hero{
+    min-height: 20em;
+    background-color: #f6f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+
 .main-title{
 font-size: 2.3em;
 }
@@ -43,3 +57,4 @@ font-size: 2.3em;
 .info-button-secondary {
   background-color: var(--secondary);
 }
+

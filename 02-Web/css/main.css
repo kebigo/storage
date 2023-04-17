@@ -119,11 +119,9 @@ header .modal-header {
   .boton_favoritos, .boton_login {
     display: flex !important;
   }
-
   .boton_carrito {
     background-color: var(--primary);
   }
-
   .boton_login {
     background-color: var(--secondary);
   }
@@ -221,11 +219,6 @@ footer {
   color: var(--primary);
 }
 
-.label-icono {
-  font-size: 1em;
-  margin-left: 0.25em;
-}
-
 .input-buscador:focus {
   border: none;
   outline: none;
@@ -243,19 +236,29 @@ footer {
   .buscador {
     border-radius: 20em;
   }
-
   .filter:nth-child(2), .filter:nth-child(3) {
     padding-left: 2em;
   }
-
   .filter {
     border-bottom: 0;
   }
-
   .filter:not(:nth-child(3)) {
     border-right: 2px solid var(--primary);
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 20em;
+  background-color: #f6f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .main-title {
   font-size: 2.3em;
 }
