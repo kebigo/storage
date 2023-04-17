@@ -1,9 +1,10 @@
 package TodoElProyecto;
 
-public class agenciaMain {
-    import java.sql.*;
-    import java.util.ArrayList;
-    import java.util.Scanner;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class agenciamain {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         ArrayList<empleado> empleadosArray = new ArrayList<empleado>();
@@ -311,5 +312,140 @@ public class agenciaMain {
             e.printStackTrace();
             System.out.println("Error de Conexión");
         }
+
+        int intentos = 3;
+        boolean login = false;
+        boolean empleado = false;
+        String email = "";
+        String contresena = "";
+        String nombre = "";
+        int opcion = 0;
+        // AGREGAR FECHA ELIMINACIÓN
+        // INSERT INTO TABLE1 (fecha_eliminación) VALUES(sysdate());
+        while (intentos > 0 && !login) {
+            if (intentos < 3) {
+                System.out.println("Contraseña o email incorrectos. Te quedan: " + intentos);
+            }
+            System.out.println("LOGIN");
+            System.out.println("Email");
+            email = teclado.next();
+            System.out.println("Contraseña");
+            contresena = teclado.next();
+            for (empleado e : empleadosArray) {
+                if (email.equals(e.getEmail())) {
+                    if (contresena.equals(e.getContraseña())) {
+                        login = true;
+                    }
+                }
+            }
+            if (intentos == 1) {
+                System.out.println("Te queda 1 intento. Quieres registrarte? si/no");
+                String CrearUsuario;
+                CrearUsuario = teclado.next().toLowerCase();
+                if (CrearUsuario.equals("si")) {
+                    // metodocrear usuario
+                }
+            }
+            /*
+             * Se compara con la base de datos y si se encuentra la info en la base de datos
+             * pone el login en true,
+             * de lo contrario, te da un apartado al ultimo intento para poder registrarse
+             */
+        }
+        if (intentos == 0) {
+            System.out.println("Ha llegado al limite de intentos." + "\n" + " Intentelo de nuevo más tarde");
+            System.exit(0);
+        }
+        if (login) {
+            System.out.println("Bienvenido " + nombre + " Que desea hacer?");
+        }
+        // Registro completo de lo que se haga, login, eliminar, cambiar contraseña.
+        do {
+            if (login && empleado) {// Vista empleado(Superior o Dueño)
+                while (opcion < 0 || opcion > 8) {
+                    System.out.println(" 0- Salir del Programa");
+                    System.out.println(" 1- Añadir un nuevo empleado");
+                    System.out.println(" 2- Añadir nuevo Trans/Aloj/Paquete");
+                    System.out.println(" 3- Ver empelados");
+                    System.out.println(" 5- Ver reservas");
+                    System.out.println(" 6- Ver Trans/Aloj/Paquete");
+                    System.out.println(" 7- eliminar Trans/ALoj/Paquete");
+                    System.out.println("Opciones: ");
+                    opcion = teclado.nextInt();
+                    if (opcion < 0 || opcion > 8) {
+                        System.out.println("Por favor, elija una opcion valida valido");
+                    }
+                }
+                switch (opcion) {
+                    case 1:
+                        Empleado = new empleado();
+                        teclado.nextLine();
+                        System.out.println("Añada al nuevo empleado");
+                        Empleado.leer(teclado);
+
+                        if (empleadosArray.contains(Empleado))
+                            System.out.println("El Empelado ya existe");
+                        else {
+                            empleadosArray.add(new empleado(Empleado));
+                            System.out.println("El Perro a sido añadido correctamente");
+                            Modificado = true;
+                        }
+                        break;
+                    case 2:
+                        Empleado = new empleado();
+                        teclado.nextLine();
+                        System.out.println("Que desea añadir");
+                        int opcion2 = 0;
+                        System.out.println("1- Transporte");
+                        System.out.println("2- Alojamiento");
+                        System.out.println("3- Paquete");
+                        System.out.println("opcion:");
+                        opcion2 = teclado.nextInt();
+                        switch (opcion2) {
+                            case 1:
+                                Transporte = new transporte();
+
+                                break;
+                            case 2:
+                                Alojamiento = new alojamiento();
+                                break;
+                            case 3:
+                                Paquete = new paquete();
+                                break;
+
+                            default:
+                                break;
+                        }
+
+                        if (empleadosArray.contains(Empleado))
+                            System.out.println("El Empelado ya existe");
+                        else {
+                            empleadosArray.add(new empleado(Empleado));
+                            System.out.println("El Perro a sido añadido correctamente");
+                            Modificado = true;
+                        }
+                        break;
+                }
+            } else if (login && !empleado) {
+                while (opcion < 0 || opcion > 8) {
+                    System.out.println(" 0- Salir del Programa");
+                    System.out.println(" 1- Ver Trans/Aloj/Paquete");
+                    System.out.println(" 2- hacer una reserva");
+                    System.out.println(" 3- Ver reservas");
+                    System.out.println(" 4- Cancelar una reserva");
+                    System.out.println("Opciones: ");
+                    opcion = teclado.nextInt();
+                    if (opcion < 0 || opcion > 8) {
+                        System.out.println("Por favor, elija una opcion valida valido");
+                    }
+                }
+                switch (opcion) {
+                    case 1:
+                        
+                        break;
+                }
+            }
+        } while (opcion > 0);
+        teclado.close();
     }
 }
