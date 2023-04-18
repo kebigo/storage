@@ -1,4 +1,17 @@
+//Inicio filtros top
+const checkbox = document.querySelectorAll(".tipo-viaje input[type=checkbox]");
 
+
+checkbox.forEach( e =>{
+    e.addEventListener("click", ()=>{
+        checkbox.forEach((e) =>{
+            e.checked = false;
+        })
+
+        e.checked = true;
+    })
+
+})
 
 //Inicio filtro busqueda
 const filters = document.querySelectorAll(".boton-filtros-main");
@@ -10,10 +23,6 @@ filters.forEach(e =>{
         e.classList.add("boton-active");
     })
 })
-
-
-
-
 
 
 //Inicio filtro precio
