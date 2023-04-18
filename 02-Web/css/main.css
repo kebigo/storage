@@ -221,11 +221,6 @@ footer {
   color: var(--primary);
 }
 
-.label-icono {
-  font-size: 1em;
-  margin-left: 0.25em;
-}
-
 .input-buscador:focus {
   border: none;
   outline: none;
@@ -256,6 +251,18 @@ footer {
     border-right: 2px solid var(--primary);
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 20em;
+  background-color: #f6f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-title {
   font-size: 2.3em;
 }

@@ -1,0 +1,11 @@
+.container-lg{
+    height: 100vh;
+}
+
+.filter, .main{
+    height: fit-content;
+}
+
+article{
+    height: 10em;
+}

@@ -39,7 +39,7 @@ export class HeaderPersonalizado extends HTMLElement {
 
           <li class="py-3 d-flex align-items-center">
             <i class="icono_mobile bi bi-airplane-fill fs-2 me-2"></i>
-            <a class="text-decoration-none text-white href="#">Transporte</a>
+            <a class="text-decoration-none text-white href="../tranporte.html">Transporte</a>
           </li>
           
           <li class="py-3 d-flex align-items-center">
@@ -90,7 +90,7 @@ export class HeaderPersonalizado extends HTMLElement {
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Transporte</a>
+                <a class="nav-link" href="transporte.html">Transporte</a>
               </li>
 
               <li class="nav-item">

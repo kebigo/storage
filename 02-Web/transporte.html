@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEBIGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/transportes.css">
+    <link rel="stylesheet" href="css/contenidoConsulta.css">
+   
+</head>
+<body>
+
+    <header-personalizado></header-personalizado>
+
+    <section class="hero">
+        <div class="container-lg d-flex h-100 flex-column align-items-center justify-content-center">
+            <span class="sub-title fs-5 fw-bold">Conoce mundo con toda comodidad</span>
+            <h2 class="main-title fw-semibold mt-2 text-center">Muevete en los mejores transportes</h2>
+        </div>
+    </section>
+
+    <section class="buscador container-lg mx-auto d-flex justify-content-center align-items-center py-4 py-lg-0 ">
+        <div class="buscador-filters  d-lg-flex justify-content-center align-items-center ">
+            <div class="filter destino col d-flex flex-column align-items-start pb-3 pb-lg-0 me-5 me-lg-0">
+                <label class="label-buscador fs-5 fw-semibold" for="destinoList">Origen&nbsp;<i class="fa-solid fa-thumbtack"></i></label>
+                <input class="input-buscador border-0 text-capitalize" list="destinos" type="text" id="destinoList" placeholder="Jalisco, JAL">
+                <datalist id="destinos">
+                    <option value="Bilbao BIO"></option>
+                    <option value="Madrid MAD"></option>
+                    <option value="Jalisco JAL"></option>
+                </datalist>
+            </div>
+
+            <div class="filter destino col d-flex flex-column align-items-start pb-3 pb-lg-0">
+                <label class="label-buscador fs-5 fw-semibold" for="destinoList">Destino&nbsp;<i class="label-icono fa-solid fa-location-dot"></i></label>
+                <input class="input-buscador border-0 text-capitalize" list="destinos" type="text" id="destinoList" placeholder="Los Angeles, CA">
+                <datalist id="destinos">
+                    <option value="platano"></option>
+                    <option value="mandarina"></option>
+                    <option value="platanito"></option>
+                </datalist>
+            </div>
+              
+            <div class="filter transporte col d-flex flex-column pb-3 pb-lg-0 mt-3 mt-lg-0 me-5 me-lg-0">
+                <label class="label-buscador fs-5 fw-semibold" for="transportes">Fecha&nbsp;<i class="label-icono fa-solid fa-route"></i></label>
+                <input class="input-buscador border-0 text-capitalize" list="transportesList" type="text" id="transportes" placeholder="03/05 - 12/05">
+                <datalist id="transportesList">
+                    <option value="Avion"></option>
+                    <option value="Autobus"></option>
+                    <option value="Crucero"></option>
+                </datalist>
+            </div>
+  
+            <div class="filter pasajeros col d-flex flex-column pb-3 pb-lg-0 mt-3 mt-lg-0">
+                <label class="label-buscador fs-5 fw-semibold" for="pasajeros">Pasajeros&nbsp;<i class="label-icono fa-solid fa-user"></i></label>
+                <input class="input-buscador border-0 text-capitalize" list="pasajerosList" type="text" id="pasajeros" placeholder="Adultos, 2">
+                <datalist id="pasajerosList">
+                    <option value="Avion"></option>
+                    <option value="Autobus"></option>
+                    <option value="Crucero"></option>
+                </datalist>
+            </div>
+  
+            <div class=" d-flex justify-content-center buscador_boton mt-5 mt-lg-0">
+            <a class=" d-block w-100 text-center py-2 px-4 px-xl-5 text-decoration-none text-white text-center rounded-pill" href="#">Buscar</a>
+            </div>
+        </div>
+      
+       
+    </section>
+
+    <section class="d-flex justify-content-center my-5">
+        <div class="container-lg d-flex flex-column flex-lg-row justify-content-between ">
+
+            <div class="filter-mobile d-lg-none d-flex flex-column align-items-center justify-content-center mb-4">
+                <div class="row col-11 d-flex justify-content-between">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalFiltros" class="filter-button col-6 text-start fw-semibold title border-0"><i class="fa-solid fa-filter sub-title"></i>&nbsp;Filtrar</button>
+                    <h6 class="col-6 title title text-end"><i class="sub-title fa-solid fa-arrow-up-short-wide"></i>&nbsp;Ordenar</h6>
+                </div>
+
+                
+
+                <hr class="col-11">
+
+                <div class="modal" id="modalFiltros" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title title">Filtrar por:</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                     Tipo
+                                    </button>
+                                  </h2>
+                                  <div id="collapseOne" class="accordion-collapse collapse ">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <label><input type="checkbox" value="Hotel">&nbsp;Avion</label>
+                                        <label> <input type="checkbox" value="Apartamento">&nbsp;Autobus</label>
+                                        <label><input type="checkbox" value="Camping">&nbsp;Crucero</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      Categoria
+                                    </button>
+                                  </h2>
+                                  <div id="collapseTwo" class="accordion-collapse collapse">
+                                    <div class="accordion-body d-flex flex-column">
+                                     
+                                        <label><input type="checkbox" value="Piscina">&nbsp;Business</label>
+                                        <label> <input type="checkbox" value="Gimnasio">&nbsp;1ª Clase</label>
+                                        <label><input type="checkbox" value="Entretenimiento">&nbsp;Turista</label>
+                                        <label><input type="checkbox" value="Restaurante">&nbsp;Polizon</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      Puntuacion
+                                    </button>
+                                  </h2>
+                                  <div id="collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body d-flex flex-column">
+
+                                        <label><input type="checkbox" value="Excelente">&nbsp;Excelente, 9 o mas</label>
+                                        <label> <input type="checkbox" value="Muy bien">&nbsp;Muy bien, 8 o mas</label>
+                                        <label><input type="checkbox" value="Bien">&nbsp;Bien, 6 o mas</label>
+                                        <label><input type="checkbox" value="Meh">&nbsp;Meh, 5 o mas</label>                                  
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="filter-precio px-4">
+                                    <h6 class="pt-3 fw-normal fs-6">Precio</h6>
+
+                                    <div class="slider mt-4 ">
+                                        <div class="progress"></div>
+                                        <div class="input-range d-flex ">
+                                            <input type="range" class="input-min col-6" min="0" max="80" value="20">
+                                            <input type="range" class="input-min col-6" min="0" max="200" value="150">
+                
+                                        </div>
+                                    </div>
+                
+                                    <span class="mt-4 range-text d-block">Rango:  </span>
+
+                                </div>
+
+                              
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <a data-bs-dismiss="modal" aria-label="Close" class="info-button d-block text-center w-50 py-2 px-3 mt-5 ms-3 text-decoration-none text-white rounded-pill " >Aplicar</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <aside class="filters col-3 py-3 d-none d-lg-block">
+                <div class="filter-encabezado px-3">
+                    <h2 class="title fs-4 fw-semibold">Filtrar por:</h2>
+                </div>
+
+                <hr>
+
+                <div class="filter-tipo px-3 d-flex w-auto flex-column">
+                    <h2 class="title fs-5 fw-semibold">Tipo: </h2>
+                    
+                    <label><input type="checkbox" value="Hotel">&nbsp;Avion</label>
+                    <label> <input type="checkbox" value="Apartamento">&nbsp;Autobus</label>
+                    <label><input type="checkbox" value="Camping">&nbsp;Crucero</label>
+                   
+                </div>
+
+                <hr>
+
+                <div class="filter-instalaciones px-3 d-flex w-auto flex-column">
+                    <h2 class="title fs-5 fw-semibold">Categoria: </h2>
+                    
+                    <label><input type="checkbox" value="Piscina">&nbsp;Business</label>
+                    <label> <input type="checkbox" value="Gimnasio">&nbsp;1ª Clase</label>
+                    <label><input type="checkbox" value="Entretenimiento">&nbsp;Turista</label>
+                    <label><input type="checkbox" value="Restaurante">&nbsp;Polizon</label>
+                   
+                </div>
+
+                <hr>
+
+                <div class="filter-puntuacion px-3 d-flex w-auto flex-column">
+                    <h2 class="title fs-5 fw-semibold">Puntuacion: </h2>
+                    
+                    <label><input type="checkbox" value="Excelente">&nbsp;Excelente, 9 o mas</label>
+                    <label> <input type="checkbox" value="Muy bien">&nbsp;Muy bien, 8 o mas</label>
+                    <label><input type="checkbox" value="Bien">&nbsp;Bien, 6 o mas</label>
+                    <label><input type="checkbox" value="Meh">&nbsp;Meh, 5 o mas</label>
+                   
+                </div>
+
+                <hr>
+
+                <div class="filter-presupuesto px-3 d-flex w-auto flex-column">
+                    <h2 class="title fs-5 fw-semibold">Precio: </h2>
+                    
+                    <div class="slider mt-3">
+                        <div class="progress"></div>
+                        <div class="input-range d-flex ">
+                            <input type="range" class="input-min col-6" min="0" max="80" value="20">
+                            <input type="range" class="input-min col-6" min="0" max="200" value="160">
+
+                        </div>
+                    </div>
+
+                    <span class="mt-4 range-text">Rango:  </span>
+                </div>
+            
+                <a class="info-button d-block text-center w-50 py-2 px-3 mt-5 ms-3 text-decoration-none text-white rounded-pill" href="#">Filtrar</a>
+
+            </aside>
+
+            <div class="main ms-lg-5 col d-flex flex-column align-items-center">
+                
+                <div class="filtros-main col-12  d-flex justify-content-center">
+                    <div class="col">
+                        <button class="boton-active boton-filtros-main w-100 px-0 px-sm-3 py-3">Lo mejor</button>
+                    </div>
+
+                    <div class="col">
+                        <button class=" boton-filtros-main  w-100 px-0 px-sm-3 py-3">Mas rapido</button>
+                    </div>
+
+                    <div class="col">
+                        <button class="boton-filtros-main w-100 px-0 px-sm-3 py-3 ">Mas barato</button>
+                    </div>
+
+                </div>
+
+                <div class="content  mt-5 w-100 d-flex flex-column">
+
+                    <article class="alojamiento d-flex p-4 p-lg-3 p-xl-4 align-items-center justify-content-between flex-wrap flex-md-nowrap">
+                        <div class="alojamiento-image col-12 col-md-3 me-4 me-lg-5 me-xl-4 me-xxl-0">
+                            <img class="object-fit-cover rounded" src="https://img.freepik.com/foto-gratis/diseno-apartamento-estudio-moderno-dormitorio-sala-estar_1262-12375.jpg?w=1380&t=st=1681523584~exp=1681524184~hmac=6d69f403b3909cf0d3945da01653007db1ee7a26b926fd773012ea42f79fcb7f" alt="">
+                        </div>
+    
+                        <div class="puntuacion d-flex justify-content-center h-auto d-sm-none ms-2 mt-4">
+                            <div class="reviews col-10 ps-xxl-5">
+                                <h4 class="puntuacion-title fw-bold">Excelente</h4>
+                                <h5 class="puntuacion-subtitle">292 comentarios</h5>
+                            </div>
+    
+                            <div class="num col ">
+                                <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
+                            </div>
+                        </div>
+                        
+                        <div class="alojamiento-info col-12 col-sm-7 col-md-6  ms-md-3 ms-xl-0 mt-4 mt-md-0">
+                            <h2 class="title fw-semibold fs-3">Hotel Riu Plaza</h2>
+                            <span class="sub-title fw-bold">Bergamo, Italia</span>
+                            <p class="text fs-6 mt-2 pe-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque elit nisi, eu tristique nulla tempor vitae.
+                                 Nam hendrerit mattis aliquam. Cras quis est ultricies, commodo erat at, aliquet metus.  
+                                 
+                            </p>
+                        </div>
+    
+                        <div class="alojamiento-extra col-3 col-md d-flex flex-column">
+                            <div class="puntuacion d-flex justify-content-center h-auto d-none d-sm-flex pt-4 pt-lg-0">
+                                <div class="reviews col-10 ps-xxl-5">
+                                    <h4 class="puntuacion-title fw-bold">Excelente</h4>
+                                    <h5 class="puntuacion-subtitle">292 comentarios</h5>
+                                </div>
+    
+                                <div class="num col ">
+                                    <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
+                                </div>
+                            </div>
+    
+                            <div class="buttons d-flex flex-sm-column align-items-end">
+                                <a class="info-button col-1 d-block text-center py-2 px-3 mt-5 text-decoration-none text-white rounded-pill" href="#">Mas info</a>
+                                <a class="info-button col-1 d-block text-center py-2 px-3 mt-3 ms-3 ms-sm-0 text-decoration-none text-white rounded-pill" href="#">Reservar</a>
+    
+                            </div>
+                        </div>
+                    </article>
+                   
+                    
+                </div>
+
+            </div>
+
+
+           
+        </div>
+    </section>
+
+    <footer-personalizado></footer-personalizado>
+    
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/footer.js"></script>
+    <script src="js/filtros.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+</html>
