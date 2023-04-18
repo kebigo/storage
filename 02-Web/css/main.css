@@ -119,9 +119,11 @@ header .modal-header {
   .boton_favoritos, .boton_login {
     display: flex !important;
   }
+
   .boton_carrito {
     background-color: var(--primary);
   }
+
   .boton_login {
     background-color: var(--secondary);
   }
@@ -236,12 +238,15 @@ footer {
   .buscador {
     border-radius: 20em;
   }
+
   .filter:nth-child(2), .filter:nth-child(3) {
     padding-left: 2em;
   }
+
   .filter {
     border-bottom: 0;
   }
+
   .filter:not(:nth-child(3)) {
     border-right: 2px solid var(--primary);
   }
@@ -256,7 +261,6 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .main-title {

@@ -72,8 +72,8 @@
        
     </section>
 
-    <section class="contenido d-flex justify-content-center mb-5">
-        <div class="container-lg d-flex flex-column flex-lg-row justify-content-between">
+    <section class="d-flex justify-content-center my-5">
+        <div class="container-lg d-flex flex-column flex-lg-row justify-content-between ">
 
             <div class="filter-mobile d-lg-none d-flex flex-column align-items-center justify-content-center mb-4">
                 <div class="row col-11 d-flex justify-content-between">
@@ -229,62 +229,78 @@
 
             </aside>
 
-           <div class="f2 col-9 bg-primary">
-            <span>El mejor</span>
-            <span>El mas barato</span>
-            <span>El mas rapido</span>
-           </div>
-
-            <div class="content col-12  ms-lg-5 d-flex flex-column">
-
-                <article class="alojamiento d-flex p-4 p-lg-3 p-xl-4 align-items-center justify-content-between flex-wrap flex-md-nowrap">
-                    <div class="alojamiento-image col-12 col-md-3 me-4 me-lg-5 me-xl-4 me-xxl-0">
-                        <img class="object-fit-cover rounded" src="https://img.freepik.com/foto-gratis/diseno-apartamento-estudio-moderno-dormitorio-sala-estar_1262-12375.jpg?w=1380&t=st=1681523584~exp=1681524184~hmac=6d69f403b3909cf0d3945da01653007db1ee7a26b926fd773012ea42f79fcb7f" alt="">
+            <div class="main ms-lg-5 col d-flex flex-column align-items-center">
+                
+                <div class="filtros-main col-12  d-flex justify-content-center">
+                    <div class="col">
+                        <button class="boton-active boton-filtros-main w-100 px-0 px-sm-3 py-3">Lo mejor</button>
                     </div>
 
-                    <div class="puntuacion d-flex justify-content-center h-auto d-sm-none ms-2 mt-4">
-                        <div class="reviews col-10 ps-xxl-5">
-                            <h4 class="puntuacion-title fw-bold">Excelente</h4>
-                            <h5 class="puntuacion-subtitle">292 comentarios</h5>
+                    <div class="col">
+                        <button class=" boton-filtros-main  w-100 px-0 px-sm-3 py-3">Mas rapido</button>
+                    </div>
+
+                    <div class="col">
+                        <button class="boton-filtros-main w-100 px-0 px-sm-3 py-3 ">Mas barato</button>
+                    </div>
+
+                </div>
+
+                <div class="content  mt-5 w-100 d-flex flex-column">
+
+                    <article class="alojamiento d-flex p-4 p-lg-3 p-xl-4 align-items-center justify-content-between flex-wrap flex-md-nowrap">
+                        <div class="alojamiento-image col-12 col-md-3 me-4 me-lg-5 me-xl-4 me-xxl-0">
+                            <img class="object-fit-cover rounded" src="https://img.freepik.com/foto-gratis/diseno-apartamento-estudio-moderno-dormitorio-sala-estar_1262-12375.jpg?w=1380&t=st=1681523584~exp=1681524184~hmac=6d69f403b3909cf0d3945da01653007db1ee7a26b926fd773012ea42f79fcb7f" alt="">
                         </div>
-
-                        <div class="num col ">
-                            <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
-                        </div>
-                    </div>
-                    
-                    <div class="alojamiento-info col-12 col-sm-7 col-md-6  ms-md-3 ms-xl-0 mt-4 mt-md-0">
-                        <h2 class="title fw-semibold fs-3">Hotel Riu Plaza</h2>
-                        <span class="sub-title fw-bold">Bergamo, Italia</span>
-                        <p class="text fs-6 mt-2 pe-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque elit nisi, eu tristique nulla tempor vitae.
-                             Nam hendrerit mattis aliquam. Cras quis est ultricies, commodo erat at, aliquet metus.  
-                             
-                        </p>
-                    </div>
-
-                    <div class="alojamiento-extra col-3 col-md d-flex flex-column">
-                        <div class="puntuacion d-flex justify-content-center h-auto d-none d-sm-flex pt-4 pt-lg-0">
+    
+                        <div class="puntuacion d-flex justify-content-center h-auto d-sm-none ms-2 mt-4">
                             <div class="reviews col-10 ps-xxl-5">
                                 <h4 class="puntuacion-title fw-bold">Excelente</h4>
                                 <h5 class="puntuacion-subtitle">292 comentarios</h5>
                             </div>
-
+    
                             <div class="num col ">
                                 <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
                             </div>
                         </div>
-
-                        <div class="buttons d-flex flex-sm-column align-items-end">
-                            <a class="info-button col-1 d-block text-center py-2 px-3 mt-5 text-decoration-none text-white rounded-pill" href="#">Mas info</a>
-                            <a class="info-button col-1 d-block text-center py-2 px-3 mt-3 ms-3 ms-sm-0 text-decoration-none text-white rounded-pill" href="#">Reservar</a>
-
+                        
+                        <div class="alojamiento-info col-12 col-sm-7 col-md-6  ms-md-3 ms-xl-0 mt-4 mt-md-0">
+                            <h2 class="title fw-semibold fs-3">Hotel Riu Plaza</h2>
+                            <span class="sub-title fw-bold">Bergamo, Italia</span>
+                            <p class="text fs-6 mt-2 pe-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque elit nisi, eu tristique nulla tempor vitae.
+                                 Nam hendrerit mattis aliquam. Cras quis est ultricies, commodo erat at, aliquet metus.  
+                                 
+                            </p>
                         </div>
-                    </div>
-                </article>
-               
-                
+    
+                        <div class="alojamiento-extra col-3 col-md d-flex flex-column">
+                            <div class="puntuacion d-flex justify-content-center h-auto d-none d-sm-flex pt-4 pt-lg-0">
+                                <div class="reviews col-10 ps-xxl-5">
+                                    <h4 class="puntuacion-title fw-bold">Excelente</h4>
+                                    <h5 class="puntuacion-subtitle">292 comentarios</h5>
+                                </div>
+    
+                                <div class="num col ">
+                                    <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
+                                </div>
+                            </div>
+    
+                            <div class="buttons d-flex flex-sm-column align-items-end">
+                                <a class="info-button col-1 d-block text-center py-2 px-3 mt-5 text-decoration-none text-white rounded-pill" href="#">Mas info</a>
+                                <a class="info-button col-1 d-block text-center py-2 px-3 mt-3 ms-3 ms-sm-0 text-decoration-none text-white rounded-pill" href="#">Reservar</a>
+    
+                            </div>
+                        </div>
+                    </article>
+                   
+                    
+                </div>
+
             </div>
+
+
+           
         </div>
     </section>
 

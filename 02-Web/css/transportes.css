@@ -1,9 +1,4 @@
-.content{
-    height: fit-content;
-}
-.f2{
-    height: fit-content;
-}
+
 
 .filter:nth-child(4){
     border-right: none;
@@ -16,6 +11,28 @@
 
 .filter:nth-child(1){
     grid-column: 1 / 2 !important;
+}
+
+.boton-filtros-main{
+    background-color: transparent;
+    border: none;
+
+}
+
+.filtros-main{
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.boton-active{
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.boton-filtros-main:hover{
+    background-color: #f5f5f5;
 }
 
 

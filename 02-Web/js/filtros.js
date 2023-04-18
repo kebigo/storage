@@ -1,4 +1,21 @@
 
+
+//Inicio filtro busqueda
+const filters = document.querySelectorAll(".boton-filtros-main");
+
+filters.forEach(e =>{
+    e.addEventListener("click", () =>{
+      document.querySelector(".boton-active").classList.remove("boton-active");
+        
+        e.classList.add("boton-active");
+    })
+})
+
+
+
+
+
+
 //Inicio filtro precio
 const inputRange = document.querySelectorAll(".input-range input");
 const progress = document.querySelectorAll(".slider .progress");
