@@ -387,13 +387,12 @@ public class agenciamain {
                             System.out.println("El Empelado ya existe");
                         else {
                             empleadosArray.add(new empleado(Empleado));
-                            System.out.println("El Perro a sido añadido correctamente");
+                            System.out.println("El empleado a sido añadido correctamente");
                             Modificado = true;
                         }
                         break;
                     case 2:
                         Empleado = new empleado();
-                        teclado.nextLine();
                         System.out.println("Que desea añadir");
                         int opcion2 = 0;
                         System.out.println("1- Transporte");
@@ -404,26 +403,41 @@ public class agenciamain {
                         switch (opcion2) {
                             case 1:
                                 Transporte = new transporte();
-
+                                Transporte.leer(teclado);
+                                if (transportesArray.contains(Transporte))
+                                    System.out.println("El transporte ya existe");
+                                else {
+                                    transportesArray.add(new transporte(Transporte));
+                                    System.out.println("El transporte a sido añadido correctamente");
+                                    Modificado = true;
+                                }
                                 break;
                             case 2:
                                 Alojamiento = new alojamiento();
+                                Alojamiento.leer(teclado);
+                                if (alojamientosArray.contains(Alojamiento))
+                                    System.out.println("El alojamiento ya existe");
+                                else {
+                                    alojamientosArray.add(new alojamiento(Alojamiento));
+                                    System.out.println("El alojamiento a sido añadido correctamente");
+                                    Modificado = true;
+                                }
                                 break;
                             case 3:
                                 Paquete = new paquete();
+                                Paquete.leer(teclado);
+                                if (paquetesArray.contains(Paquete))
+                                    System.out.println("El paquete ya existe");
+                                else {
+                                    paquetesArray.add(new paquete(Paquete));
+                                    System.out.println("El paquete a sido añadido correctamente");
+                                    Modificado = true;
+                                }
                                 break;
-
                             default:
                                 break;
                         }
 
-                        if (empleadosArray.contains(Empleado))
-                            System.out.println("El Empelado ya existe");
-                        else {
-                            empleadosArray.add(new empleado(Empleado));
-                            System.out.println("El Perro a sido añadido correctamente");
-                            Modificado = true;
-                        }
                         break;
                 }
             } else if (login && !empleado) {
@@ -441,7 +455,7 @@ public class agenciamain {
                 }
                 switch (opcion) {
                     case 1:
-                        
+
                         break;
                 }
             }

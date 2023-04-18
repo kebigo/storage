@@ -1,5 +1,7 @@
 package TodoElProyecto;
 
+import java.util.Scanner;
+
 public class alojamiento {
     protected int idAlojamiento;
     protected double precio;
@@ -104,4 +106,17 @@ public class alojamiento {
         System.out.println("Precio: "+precio);
         System.out.println("********************************");
     }
+    public void leer(Scanner teclado){
+        System.out.println("Identificador del alojamiento");
+        this.idAlojamiento = teclado.nextInt();
+        System.out.println("tipo de alojamiento");
+        this.tipo = teclado.nextLine().toLowerCase();
+        System.out.println("Donde Se Ubica El Alojamiento");
+        this.destino = teclado.nextLine().toLowerCase();
+        System.out.println("Que extras contiene?");
+        this.extra = teclado.nextLine().toLowerCase();
+        System.out.println("precio?");
+        this.precio = teclado.nextInt();
+        System.out.println("Se agrego el usuario correctamente");
+}
 }

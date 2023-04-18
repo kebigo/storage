@@ -1,5 +1,7 @@
 package TodoElProyecto;
 
+import java.util.Scanner;
+
 public class paquete {
     protected int idPaquete;
     protected int idTransporte;
@@ -62,5 +64,16 @@ public class paquete {
     public String toString() {
         return ("IDPaquete: "+idPaquete+"\n"+"IDTrasporte: "+idTransporte+"\n"+"IDAlojamiento: "+idAlojamiento+"\n"+"Precio: "+precio);
     }
+    public void leer(Scanner teclado){
+        System.out.println("Identificador del alojamiento");
+        this.idPaquete = teclado.nextInt();
+        System.out.println("tipo de alojamiento");
+        this.idTransporte = teclado.nextInt();
+        System.out.println("Donde Se Ubica El Alojamiento");
+        this.idAlojamiento = teclado.nextInt();
+        System.out.println("precio?");
+        this.precio = teclado.nextInt();
+        System.out.println("Se agrego el usuario correctamente");
+}
 
 }
