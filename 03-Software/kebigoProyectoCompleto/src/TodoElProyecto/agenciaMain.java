@@ -367,13 +367,13 @@ public class agenciamain {
                     System.out.println(" 1- Añadir un nuevo empleado");
                     System.out.println(" 2- Añadir nuevo Trans/Aloj/Paquete");
                     System.out.println(" 3- Ver empelados");
-                    System.out.println(" 5- Ver reservas");
-                    System.out.println(" 6- Ver Trans/Aloj/Paquete");
-                    System.out.println(" 7- eliminar Trans/ALoj/Paquete");
+                    System.out.println(" 4- Ver reservas");
+                    System.out.println(" 5- Ver Trans/Aloj/Paquete");
+                    System.out.println(" 6- eliminar Trans/ALoj/Paquete");
                     System.out.println("Opciones: ");
                     opcion = teclado.nextInt();
                     if (opcion < 0 || opcion > 8) {
-                        System.out.println("Por favor, elija una opcion valida valido");
+                        System.out.println("Por favor, elija una opcion valida por favor");
                     }
                 }
                 switch (opcion) {
@@ -392,21 +392,27 @@ public class agenciamain {
                         }
                         break;
                     case 2:
-                        Empleado = new empleado();
-                        System.out.println("Que desea añadir");
                         int opcion2 = 0;
-                        System.out.println("1- Transporte");
-                        System.out.println("2- Alojamiento");
-                        System.out.println("3- Paquete");
-                        System.out.println("opcion:");
-                        opcion2 = teclado.nextInt();
+                        Empleado = new empleado();
+                        while (opcion2 < 0 || opcion2 > 3) {
+                            System.out.println("Que desea añadir");
+                            System.out.println("1- Transporte");
+                            System.out.println("2- Alojamiento");
+                            System.out.println("3- Paquete");
+                            System.out.println("opcion:");
+                            opcion2 = teclado.nextInt();
+                            if (opcion2 < 0 || opcion2 > 3) {
+                                System.out.println("Por favor, elija una opcion valida por favor");
+                            }
+                        }
+
                         switch (opcion2) {
                             case 1:
                                 Transporte = new transporte();
                                 Transporte.leer(teclado);
-                                if (transportesArray.contains(Transporte))
+                                if (transportesArray.contains(Transporte)) {
                                     System.out.println("El transporte ya existe");
-                                else {
+                                } else {
                                     transportesArray.add(new transporte(Transporte));
                                     System.out.println("El transporte a sido añadido correctamente");
                                     Modificado = true;
@@ -415,9 +421,9 @@ public class agenciamain {
                             case 2:
                                 Alojamiento = new alojamiento();
                                 Alojamiento.leer(teclado);
-                                if (alojamientosArray.contains(Alojamiento))
+                                if (alojamientosArray.contains(Alojamiento)) {
                                     System.out.println("El alojamiento ya existe");
-                                else {
+                                } else {
                                     alojamientosArray.add(new alojamiento(Alojamiento));
                                     System.out.println("El alojamiento a sido añadido correctamente");
                                     Modificado = true;
@@ -426,17 +432,69 @@ public class agenciamain {
                             case 3:
                                 Paquete = new paquete();
                                 Paquete.leer(teclado);
-                                if (paquetesArray.contains(Paquete))
+                                if (paquetesArray.contains(Paquete)) {
                                     System.out.println("El paquete ya existe");
-                                else {
+                                } else {
                                     paquetesArray.add(new paquete(Paquete));
                                     System.out.println("El paquete a sido añadido correctamente");
                                     Modificado = true;
                                 }
                                 break;
-                            default:
-                                break;
                         }
+
+                        break;
+                    case 3:
+                        for (empleado e : empleadosArray) {
+                            e.print();
+                        }
+                        break;
+                    case 4:
+                        System.out.println("************Alojamientos************");
+                        for (reservaAlojamiento ra : reservaAlojamientos) {
+                            ra.print();
+                        }
+                        System.out.println("************Transportes************");
+                        for (reservaTransporte rt : reservaTransportes) {
+                            rt.print();
+                        }
+                        System.out.println("************Paquetes************");
+                        for (reservaPaquete rp : reservaPaquetes) {
+                            rp.print();
+                        }
+                        break;
+                    case 5:
+                    opcion2 = 0;
+                    Empleado = new empleado();
+                    while (opcion2 < 0 || opcion2 > 3) {
+                        System.out.println("Que desea ver");
+                        System.out.println("1- Transporte");
+                        System.out.println("2- Alojamiento");
+                        System.out.println("3- Paquete");
+                        System.out.println("opcion:");
+                        opcion2 = teclado.nextInt();
+                        if (opcion2 < 0 || opcion2 > 3) {
+                            System.out.println("Por favor, elija una opcion valida por favor");
+                        }
+                    }
+                    switch (opcion2) {
+                        case 1:
+                            for (transporte t : transportesArray) {
+                                t.print();
+                            }
+                            break;
+                        case 2:
+                            for (alojamiento a : alojamientosArray) {
+                                a.print();
+                            }
+                            break;
+                        case 3:
+                            for (paquete p : paquetesArray) {
+                                p.print();
+                            }
+                            break;
+                    }
+                        break;
+                    case 6:
 
                         break;
                 }

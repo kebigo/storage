@@ -64,6 +64,14 @@ public class paquete {
     public String toString() {
         return ("IDPaquete: "+idPaquete+"\n"+"IDTrasporte: "+idTransporte+"\n"+"IDAlojamiento: "+idAlojamiento+"\n"+"Precio: "+precio);
     }
+    public void print(){
+        System.out.println("IDAlojamiento: "+idPaquete);
+        System.out.println("IDAlojamiento: "+idAlojamiento);
+        System.out.println("IDAlojamiento: "+idTransporte);
+        System.out.println("Precio: "+precio);
+        System.out.println("********************************");
+    }
+
     public void leer(Scanner teclado){
         System.out.println("Identificador del alojamiento");
         this.idPaquete = teclado.nextInt();
