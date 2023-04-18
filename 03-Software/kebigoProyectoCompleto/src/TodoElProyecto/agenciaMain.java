@@ -73,15 +73,14 @@ public class agenciamain {
                 rs.beforeFirst();
                 // recorro registro a registro el ResultSet
                 while (rs.next()) {
-                    idTransporte = (int) rs.getObject("DNI");
-                    precio = (double) rs.getObject("nombre");
-                    tipo = (String) rs.getObject("apellido");
-                    destino = (String) rs.getObject("email");
-                    origen = (String) rs.getObject("telefono");
-                    puntuacion = (int) rs.getObject("contrasena");
-                    extras = (String) rs.getObject("departamento");
-                    transportesArray
-                            .add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
+                    idTransporte = (int) rs.getObject("IDTransporte");
+                    precio = (double) rs.getObject("precio");
+                    tipo = (String) rs.getObject("tipo");
+                    destino = (String) rs.getObject("destino");
+                    origen = (String) rs.getObject("origen");
+                    puntuacion = (int) rs.getObject("puntuacion");
+                    extras = (String) rs.getObject("extras");
+                    transportesArray.add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
                 }
             } else {
                 // si no hay registros
@@ -154,15 +153,14 @@ public class agenciamain {
                 rs.beforeFirst();
                 // recorro registro a registro el ResultSet
                 while (rs.next()) {
-                    idAlojamiento = (int) rs.getObject("DNI");
-                    precio = (double) rs.getObject("nombre");
-                    tipo = (String) rs.getObject("apellido");
-                    destino = (String) rs.getObject("email");
-                    puntuacion = (int) rs.getObject("telefono");
-                    extra = (String) rs.getObject("contrasena");
-                    instalaciones = (String) rs.getObject("departamento");
-                    alojamientosArray.add(
-                            new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
+                    idAlojamiento = (int) rs.getObject("IDAlojamiento");
+                    precio = (double) rs.getObject("precio");
+                    tipo = (String) rs.getObject("tipo");
+                    destino = (String) rs.getObject("destino");
+                    puntuacion = (int) rs.getObject("puntuacion");
+                    extra = (String) rs.getObject("extras");
+                    instalaciones = (String) rs.getObject("instalaciones");
+                    alojamientosArray.add(new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
                 }
             } else {
                 // si no hay registros
@@ -192,10 +190,10 @@ public class agenciamain {
                 rs.beforeFirst();
                 // recorro registro a registro el ResultSet
                 while (rs.next()) {
-                    idPaquete = (int) rs.getObject("DNI");
-                    idTransporte = (int) rs.getObject("nombre");
-                    idAlojamiento = (int) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
+                    idPaquete = (int) rs.getObject("IDPaquete");
+                    idTransporte = (int) rs.getObject("IDTransporte");
+                    idAlojamiento = (int) rs.getObject("IDAlojamiento");
+                    precio = (double) rs.getObject("precio");
                     paquetesArray.add(new paquete(idPaquete, idTransporte, idAlojamiento, precio));
                 }
             } else {
@@ -226,10 +224,10 @@ public class agenciamain {
                 rs.beforeFirst();
                 // recorro registro a registro el ResultSet
                 while (rs.next()) {
-                    IDAlojamiento = (int) rs.getObject("DNI");
-                    DNI = (String) rs.getObject("nombre");
-                    fecha = (FechaT5) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
+                    IDAlojamiento = (int) rs.getObject("IDAlojamiento");
+                    DNI = (String) rs.getObject("DNI");
+                    fecha = (FechaT5) rs.getObject("fecha");
+                    precio = (double) rs.getObject("precio");
                     reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, fecha, precio));
                 }
             } else {
@@ -260,10 +258,10 @@ public class agenciamain {
                 rs.beforeFirst();
                 // recorro registro a registro el ResultSet
                 while (rs.next()) {
-                    IDTransporte = (int) rs.getObject("DNI");
-                    DNI = (String) rs.getObject("nombre");
-                    fecha = (FechaT5) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
+                    IDTransporte = (int) rs.getObject("IDTransporte");
+                    DNI = (String) rs.getObject("DNI");
+                    fecha = (FechaT5) rs.getObject("fecha");
+                    precio = (double) rs.getObject("precio");
                     reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, fecha, precio));
                 }
             } else {
@@ -294,10 +292,10 @@ public class agenciamain {
                 rs.beforeFirst();
                 // recorro registro a registro el ResultSet
                 while (rs.next()) {
-                    IDPaquete = (int) rs.getObject("DNI");
-                    DNI = (String) rs.getObject("nombre");
-                    fecha = (FechaT5) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
+                    IDPaquete = (int) rs.getObject("IDPaquete");
+                    DNI = (String) rs.getObject("DNI");
+                    fecha = (FechaT5) rs.getObject("fecha");
+                    precio = (double) rs.getObject("precio");
                     reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, fecha, precio));
                 }
             } else {
@@ -317,7 +315,7 @@ public class agenciamain {
         boolean login = false;
         boolean empleado = false;
         String email = "";
-        String contresena = "";
+        String contraseña = "";
         String nombre = "";
         int opcion = 0;
         // AGREGAR FECHA ELIMINACIÓN
@@ -330,10 +328,10 @@ public class agenciamain {
             System.out.println("Email");
             email = teclado.next();
             System.out.println("Contraseña");
-            contresena = teclado.next();
+            contraseña = teclado.next();
             for (empleado e : empleadosArray) {
                 if (email.equals(e.getEmail())) {
-                    if (contresena.equals(e.getContraseña())) {
+                    if (contraseña.equals(e.getContraseña())) {
                         login = true;
                     }
                 }
@@ -519,6 +517,7 @@ public class agenciamain {
             }
         } while (opcion > 0);
         teclado.close();
+        if(Modificado){
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
             // si se ha conectado correctamente
@@ -591,7 +590,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.viajero;");
+            ResultSet rs = st.executeQuery("DELETE FROM viajero;");
             String DNI = "";
             String Nombre = "";
             String apellido = "";
@@ -599,24 +598,17 @@ public class agenciamain {
             String telefono = "";
             String contrasena = "";
             int vacunasCOVID = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    DNI = (String) rs.getObject("DNI");
-                    nombre = (String) rs.getObject("nombre");
-                    apellido = (String) rs.getObject("apellido");
-                    email = (String) rs.getObject("email");
-                    telefono = (String) rs.getObject("telefono");
-                    contrasena = (String) rs.getObject("contrasena");
-                    vacunasCOVID = (int) rs.getObject("departamento");
-                    viajerosArray.add(new viajero(DNI, nombre, apellido, email, telefono, contrasena, vacunasCOVID));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
+
+            for (viajero v : viajerosArray) {
+                DNI = v.getDNI();
+                Nombre = v.getNombre();
+                apellido = v.getApellido();
+                Email = v.getEmail();
+                telefono = v.getTelefono();
+                contrasena = v.getContraseña();
+                vacunasCOVID = v.getVacunasCOVID();
+                st.executeUpdate("INSERT INTO empleado VALUES ('"+ DNI +"','"+ Nombre +"','"+ 
+                apellido +"','"+ Email +"','"+ telefono +"','"+ contrasena +"','"+ vacunasCOVID +"')");
             }
             // cierro la conexion
             rs.close();
@@ -631,7 +623,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.alojamiento;");
+            ResultSet rs = st.executeQuery("DELETE FROM alojamiento;");
             int idAlojamiento = 0;
             double precio = 0;
             String tipo = "";
@@ -639,25 +631,16 @@ public class agenciamain {
             int puntuacion = 0;
             String extra = "";
             String instalaciones = "";
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    idAlojamiento = (int) rs.getObject("DNI");
-                    precio = (double) rs.getObject("nombre");
-                    tipo = (String) rs.getObject("apellido");
-                    destino = (String) rs.getObject("email");
-                    puntuacion = (int) rs.getObject("telefono");
-                    extra = (String) rs.getObject("contrasena");
-                    instalaciones = (String) rs.getObject("departamento");
-                    alojamientosArray.add(
-                            new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
+            for (alojamiento a : alojamientosArray) {
+                idAlojamiento = a.getIdAlojamiento();
+                precio = a.getPrecio();
+                tipo = a.getTipo();
+                destino = a.getDestino();
+                puntuacion = a.getPuntuacion();
+                extra = a.getExtra();
+                instalaciones = a.getInstalaciones();
+                st.executeUpdate("INSERT INTO empleado VALUES ('"+ idAlojamiento +"','"+ precio +"','"+ 
+                tipo +"','"+ destino +"','"+ puntuacion +"','"+ extra +"','"+ instalaciones +"')");
             }
             // cierro la conexion
             rs.close();
@@ -672,26 +655,18 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.paquete;");
+            ResultSet rs = st.executeQuery("DELETE FROM paquete;");
             int idPaquete = 0;
             int idTransporte = 0;
             int idAlojamiento = 0;
             double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    idPaquete = (int) rs.getObject("DNI");
-                    idTransporte = (int) rs.getObject("nombre");
-                    idAlojamiento = (int) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
-                    paquetesArray.add(new paquete(idPaquete, idTransporte, idAlojamiento, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
+            for (paquete p : paquetesArray) {
+                idPaquete = p.getIdPaquete();
+                idTransporte = p.getIdTransporte();
+                idAlojamiento = p.getIdAlojamiento();
+                precio = p.getPrecio();
+                st.executeUpdate("INSERT INTO empleado VALUES ('"+ idPaquete +"','"+ idTransporte +"','"+ 
+                idAlojamiento +"','"+ precio +"')");
             }
             // cierro la conexion
             rs.close();
@@ -706,26 +681,18 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservaalojamiento;");
+            ResultSet rs = st.executeQuery(" DELETE FROM reservaalojamiento;");
             int IDAlojamiento = 0;
             String DNI = "";
             FechaT5 fecha = new FechaT5();
             double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    IDAlojamiento = (int) rs.getObject("DNI");
-                    DNI = (String) rs.getObject("nombre");
-                    fecha = (FechaT5) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
-                    reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, fecha, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
+            for (reservaAlojamiento ra : reservaAlojamientos) {
+                IDAlojamiento = ra.getIDAlojamiento();
+                DNI = ra.getDNI();
+                fecha = ra.getFecha();
+                precio = ra.getPrecio();
+                st.executeUpdate("INSERT INTO empleado VALUES ('"+ IDAlojamiento +"','"+ DNI +"','"+ 
+                fecha +"','"+ precio +"')");
             }
             // cierro la conexion
             rs.close();
@@ -740,26 +707,18 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservatransporte;");
+            ResultSet rs = st.executeQuery("DELETE FROM reservatransporte;");
             int IDTransporte = 0;
             String DNI = "";
             FechaT5 fecha = new FechaT5();
             double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    IDTransporte = (int) rs.getObject("DNI");
-                    DNI = (String) rs.getObject("nombre");
-                    fecha = (FechaT5) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
-                    reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, fecha, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
+            for (reservaTransporte rt : reservaTransportes) {
+                IDTransporte = rt.getIDTransporte();
+                DNI = rt.getDNI();
+                fecha = rt.getFecha();
+                precio = rt.getPrecio();
+                st.executeUpdate("INSERT INTO empleado VALUES ('"+ IDTransporte +"','"+ DNI +"','"+ 
+                fecha +"','"+ precio +"')");
             }
             // cierro la conexion
             rs.close();
@@ -774,26 +733,18 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservapaquete;");
+            ResultSet rs = st.executeQuery("DELETE FROM reservapaquete;");
             int IDPaquete = 0;
             String DNI = "";
             FechaT5 fecha = new FechaT5();
             double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    IDPaquete = (int) rs.getObject("DNI");
-                    DNI = (String) rs.getObject("nombre");
-                    fecha = (FechaT5) rs.getObject("apellido");
-                    precio = (double) rs.getObject("email");
-                    reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, fecha, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
+            for (reservaTransporte rt : reservaTransportes) {
+                IDPaquete = rt.getIDTransporte();
+                DNI = rt.getDNI();
+                fecha = rt.getFecha();
+                precio = rt.getPrecio();
+                st.executeUpdate("INSERT INTO empleado VALUES ('"+ IDPaquete +"','"+ DNI +"','"+ 
+                fecha +"','"+ precio +"')");
             }
             // cierro la conexion
             rs.close();
@@ -803,5 +754,6 @@ public class agenciamain {
             e.printStackTrace();
             System.out.println("Error de Conexión");
         }
+    }
     }
 }
