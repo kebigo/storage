@@ -1,5 +1,6 @@
 
 
+
 .filter:nth-child(4){
     border-right: none;
     padding-left: 1em;
@@ -86,6 +87,17 @@
   .info-salida span, .info-llegada span{
     font-size: 0.85em;
     margin-top: -5px;
+  
+  }
+
+  .info-trayecto span{
+    font-size: 0.8em ;
+   
+  
+  }
+
+  .logo-compañia span{
+    font-size: 1em;
   }
 
   .precio-transporte span{
@@ -105,6 +117,14 @@
     width: 100%;
     background-color: #ccc;
     
+}
+
+.precio-transporte .fav{
+  color: rgba(214, 12, 12, 0.692);
+}
+
+.precio-transporte .case{
+  color: var(--background);
 }
 @media (min-width: 576px) { 
 
