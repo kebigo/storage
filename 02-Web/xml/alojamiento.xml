@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alojamientos>
+   <alojamiento>
+        <tipo>Hotel</tipo>
+        <imagen></imagen>
+        <nombre>Hotel de prueba</nombre>
+        <ciudad>Paris, Francia</ciudad>
+        <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+        <puntuacion>6,4</puntuacion>
+        <comentarios>652</comentarios>
+        <instalaciones>
+            <piscina></piscina>
+        </instalaciones>
+        <precio>30€</precio>
+   </alojamiento> 
+
+   <alojamiento>
+        <tipo>Hotel</tipo>
+        <imagen></imagen>
+        <nombre>Hotel de prueba</nombre>
+        <ciudad>Oslo</ciudad>
+        <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+        <puntuacion>6,4</puntuacion>
+        <comentarios>652</comentarios>
+        <instalaciones>
+            <piscina></piscina>
+        </instalaciones>
+        <precio>30€</precio>
+   </alojamiento> 
+</alojamientos>

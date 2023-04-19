@@ -22,9 +22,29 @@
         </div>
     </section>
 
-    <section class="buscador container-lg mx-auto d-flex justify-content-center align-items-center py-4 py-lg-0 ">
+    <section class="buscador container-lg mx-auto d-flex justify-content-center align-items-center py-4 py-lg-0 position-relative">
+        
+        <div class="tipo-viaje position-absolute d-flex">
+            <div class="filtro-tipo-viaje d-flex align-items-center">
+                <input type="checkbox" checked id="checkbox" />
+                <label class="checkbox" for="checkbox"></label>
+                <label class="ms-2">Solo ida</label>
+            </div>
+
+            <div class="filtro-tipo-viaje d-flex align-items-center">
+                <input type="checkbox" id="checkbox2" />
+                <label class="checkbox" for="checkbox2"></label>
+                <label class="ms-2">Ida y vuelta</label>
+            </div>
+
+           
+        </div>
+
         <div class="buscador-filters  d-lg-flex justify-content-center align-items-center ">
+
+        
             <div class="filter destino col d-flex flex-column align-items-start pb-3 pb-lg-0 me-5 me-lg-0">
+
                 <label class="label-buscador fs-5 fw-semibold" for="destinoList">Origen&nbsp;<i class="fa-solid fa-thumbtack"></i></label>
                 <input class="input-buscador border-0 text-capitalize" list="destinos" type="text" id="destinoList" placeholder="Jalisco, JAL">
                 <datalist id="destinos">
@@ -67,6 +87,9 @@
             <div class=" d-flex justify-content-center buscador_boton mt-5 mt-lg-0">
             <a class=" d-block w-100 text-center py-2 px-4 px-xl-5 text-decoration-none text-white text-center rounded-pill" href="#">Buscar</a>
             </div>
+
+           
+            
         </div>
       
        
@@ -104,7 +127,7 @@
                                     <div class="accordion-body d-flex flex-column">
                                         <label><input type="checkbox" value="Hotel">&nbsp;Avion</label>
                                         <label> <input type="checkbox" value="Apartamento">&nbsp;Autobus</label>
-                                        <label><input type="checkbox" value="Camping">&nbsp;Crucero</label>
+                                        <label><input type="checkbox" value="Camping">&nbsp;Tren</label>
                                     </div>
                                   </div>
                                 </div>
@@ -180,7 +203,7 @@
                     
                     <label><input type="checkbox" value="Hotel">&nbsp;Avion</label>
                     <label> <input type="checkbox" value="Apartamento">&nbsp;Autobus</label>
-                    <label><input type="checkbox" value="Camping">&nbsp;Crucero</label>
+                    <label><input type="checkbox" value="Camping">&nbsp;Tren</label>
                    
                 </div>
 
@@ -248,50 +271,117 @@
 
                 <div class="content  mt-5 w-100 d-flex flex-column">
 
-                    <article class="alojamiento d-flex p-4 p-lg-3 p-xl-4 align-items-center justify-content-between flex-wrap flex-md-nowrap">
-                        <div class="alojamiento-image col-12 col-md-3 me-4 me-lg-5 me-xl-4 me-xxl-0">
-                            <img class="object-fit-cover rounded" src="https://img.freepik.com/foto-gratis/diseno-apartamento-estudio-moderno-dormitorio-sala-estar_1262-12375.jpg?w=1380&t=st=1681523584~exp=1681524184~hmac=6d69f403b3909cf0d3945da01653007db1ee7a26b926fd773012ea42f79fcb7f" alt="">
-                        </div>
-    
-                        <div class="puntuacion d-flex justify-content-center h-auto d-sm-none ms-2 mt-4">
-                            <div class="reviews col-10 ps-xxl-5">
-                                <h4 class="puntuacion-title fw-bold">Excelente</h4>
-                                <h5 class="puntuacion-subtitle">292 comentarios</h5>
+                    <article class="alojamiento p-4 px-lg-3 px-xl-4 d-flex flex-column flex-md-row position-relative">
+
+                        <div class="info-transporte col-12 col-md-8 d-flex">
+
+                            <div class="logo-compañia w-auto d-flex flex-column align-items-center">
+                                <img src="./assets/img/logo_iberia_principal (1).jpg" alt="">
+                                <span class="mt-3 ms-1 fw-semibold">Iberia</span>
                             </div>
-    
-                            <div class="num col ">
-                                <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
+
+                            <div class="info-salida col ps-2 ps-sm-4">
+                                <h2 class="fs-5 fw-bold">07:00</h2>
+                                <span class="d-block">BIO &bull; 22/04</span>
+                            </div>
+
+                            <div class="info-trayecto col col-sm-5 d-flex flex-column align-items-center">
+                                <span>1h 50 min</span>
+                                <div class="divider-horizontal my-1"></div>
+                                <span>Directo</span>
+                            
+                            </div>
+
+                            <div class="info-llegada col d-flex flex-column align-items-end pe-md-2">
+                                <h2 class="fs-5 fw-bold">17:30</h2>
+                                <span class="d-block">LAS &bull; 22/05</span>
                             </div>
                         </div>
-                        
-                        <div class="alojamiento-info col-12 col-sm-7 col-md-6  ms-md-3 ms-xl-0 mt-4 mt-md-0">
-                            <h2 class="title fw-semibold fs-3">Hotel Riu Plaza</h2>
-                            <span class="sub-title fw-bold">Bergamo, Italia</span>
-                            <p class="text fs-6 mt-2 pe-3">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque elit nisi, eu tristique nulla tempor vitae.
-                                 Nam hendrerit mattis aliquam. Cras quis est ultricies, commodo erat at, aliquet metus.  
-                                 
-                            </p>
+
+
+                        <div class="divider-vertical d-none d-md-block position-absolute"></div>
+                        <div class="divider-horizontal mt-4 d-md-none"></div>
+
+                        <div class="precio-transporte w-100 d-flex flex-md-column justify-content-end align-items-center align-items-md-end mt-4 mt-md-0">
+                            <i class="fav fa-solid fa-heart fs-3 mb-md-4 col"></i>
+                            <h5 class="fs-3 title me-3 me-md-0 ">67,43€</h5>
+                            <span class="d-block fw-semibold text-end mt-2 mb-3 d-none d-md-block">Precio para todos los pasajeros</span>
+
+                            <a class=" col-6 mt-md-4 d-block info-button w-auto text-center py-2 px-4 px-xl-5 text-decoration-none text-white text-center rounded-pill" href="#">Reservar vuelo</a>
                         </div>
-    
-                        <div class="alojamiento-extra col-3 col-md d-flex flex-column">
-                            <div class="puntuacion d-flex justify-content-center h-auto d-none d-sm-flex pt-4 pt-lg-0">
-                                <div class="reviews col-10 ps-xxl-5">
-                                    <h4 class="puntuacion-title fw-bold">Excelente</h4>
-                                    <h5 class="puntuacion-subtitle">292 comentarios</h5>
+
+                       
+                       
+                    </article>
+
+                    <article class="alojamiento p-4 px-lg-3 px-xl-4 d-flex flex-column flex-md-row position-relative mt-5">
+
+                        <div class="info-transporte col-12 col-md-8 d-flex flex-column">
+
+                            <div class="info-ida col d-flex">
+                                <div class="logo-compañia w-auto d-flex flex-column align-items-center">
+                                    <img src="./assets/img/logo_iberia_principal (1).jpg" alt="">
+                                    <span class="mt-3 ms-1 fw-semibold fs-6">Iberia</span>
                                 </div>
     
-                                <div class="num col ">
-                                    <span class="card-review d-flex align-items-center justify-content-center text-white fw-bold ">9,4</span>
+                                <div class="info-salida col ps-2 ps-sm-4">
+                                    <h2 class="fs-5 fw-bold">07:00</h2>
+                                    <span class="d-block">BIO &bull; 22/04</span>
+                                </div>
+    
+                                <div class="info-trayecto col col-sm-5 d-flex flex-column align-items-center">
+                                    <span>1h 50 min</span>
+                                    <div class="divider-horizontal my-2"></div>
+                                    <span>Ida</span>
+                                
+                                </div>
+    
+                                <div class="info-llegada col d-flex flex-column align-items-end pe-md-2">
+                                    <h2 class="fs-5 fw-bold">17:30</h2>
+                                    <span class="d-block">LAS &bull; 22/05</span>
                                 </div>
                             </div>
+
+                            <div class="info-salida col d-flex mt-4">
+                                <div class="logo-compañia w-auto d-flex flex-column align-items-center">
+                                    <img src="https://play-lh.googleusercontent.com/UlvFF-Zo2h6_8RdoMh9xWbAcaqSrsIU_yhQPOcH5rbTQ7Av9EvfWFTrAen1EX4X-JxA_" alt="">
+                                    <span class="mt-3 ms-1 fw-semibold">Ryanair</span>
+                                </div>
     
-                            <div class="buttons d-flex flex-sm-column align-items-end">
-                                <a class="info-button col-1 d-block text-center py-2 px-3 mt-5 text-decoration-none text-white rounded-pill" href="#">Mas info</a>
-                                <a class="info-button col-1 d-block text-center py-2 px-3 mt-3 ms-3 ms-sm-0 text-decoration-none text-white rounded-pill" href="#">Reservar</a>
+                                <div class="info-salida col ps-2 ps-sm-4">
+                                    <h2 class="fs-5 fw-bold">07:00</h2>
+                                    <span class="d-block">BIO &bull; 22/04</span>
+                                </div>
     
+                                <div class="info-trayecto col col-sm-5 d-flex flex-column align-items-center">
+                                    <span>1h 50 min</span>
+                                    <div class="divider-horizontal my-2"></div>
+                                    <span>Vuelta</span>
+                                
+                                </div>
+    
+                                <div class="info-llegada col d-flex flex-column align-items-end pe-md-2">
+                                    <h2 class="fs-5 fw-bold">17:30</h2>
+                                    <span class="d-block">LAS &bull; 22/05</span>
+                                </div>
                             </div>
+                     
                         </div>
+
+
+                        <div class="divider-vertical d-none d-md-block position-absolute"></div>
+                        <div class="divider-horizontal mt-4 d-md-none"></div>
+
+                        <div class="precio-transporte w-100 d-flex flex-md-column justify-content-end align-items-center align-items-md-end mt-4 mt-md-0">
+                            <i class="fav fa-solid fa-heart fs-3 mb-md-4 col"></i>
+                            <h5 class="fs-3 title me-3 me-md-0 ">126,84€</h5>
+                            <span class="d-block fw-semibold text-end mt-2 mb-3 d-none d-md-block">Precio para todos los pasajeros</span>
+
+                            <a class=" col-6 mt-md-4 d-block info-button w-auto text-center py-2 px-4 px-xl-5 text-decoration-none text-white text-center rounded-pill" href="#">Reservar vuelo</a>
+                        </div>
+
+                       
+                       
                     </article>
                    
                     

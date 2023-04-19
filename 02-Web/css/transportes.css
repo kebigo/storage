@@ -1,5 +1,6 @@
 
 
+
 .filter:nth-child(4){
     border-right: none;
     padding-left: 1em;
@@ -35,7 +36,96 @@
     background-color: #f5f5f5;
 }
 
+.tipo-viaje {
+    margin-top: -24em;
+    left: 5px;
+}
 
+
+  .filtro-tipo-viaje .checkbox {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.2em;
+    width: 1.2em;
+  }
+  
+  .filtro-tipo-viaje .checkbox:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    opacity: 0;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 11px;
+    margin-top: 4px;
+    margin-left: 3px;
+  }
+  
+  .filtro-tipo-viaje input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .filtro-tipo-viaje input[type="checkbox"]:checked + .checkbox {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+  }
+  
+  .filtro-tipo-viaje input[type="checkbox"]:checked + .checkbox:after {
+    opacity: 1;
+  }
+  
+  .logo-compañia img{
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+  }
+
+  .info-salida span, .info-llegada span{
+    font-size: 0.85em;
+    margin-top: -5px;
+  
+  }
+
+  .info-trayecto span{
+    font-size: 0.8em ;
+   
+  
+  }
+
+  .logo-compañia span{
+    font-size: 1em;
+  }
+
+  .precio-transporte span{
+    font-size: 0.8em;
+  }
+
+.divider-vertical{
+    width:2px;
+    height: 100%;
+    background-color: #ccc;
+    top: 0;
+    right: 33%;
+}
+
+.divider-horizontal{
+    height: 2px;
+    width: 100%;
+    background-color: #ccc;
+    
+}
+
+.precio-transporte .fav{
+  color: rgba(214, 12, 12, 0.692);
+}
+
+.precio-transporte .case{
+  color: var(--background);
+}
 @media (min-width: 576px) { 
 
  }
@@ -50,6 +140,11 @@
     .filter:nth-child(3){
         border-right: 2px solid var(--primary);
         
+    }
+
+    .tipo-viaje{
+        margin-top: -11em;
+        left: 30px;
     }
  }
 
