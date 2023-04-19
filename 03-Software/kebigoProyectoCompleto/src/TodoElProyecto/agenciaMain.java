@@ -4,6 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.security.auth.callback.TextInputCallback;
+
 public class agenciamain {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
@@ -80,7 +82,8 @@ public class agenciamain {
                     origen = (String) rs.getObject("origen");
                     puntuacion = (int) rs.getObject("puntuacion");
                     extras = (String) rs.getObject("extras");
-                    transportesArray.add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
+                    transportesArray
+                            .add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
                 }
             } else {
                 // si no hay registros
@@ -160,7 +163,8 @@ public class agenciamain {
                     puntuacion = (int) rs.getObject("puntuacion");
                     extra = (String) rs.getObject("extras");
                     instalaciones = (String) rs.getObject("instalaciones");
-                    alojamientosArray.add(new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
+                    alojamientosArray.add(
+                            new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
                 }
             } else {
                 // si no hay registros
@@ -391,7 +395,6 @@ public class agenciamain {
                         break;
                     case 2:
                         int opcion2 = 0;
-                        Empleado = new empleado();
                         while (opcion2 < 0 || opcion2 > 3) {
                             System.out.println("Que desea añadir");
                             System.out.println("1- Transporte");
@@ -461,42 +464,91 @@ public class agenciamain {
                         }
                         break;
                     case 5:
-                    opcion2 = 0;
-                    Empleado = new empleado();
-                    while (opcion2 < 0 || opcion2 > 3) {
-                        System.out.println("Que desea ver");
-                        System.out.println("1- Transporte");
-                        System.out.println("2- Alojamiento");
-                        System.out.println("3- Paquete");
-                        System.out.println("opcion:");
-                        opcion2 = teclado.nextInt();
-                        if (opcion2 < 0 || opcion2 > 3) {
-                            System.out.println("Por favor, elija una opcion valida por favor");
+                        opcion2 = 0;
+                        while (opcion2 < 0 || opcion2 > 3) {
+                            System.out.println("Que desea ver");
+                            System.out.println("1- Transporte");
+                            System.out.println("2- Alojamiento");
+                            System.out.println("3- Paquete");
+                            System.out.println("opcion:");
+                            opcion2 = teclado.nextInt();
+                            if (opcion2 < 0 || opcion2 > 3) {
+                                System.out.println("Por favor, elija una opcion valida por favor");
+                            }
                         }
-                    }
-                    switch (opcion2) {
-                        case 1:
-                            for (transporte t : transportesArray) {
-                                t.print();
-                            }
-                            break;
-                        case 2:
-                            for (alojamiento a : alojamientosArray) {
-                                a.print();
-                            }
-                            break;
-                        case 3:
-                            for (paquete p : paquetesArray) {
-                                p.print();
-                            }
-                            break;
-                    }
+                        switch (opcion2) {
+                            case 1:
+                                for (transporte t : transportesArray) {
+                                    t.print();
+                                }
+                                break;
+                            case 2:
+                                for (alojamiento a : alojamientosArray) {
+                                    a.print();
+                                }
+                                break;
+                            case 3:
+                                for (paquete p : paquetesArray) {
+                                    p.print();
+                                }
+                                break;
+                        }
                         break;
                     case 6:
+                        opcion2 = 0;
+                        while (opcion2 < 0 || opcion2 > 3) {
+                            System.out.println("Que desea Eliminar");
+                            System.out.println("1- Transporte");
+                            System.out.println("2- Alojamiento");
+                            System.out.println("3- Paquete");
+                            System.out.println("opcion:");
+                            opcion2 = teclado.nextInt();
+                            if (opcion2 < 0 || opcion2 > 3) {
+                                System.out.println("Por favor, elija una opcion valida por favor");
+                            }
+                        }
+                        switch (opcion2) {
+                            case 1:
+                                Transporte = new transporte();
+                                System.out.println("Transporte: ");
+                                Transporte.leer(teclado);
 
+                                if (transportesArray.remove(Transporte)) {
+                                    System.out.println("El elemento ha sido borrado");
+                                } else {
+                                    System.out.println("El Transporte NO se ha encontrado");
+                                }
+                                Modificado = true;
+                                break;
+                            case 2:
+                                Alojamiento = new alojamiento();
+                                System.out.println("Transporte: ");
+                                Alojamiento.leer(teclado);
+
+                                if (alojamientosArray.remove(Alojamiento)) {
+                                    System.out.println("El elemento ha sido borrado");
+                                } else {
+                                    System.out.println("El Transporte NO se ha encontrado");
+                                }
+                                Modificado = true;
+                                break;
+                            case 3:
+                                Paquete = new paquete();
+                                System.out.println("Transporte: ");
+                                Paquete.leer(teclado);
+
+                                if (paquetesArray.remove(Paquete)) {
+                                    System.out.println("El elemento ha sido borrado");
+                                } else {
+                                    System.out.println("El Transporte NO se ha encontrado");
+                                }
+                                Modificado = true;
+                                break;
+                        }
                         break;
                 }
             } else if (login && !empleado) {
+                int opcion2 = 0;
                 while (opcion < 0 || opcion > 8) {
                     System.out.println(" 0- Salir del Programa");
                     System.out.println(" 1- Ver Trans/Aloj/Paquete");
@@ -511,249 +563,282 @@ public class agenciamain {
                 }
                 switch (opcion) {
                     case 1:
-
+                        opcion2 = 0;
+                        while (opcion2 < 0 || opcion2 > 3) {
+                            System.out.println("Que desea ver");
+                            System.out.println("1- Transporte");
+                            System.out.println("2- Alojamiento");
+                            System.out.println("3- Paquete");
+                            System.out.println("opcion:");
+                            opcion2 = teclado.nextInt();
+                            if (opcion2 < 0 || opcion2 > 3) {
+                                System.out.println("Por favor, elija una opcion valida por favor");
+                            }
+                        }
+                        switch (opcion2) {
+                            case 1:
+                                for (transporte t : transportesArray) {
+                                    t.print();
+                                }
+                                break;
+                            case 2:
+                                for (alojamiento a : alojamientosArray) {
+                                    a.print();
+                                }
+                                break;
+                            case 3:
+                                for (paquete p : paquetesArray) {
+                                    p.print();
+                                }
+                                break;
+                        }
                         break;
+                    case 2:
+                    
+                    break;
                 }
             }
         } while (opcion > 0);
         teclado.close();
-        if(Modificado){
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            st.executeUpdate("DELETE FROM empleado;");
-            String DNI = "";
-            String Nombre = "";
-            String apellido = "";
-            String Email = "";
-            String telefono = "";
-            String contrasena = "";
-            String departamento = "";
-            String rol = "";
+        if (Modificado) {
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                st.executeUpdate("DELETE FROM empleado;");
+                String DNI = "";
+                String Nombre = "";
+                String apellido = "";
+                String Email = "";
+                String telefono = "";
+                String contrasena = "";
+                String departamento = "";
+                String rol = "";
 
-            for (empleado e : empleadosArray) {
-                DNI = e.getDNI();
-                Nombre = e.getNombre();
-                apellido = e.getApellido();
-                Email = e.getEmail();
-                telefono = e.getTelefono();
-                contrasena = e.getContraseña();
-                departamento = e.getDepartamento();
-                rol = e.getRol();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ DNI +"','"+ Nombre +"','"+ 
-                apellido +"','"+ Email +"','"+ telefono +"','"+ contrasena +"','"+ departamento +"','"+ rol +"')");
-            }
+                for (empleado e : empleadosArray) {
+                    DNI = e.getDNI();
+                    Nombre = e.getNombre();
+                    apellido = e.getApellido();
+                    Email = e.getEmail();
+                    telefono = e.getTelefono();
+                    contrasena = e.getContraseña();
+                    departamento = e.getDepartamento();
+                    rol = e.getRol();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + DNI + "','" + Nombre + "','" +
+                            apellido + "','" + Email + "','" + telefono + "','" + contrasena + "','" + departamento
+                            + "','" + rol + "')");
+                }
 
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("DELETE FROM transporte;");
-            int idTransporte = 0;
-            double precio = 0;
-            String tipo = "";
-            String destino = "";
-            String origen = "";
-            int puntuacion = 0;
-            String extras = "";
-            
-            for (transporte t : transportesArray) {
-                idTransporte = t.getIdTransporte();
-                precio = t.getPrecio();
-                tipo = t.getTipo();
-                destino = t.getDestino();
-                origen = t.getOrigen();
-                puntuacion = t.getPuntuacion();
-                extras = t.getExtras();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ idTransporte +"','"+ precio +"','"+ 
-                tipo +"','"+ destino +"','"+ origen +"','"+ puntuacion +"','"+ extras +"')");
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("DELETE FROM viajero;");
-            String DNI = "";
-            String Nombre = "";
-            String apellido = "";
-            String Email = "";
-            String telefono = "";
-            String contrasena = "";
-            int vacunasCOVID = 0;
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery("DELETE FROM transporte;");
+                int idTransporte = 0;
+                double precio = 0;
+                String tipo = "";
+                String destino = "";
+                String origen = "";
+                int puntuacion = 0;
+                String extras = "";
 
-            for (viajero v : viajerosArray) {
-                DNI = v.getDNI();
-                Nombre = v.getNombre();
-                apellido = v.getApellido();
-                Email = v.getEmail();
-                telefono = v.getTelefono();
-                contrasena = v.getContraseña();
-                vacunasCOVID = v.getVacunasCOVID();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ DNI +"','"+ Nombre +"','"+ 
-                apellido +"','"+ Email +"','"+ telefono +"','"+ contrasena +"','"+ vacunasCOVID +"')");
+                for (transporte t : transportesArray) {
+                    idTransporte = t.getIdTransporte();
+                    precio = t.getPrecio();
+                    tipo = t.getTipo();
+                    destino = t.getDestino();
+                    origen = t.getOrigen();
+                    puntuacion = t.getPuntuacion();
+                    extras = t.getExtras();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + idTransporte + "','" + precio + "','" +
+                            tipo + "','" + destino + "','" + origen + "','" + puntuacion + "','" + extras + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("DELETE FROM alojamiento;");
-            int idAlojamiento = 0;
-            double precio = 0;
-            String tipo = "";
-            String destino = "";
-            int puntuacion = 0;
-            String extra = "";
-            String instalaciones = "";
-            for (alojamiento a : alojamientosArray) {
-                idAlojamiento = a.getIdAlojamiento();
-                precio = a.getPrecio();
-                tipo = a.getTipo();
-                destino = a.getDestino();
-                puntuacion = a.getPuntuacion();
-                extra = a.getExtra();
-                instalaciones = a.getInstalaciones();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ idAlojamiento +"','"+ precio +"','"+ 
-                tipo +"','"+ destino +"','"+ puntuacion +"','"+ extra +"','"+ instalaciones +"')");
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery("DELETE FROM viajero;");
+                String DNI = "";
+                String Nombre = "";
+                String apellido = "";
+                String Email = "";
+                String telefono = "";
+                String contrasena = "";
+                int vacunasCOVID = 0;
+
+                for (viajero v : viajerosArray) {
+                    DNI = v.getDNI();
+                    Nombre = v.getNombre();
+                    apellido = v.getApellido();
+                    Email = v.getEmail();
+                    telefono = v.getTelefono();
+                    contrasena = v.getContraseña();
+                    vacunasCOVID = v.getVacunasCOVID();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + DNI + "','" + Nombre + "','" +
+                            apellido + "','" + Email + "','" + telefono + "','" + contrasena + "','" + vacunasCOVID
+                            + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("DELETE FROM paquete;");
-            int idPaquete = 0;
-            int idTransporte = 0;
-            int idAlojamiento = 0;
-            double precio = 0;
-            for (paquete p : paquetesArray) {
-                idPaquete = p.getIdPaquete();
-                idTransporte = p.getIdTransporte();
-                idAlojamiento = p.getIdAlojamiento();
-                precio = p.getPrecio();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ idPaquete +"','"+ idTransporte +"','"+ 
-                idAlojamiento +"','"+ precio +"')");
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery("DELETE FROM alojamiento;");
+                int idAlojamiento = 0;
+                double precio = 0;
+                String tipo = "";
+                String destino = "";
+                int puntuacion = 0;
+                String extra = "";
+                String instalaciones = "";
+                for (alojamiento a : alojamientosArray) {
+                    idAlojamiento = a.getIdAlojamiento();
+                    precio = a.getPrecio();
+                    tipo = a.getTipo();
+                    destino = a.getDestino();
+                    puntuacion = a.getPuntuacion();
+                    extra = a.getExtra();
+                    instalaciones = a.getInstalaciones();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + idAlojamiento + "','" + precio + "','" +
+                            tipo + "','" + destino + "','" + puntuacion + "','" + extra + "','" + instalaciones + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery(" DELETE FROM reservaalojamiento;");
-            int IDAlojamiento = 0;
-            String DNI = "";
-            FechaT5 fecha = new FechaT5();
-            double precio = 0;
-            for (reservaAlojamiento ra : reservaAlojamientos) {
-                IDAlojamiento = ra.getIDAlojamiento();
-                DNI = ra.getDNI();
-                fecha = ra.getFecha();
-                precio = ra.getPrecio();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ IDAlojamiento +"','"+ DNI +"','"+ 
-                fecha +"','"+ precio +"')");
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery("DELETE FROM paquete;");
+                int idPaquete = 0;
+                int idTransporte = 0;
+                int idAlojamiento = 0;
+                double precio = 0;
+                for (paquete p : paquetesArray) {
+                    idPaquete = p.getIdPaquete();
+                    idTransporte = p.getIdTransporte();
+                    idAlojamiento = p.getIdAlojamiento();
+                    precio = p.getPrecio();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + idPaquete + "','" + idTransporte + "','" +
+                            idAlojamiento + "','" + precio + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("DELETE FROM reservatransporte;");
-            int IDTransporte = 0;
-            String DNI = "";
-            FechaT5 fecha = new FechaT5();
-            double precio = 0;
-            for (reservaTransporte rt : reservaTransportes) {
-                IDTransporte = rt.getIDTransporte();
-                DNI = rt.getDNI();
-                fecha = rt.getFecha();
-                precio = rt.getPrecio();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ IDTransporte +"','"+ DNI +"','"+ 
-                fecha +"','"+ precio +"')");
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery(" DELETE FROM reservaalojamiento;");
+                int IDAlojamiento = 0;
+                String DNI = "";
+                FechaT5 fecha = new FechaT5();
+                double precio = 0;
+                for (reservaAlojamiento ra : reservaAlojamientos) {
+                    IDAlojamiento = ra.getIDAlojamiento();
+                    DNI = ra.getDNI();
+                    fecha = ra.getFecha();
+                    precio = ra.getPrecio();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + IDAlojamiento + "','" + DNI + "','" +
+                            fecha + "','" + precio + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("DELETE FROM reservapaquete;");
-            int IDPaquete = 0;
-            String DNI = "";
-            FechaT5 fecha = new FechaT5();
-            double precio = 0;
-            for (reservaTransporte rt : reservaTransportes) {
-                IDPaquete = rt.getIDTransporte();
-                DNI = rt.getDNI();
-                fecha = rt.getFecha();
-                precio = rt.getPrecio();
-                st.executeUpdate("INSERT INTO empleado VALUES ('"+ IDPaquete +"','"+ DNI +"','"+ 
-                fecha +"','"+ precio +"')");
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery("DELETE FROM reservatransporte;");
+                int IDTransporte = 0;
+                String DNI = "";
+                FechaT5 fecha = new FechaT5();
+                double precio = 0;
+                for (reservaTransporte rt : reservaTransportes) {
+                    IDTransporte = rt.getIDTransporte();
+                    DNI = rt.getDNI();
+                    fecha = rt.getFecha();
+                    precio = rt.getPrecio();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + IDTransporte + "','" + DNI + "','" +
+                            fecha + "','" + precio + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
             }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                ResultSet rs = st.executeQuery("DELETE FROM reservapaquete;");
+                int IDPaquete = 0;
+                String DNI = "";
+                FechaT5 fecha = new FechaT5();
+                double precio = 0;
+                for (reservaTransporte rt : reservaTransportes) {
+                    IDPaquete = rt.getIDTransporte();
+                    DNI = rt.getDNI();
+                    fecha = rt.getFecha();
+                    precio = rt.getPrecio();
+                    st.executeUpdate("INSERT INTO empleado VALUES ('" + IDPaquete + "','" + DNI + "','" +
+                            fecha + "','" + precio + "')");
+                }
+                // cierro la conexion
+                rs.close();
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
+            }
         }
-    }
     }
 }
