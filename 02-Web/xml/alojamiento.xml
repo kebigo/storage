@@ -3,7 +3,7 @@
    <alojamiento>
         <tipo>Hotel</tipo>
         <imagen></imagen>
-        <nombre>Hotel de prueba</nombre>
+        <nombre>NH hotel</nombre>
         <ciudad>Paris, Francia</ciudad>
         <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
         <puntuacion>6,4</puntuacion>
@@ -17,8 +17,8 @@
    <alojamiento>
         <tipo>Hotel</tipo>
         <imagen></imagen>
-        <nombre>Hotel de prueba</nombre>
-        <ciudad>Oslo</ciudad>
+        <nombre>Camping las arenas</nombre>
+        <ciudad>Noja</ciudad>
         <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
         <puntuacion>6,4</puntuacion>
         <comentarios>652</comentarios>
@@ -27,4 +27,76 @@
         </instalaciones>
         <precio>30€</precio>
    </alojamiento> 
+
+   <alojamiento>
+    <tipo>Hotel</tipo>
+    <imagen></imagen>
+    <nombre>PortAventura</nombre>
+    <ciudad>Cataluña</ciudad>
+    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+    <puntuacion>6,4</puntuacion>
+    <comentarios>652</comentarios>
+    <instalaciones>
+        <piscina></piscina>
+    </instalaciones>
+    <precio>30€</precio>
+</alojamiento> 
+
+<alojamiento>
+    <tipo>Hotel</tipo>
+    <imagen></imagen>
+    <nombre>Arkaiko hotel</nombre>
+    <ciudad>Elorrio</ciudad>
+    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+    <puntuacion>6,4</puntuacion>
+    <comentarios>652</comentarios>
+    <instalaciones>
+        <piscina></piscina>
+    </instalaciones>
+    <precio>30€</precio>
+</alojamiento> 
+
+<alojamiento>
+    <tipo>Hotel</tipo>
+    <imagen></imagen>
+    <nombre>Julen Resort</nombre>
+    <ciudad>Amorebieta</ciudad>
+    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+    <puntuacion>6,4</puntuacion>
+    <comentarios>652</comentarios>
+    <instalaciones>
+        <piscina></piscina>
+    </instalaciones>
+    <precio>30€</precio>
+</alojamiento> 
+
+<alojamiento>
+    <tipo>Hotel</tipo>
+    <imagen></imagen>
+    <nombre>Paloma luxury</nombre>
+    <ciudad>La peña, Bilbao</ciudad>
+    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+    <puntuacion>6,4</puntuacion>
+    <comentarios>652</comentarios>
+    <instalaciones>
+        <piscina></piscina>
+    </instalaciones>
+    <precio>30€</precio>
+</alojamiento> 
+
+<alojamiento>
+    <tipo>Hotel</tipo>
+    <imagen></imagen>
+    <nombre>Hotel aldekoa</nombre>
+    <ciudad>La peña, Bilbao</ciudad>
+    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
+    <puntuacion>6,4</puntuacion>
+    <comentarios>652</comentarios>
+    <instalaciones>
+        <piscina></piscina>
+    </instalaciones>
+    <precio>30€</precio>
+</alojamiento> 
+
+
 </alojamientos>
