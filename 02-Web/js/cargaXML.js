@@ -8,25 +8,26 @@ xhr.onreadystatechange = function(){
 xhr.open("GET", "./xml/alojamiento.xml", true);
 xhr.send();
 
+
+
 function cargarXML(xml){
     
+    const padre = document.querySelector(".content");
+    const hijo = document.querySelector(".content .alojamiento")
+
     var docXML = xml.responseXML;
     var lista = docXML.getElementsByTagName("alojamiento");
-
-    const padre = document.querySelectorAll(".content");
-    const hijo = document.querySelectorAll(".content article")
-    let clone = hijo.cloneNode(true);
-        padre.innerHTML(clone);
-
-        console.log(padre);
-
+   
     for(let i = 0; i<lista.length; i++){
+        var clone = hijo.cloneNode(true);
+        padre.appendChild(clone);
+        document.querySelector(".alojamiento-info .title").innerText = lista[i].getElementsByTagName("nombre")[0].textContent;
+        document.querySelector(".alojamiento-info .sub-title").innerText = lista[i].getElementsByTagName("ciudad")[0].textContent;
 
-        
-
-        document.querySelector(".ciudad").innerText = lista[i].getElementsByTagName("ciudad")[0].textContent;
-        
     }
- 
+
+    padre.removeChild(document.getElementById("padre").children[1]);
+
    
 }
+
