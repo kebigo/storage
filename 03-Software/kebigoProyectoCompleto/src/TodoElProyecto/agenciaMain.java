@@ -4,8 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.security.auth.callback.TextInputCallback;
-
 public class agenciamain {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
@@ -594,7 +592,55 @@ public class agenciamain {
                         }
                         break;
                     case 2:
-                    
+                    opcion2 = 0;
+                    while (opcion2 < 0 || opcion2 > 3) {
+                            System.out.println("Que quieres reservar?");
+                            System.out.println("1- Transporte");
+                            System.out.println("2- Alojamiento");
+                            System.out.println("3- Paquete");
+                            System.out.println("opcion:");
+                            opcion2 = teclado.nextInt();
+                            if (opcion2 < 0 || opcion2 > 3) {
+                                System.out.println("Por favor, elija una opcion valida por favor");
+                            }
+                        }
+                        switch (opcion2) {
+                            case 1:
+                            Transporte = new transporte();
+                            int idtransporte = 0;
+                            boolean encontrado =false;
+                            String dni = "";
+                            double precio = 0;
+                            FechaT5 fecha = new FechaT5();
+                                System.out.println("Escribe el id del transporte que desea reservar");
+                                idtransporte = teclado.nextInt();
+                                for (transporte t : transportesArray) {
+                                    if(t.idTransporte == idtransporte){
+                                        precio = t.getPrecio();
+                                        encontrado = true;
+                                    }
+                                }
+                                if (!encontrado) {
+                                    System.err.println("No se a encontrado ningun transporte ");
+                                }
+                                for (viajero v : viajerosArray) {
+                                    if (email.equals(v.getEmail())) {
+                                        dni = v.getDNI();
+                                    }
+                                }
+                                reservaTransportes.add(new reservaTransporte(idtransporte, dni, fecha,precio));
+                                break;
+                            case 2:
+                                for (alojamiento a : alojamientosArray) {
+                                    a.print();
+                                }
+                                break;
+                            case 3:
+                                for (paquete p : paquetesArray) {
+                                    p.print();
+                                }
+                                break;
+                        }
                     break;
                 }
             }

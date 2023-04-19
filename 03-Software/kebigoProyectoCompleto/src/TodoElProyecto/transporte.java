@@ -119,4 +119,5 @@ public class transporte {
             this.precio = teclado.nextInt();
             System.out.println("Se agrego el usuario correctamente");
     }
+    
 }
