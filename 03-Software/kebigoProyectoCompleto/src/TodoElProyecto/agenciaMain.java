@@ -592,6 +592,7 @@ public class agenciamain {
                         }
                         break;
                     case 2:
+                    
                     opcion2 = 0;
                     while (opcion2 < 0 || opcion2 > 3) {
                             System.out.println("Que quieres reservar?");
