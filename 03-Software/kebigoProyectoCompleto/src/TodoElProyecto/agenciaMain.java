@@ -20,6 +20,7 @@ public class agenciamain {
         alojamiento Alojamiento;
         paquete Paquete;
         boolean Modificado = false;
+        boolean admin = false;
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
             // si se ha conectado correctamente
@@ -364,7 +365,9 @@ public class agenciamain {
             if (login && empleado) {// Vista empleado(Superior o Dueño)
                 while (opcion < 0 || opcion > 8) {
                     System.out.println(" 0- Salir del Programa");
-                    System.out.println(" 1- Añadir un nuevo empleado");
+                    if (admin) {
+                        System.out.println(" 1- Añadir un nuevo empleado");
+                    }
                     System.out.println(" 2- Añadir nuevo Trans/Aloj/Paquete");
                     System.out.println(" 3- Ver empelados");
                     System.out.println(" 4- Ver reservas");
