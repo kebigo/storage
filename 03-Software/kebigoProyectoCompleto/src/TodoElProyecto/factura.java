@@ -1,38 +1,39 @@
 package TodoElProyecto;
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class factura implements facturacion {
     protected int IDFactura;
     protected String DNI;
-    protected FechaT5 fecha;
+    protected Date fecha;
     protected ArrayList<LineaFactura> lineasfactura = new ArrayList<>();
     protected int total;
 
     public factura() {
         this.IDFactura = 0;
         this.DNI = "";
-        this.fecha = new FechaT5();
+        this.fecha = new Date(0000-00-00);
         this.lineasfactura = new ArrayList<LineaFactura>();
     }
 
     public factura(factura f) {
         this.IDFactura = f.IDFactura;
         this.DNI = f.DNI;
-        this.fecha = new FechaT5(f.fecha);
+        this.fecha = f.fecha;
         this.lineasfactura = f.lineasfactura;
     }
 
-    public factura(int i, String d, FechaT5 f, int t, ArrayList<LineaFactura> array) {
+    public factura(int i, String d, Date f, int t, ArrayList<LineaFactura> array) {
         this.IDFactura = i;
         this.DNI = d;
-        this.fecha = new FechaT5(f);
+        this.fecha = f;
         this.lineasfactura = array;
     }
 
     public factura(int i, String d, int t, ArrayList<LineaFactura> array) {
         this.IDFactura = i;
         this.DNI = d;
-        this.fecha = new FechaT5();
+        this.fecha = new Date(0000-00-00);
         this.lineasfactura = array;
     }
 
@@ -82,11 +83,11 @@ public class factura implements facturacion {
         this.DNI = DNI;
     }
 
-    public FechaT5 getFecha() {
+    public Date getFecha() {
         return this.fecha;
     }
 
-    public void setFecha(FechaT5 fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 

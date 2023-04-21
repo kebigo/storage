@@ -64,7 +64,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.transporte;");
+            ResultSet rs = st.executeQuery("SELECT * FROM transporte;");
             int idTransporte = 0;
             double precio = 0;
             String tipo = "";
@@ -72,11 +72,7 @@ public class agenciamain {
             String origen = "";
             int puntuacion = 0;
             String extras = "";
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
+            
                 while (rs.next()) {
                     idTransporte = (int) rs.getObject("IDTransporte");
                     precio = (double) rs.getObject("precio");
@@ -88,10 +84,7 @@ public class agenciamain {
                     transportesArray
                             .add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
                 }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
+            
             // cierro la conexion
             rs.close();
             conexion.close();
@@ -105,7 +98,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.viajero;");
+            ResultSet rs = st.executeQuery("SELECT * FROM viajero;");
             String DNI = "";
             String nombre = "";
             String apellido = "";
@@ -113,7 +106,6 @@ public class agenciamain {
             String telefono = "";
             String contrasena = "";
             int vacunasCOVID = 0;
-            if (rs.first()) {
                 // si hay registros
                 // vuelvo al primero
                 rs.beforeFirst();
@@ -128,11 +120,7 @@ public class agenciamain {
                     vacunasCOVID = (int) rs.getObject("departamento");
                     viajerosArray.add(new viajero(DNI, nombre, apellido, email, telefono, contrasena, vacunasCOVID));
                 }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // cierro la conexion
+            
             rs.close();
             conexion.close();
         } catch (SQLException e) {
@@ -145,7 +133,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.alojamiento;");
+            ResultSet rs = st.executeQuery("SELECT * FROM alojamiento;");
             int idAlojamiento = 0;
             double precio = 0;
             String tipo = "";
@@ -186,7 +174,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.paquete;");
+            ResultSet rs = st.executeQuery("SELECT * FROM paquete;");
             int idPaquete = 0;
             int idTransporte = 0;
             int idAlojamiento = 0;
@@ -220,7 +208,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservaalojamiento;");
+            ResultSet rs = st.executeQuery("SELECT * FROM reservaalojamiento;");
             int IDAlojamiento = 0;
             String DNI = "";
             Date Fecha = new Date(0000-00-00);
@@ -254,7 +242,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservatransporte;");
+            ResultSet rs = st.executeQuery("SELECT * FROM reservatransporte;");
             int IDTransporte = 0;
             String DNI = "";
             Date Fecha = new Date(0000-00-00);
@@ -288,7 +276,7 @@ public class agenciamain {
             // si se ha conectado correctamente
             System.out.println("Conexión Correcta.");
             Statement st = conexion.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservapaquete;");
+            ResultSet rs = st.executeQuery("SELECT * FROM reservapaquete;");
             int IDPaquete = 0;
             String DNI = "";
             Date Fecha = new Date(0000-00-00);
