@@ -1,8 +1,9 @@
 package TodoElProyecto;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.util.*;
+import java.sql.Date;
 
 public class agenciamain {
     public static void main(String[] args) {
@@ -21,6 +22,9 @@ public class agenciamain {
         paquete Paquete;
         boolean Modificado = false;
         boolean admin = false;
+        Date fecha;
+        LocalDate fechaLocalDate;
+
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
             // si se ha conectado correctamente
@@ -219,7 +223,7 @@ public class agenciamain {
             ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservaalojamiento;");
             int IDAlojamiento = 0;
             String DNI = "";
-            FechaT5 fecha = new FechaT5();
+            Date Fecha = new Date(0000-00-00);
             double precio = 0;
             if (rs.first()) {
                 // si hay registros
@@ -229,9 +233,9 @@ public class agenciamain {
                 while (rs.next()) {
                     IDAlojamiento = (int) rs.getObject("IDAlojamiento");
                     DNI = (String) rs.getObject("DNI");
-                    fecha = (FechaT5) rs.getObject("fecha");
+                    Fecha = (Date) rs.getObject("fecha");
                     precio = (double) rs.getObject("precio");
-                    reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, fecha, precio));
+                    reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, Fecha, precio));
                 }
             } else {
                 // si no hay registros
@@ -253,7 +257,7 @@ public class agenciamain {
             ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservatransporte;");
             int IDTransporte = 0;
             String DNI = "";
-            FechaT5 fecha = new FechaT5();
+            Date Fecha = new Date(0000-00-00);
             double precio = 0;
             if (rs.first()) {
                 // si hay registros
@@ -263,9 +267,9 @@ public class agenciamain {
                 while (rs.next()) {
                     IDTransporte = (int) rs.getObject("IDTransporte");
                     DNI = (String) rs.getObject("DNI");
-                    fecha = (FechaT5) rs.getObject("fecha");
+                    Fecha = (Date) rs.getObject("fecha");
                     precio = (double) rs.getObject("precio");
-                    reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, fecha, precio));
+                    reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, Fecha, precio));
                 }
             } else {
                 // si no hay registros
@@ -287,7 +291,7 @@ public class agenciamain {
             ResultSet rs = st.executeQuery("SELECT * FROM agenciadeviajes.reservapaquete;");
             int IDPaquete = 0;
             String DNI = "";
-            FechaT5 fecha = new FechaT5();
+            Date Fecha = new Date(0000-00-00);
             double precio = 0;
             if (rs.first()) {
                 // si hay registros
@@ -297,9 +301,9 @@ public class agenciamain {
                 while (rs.next()) {
                     IDPaquete = (int) rs.getObject("IDPaquete");
                     DNI = (String) rs.getObject("DNI");
-                    fecha = (FechaT5) rs.getObject("fecha");
+                    Fecha = (Date) rs.getObject("fecha");
                     precio = (double) rs.getObject("precio");
-                    reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, fecha, precio));
+                    reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, Fecha, precio));
                 }
             } else {
                 // si no hay registros
@@ -615,7 +619,8 @@ public class agenciamain {
                             boolean encontrado =false;
                             String dni = "";
                             double precio = 0;
-                            FechaT5 fecha = new FechaT5();
+                            fecha = new Date(0000-00-00);
+
                                 System.out.println("Escribe el id del transporte que desea reservar");
                                 idtransporte = teclado.nextInt();
                                 for (transporte t : transportesArray) {
@@ -630,6 +635,8 @@ public class agenciamain {
                                 for (viajero v : viajerosArray) {
                                     if (email.equals(v.getEmail())) {
                                         dni = v.getDNI();
+                                        fechaLocalDate = LocalDate.now();
+                                        fecha = java.sql.Date.valueOf(fechaLocalDate);
                                     }
                                 }
                                 reservaTransportes.add(new reservaTransporte(idtransporte, dni, fecha,precio));
@@ -819,15 +826,15 @@ public class agenciamain {
                 ResultSet rs = st.executeQuery(" DELETE FROM reservaalojamiento;");
                 int IDAlojamiento = 0;
                 String DNI = "";
-                FechaT5 fecha = new FechaT5();
+                Date Fecha = new Date(0000-00-00);
                 double precio = 0;
                 for (reservaAlojamiento ra : reservaAlojamientos) {
                     IDAlojamiento = ra.getIDAlojamiento();
                     DNI = ra.getDNI();
-                    fecha = ra.getFecha();
+                    Fecha = ra.getFecha();
                     precio = ra.getPrecio();
                     st.executeUpdate("INSERT INTO empleado VALUES ('" + IDAlojamiento + "','" + DNI + "','" +
-                            fecha + "','" + precio + "')");
+                            Fecha + "','" + precio + "')");
                 }
                 // cierro la conexion
                 rs.close();
@@ -845,15 +852,15 @@ public class agenciamain {
                 ResultSet rs = st.executeQuery("DELETE FROM reservatransporte;");
                 int IDTransporte = 0;
                 String DNI = "";
-                FechaT5 fecha = new FechaT5();
+                Date Fecha = new Date(0000-00-00);
                 double precio = 0;
                 for (reservaTransporte rt : reservaTransportes) {
                     IDTransporte = rt.getIDTransporte();
                     DNI = rt.getDNI();
-                    fecha = rt.getFecha();
+                    Fecha = rt.getFecha();
                     precio = rt.getPrecio();
                     st.executeUpdate("INSERT INTO empleado VALUES ('" + IDTransporte + "','" + DNI + "','" +
-                            fecha + "','" + precio + "')");
+                            Fecha + "','" + precio + "')");
                 }
                 // cierro la conexion
                 rs.close();
@@ -871,15 +878,15 @@ public class agenciamain {
                 ResultSet rs = st.executeQuery("DELETE FROM reservapaquete;");
                 int IDPaquete = 0;
                 String DNI = "";
-                FechaT5 fecha = new FechaT5();
+                Date Fecha = new Date(0000-00-00);
                 double precio = 0;
                 for (reservaTransporte rt : reservaTransportes) {
                     IDPaquete = rt.getIDTransporte();
                     DNI = rt.getDNI();
-                    fecha = rt.getFecha();
+                    Fecha = rt.getFecha();
                     precio = rt.getPrecio();
                     st.executeUpdate("INSERT INTO empleado VALUES ('" + IDPaquete + "','" + DNI + "','" +
-                            fecha + "','" + precio + "')");
+                            Fecha + "','" + precio + "')");
                 }
                 // cierro la conexion
                 rs.close();

@@ -1,36 +1,39 @@
 package TodoElProyecto;
 
+import java.text.SimpleDateFormat;
+import java.sql.Date;
+
 public class reservaAlojamiento {
     protected int IDAlojamiento;
     protected String DNI;
-    protected FechaT5 fecha;
+    protected Date fecha;
     protected double precio;
 
     public reservaAlojamiento() {
         this.IDAlojamiento = 0;
         this.DNI = "";
-        this.fecha = new FechaT5();
+        this.fecha = new Date(0000-00-00);
         this.precio = 0;
     }
 
     public reservaAlojamiento(reservaAlojamiento r) {
         this.IDAlojamiento = r.IDAlojamiento;
         this.DNI = r.DNI;
-        this.fecha = new FechaT5(r.fecha);
+        this.fecha = r.fecha;
         this.precio = r.precio;
     }
 
-    public reservaAlojamiento(int i, String d, FechaT5 f, double p) {
+    public reservaAlojamiento(int i, String d, Date f, double p) {
         this.IDAlojamiento = i;
         this.DNI = d;
-        this.fecha = new FechaT5(f);
+        this.fecha = f;
         this.precio = p;
     }
 
     public reservaAlojamiento(int i, String d, double p) {
         this.IDAlojamiento = i;
         this.DNI = d;
-        this.fecha = new FechaT5();
+        this.fecha = new Date(0000-00-00);
         this.precio = p;
     }
 
@@ -50,12 +53,12 @@ public class reservaAlojamiento {
         this.DNI = DNI;
     }
 
-    public FechaT5 getFecha() {
+    public Date getFecha() {
         return this.fecha;
     }
 
-    public void setFecha(FechaT5 fecha) {
-        this.fecha = new FechaT5(fecha);
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public double getPrecio() {
@@ -69,7 +72,9 @@ public class reservaAlojamiento {
     public void print() {
         System.out.println("IDAlojamiento: " + IDAlojamiento);
         System.out.println("DNI: " + DNI);
-        System.out.println("Fecha: " + fecha);
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        String fechaString = formato.format(fecha);
+        System.out.println("Fecha: " + fechaString);
         System.out.println("Precio : " + precio);
     }
 }
