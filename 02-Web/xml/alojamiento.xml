@@ -1,102 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alojamientos>
-   <alojamiento>
-        <tipo>Hotel</tipo>
-        <imagen></imagen>
-        <nombre>NH hotel</nombre>
-        <ciudad>Paris, Francia</ciudad>
-        <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-        <puntuacion>6,4</puntuacion>
-        <comentarios>652</comentarios>
-        <instalaciones>
-            <piscina></piscina>
-        </instalaciones>
-        <precio>30€</precio>
-   </alojamiento> 
-
-   <alojamiento>
-        <tipo>Hotel</tipo>
-        <imagen></imagen>
-        <nombre>Camping las arenas</nombre>
-        <ciudad>Noja</ciudad>
-        <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-        <puntuacion>6,4</puntuacion>
-        <comentarios>652</comentarios>
-        <instalaciones>
-            <piscina></piscina>
-        </instalaciones>
-        <precio>30€</precio>
-   </alojamiento> 
-
-   <alojamiento>
-    <tipo>Hotel</tipo>
-    <imagen></imagen>
-    <nombre>PortAventura</nombre>
-    <ciudad>Cataluña</ciudad>
-    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-    <puntuacion>6,4</puntuacion>
-    <comentarios>652</comentarios>
-    <instalaciones>
-        <piscina></piscina>
-    </instalaciones>
-    <precio>30€</precio>
-</alojamiento> 
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel del Mar</nombre>
+  <ciudad>Barcelona, ES</ciudad>
+  <texto>Este es un hermoso hotel en el centro de la ciudad, a pocos minutos a pie de las principales atracciones turísticas.</texto>
+  <puntuacion>4.5</puntuacion>
+  <comentarios>945</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>true</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>100</precio>
+</alojamiento>
 
 <alojamiento>
-    <tipo>Hotel</tipo>
-    <imagen></imagen>
-    <nombre>Arkaiko hotel</nombre>
-    <ciudad>Elorrio</ciudad>
-    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-    <puntuacion>6,4</puntuacion>
-    <comentarios>652</comentarios>
-    <instalaciones>
-        <piscina></piscina>
-    </instalaciones>
-    <precio>30€</precio>
-</alojamiento> 
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel del Sol</nombre>
+  <ciudad>Barcelona, ES</ciudad>
+  <texto>Este hotel está situado en el corazón de la ciudad, cerca de la estación de metro y de muchos restaurantes y tiendas.</texto>
+  <puntuacion>4.3</puntuacion>
+  <comentarios>854</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>true</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>80</precio>
+</alojamiento>
 
 <alojamiento>
-    <tipo>Hotel</tipo>
-    <imagen></imagen>
-    <nombre>Julen Resort</nombre>
-    <ciudad>Amorebieta</ciudad>
-    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-    <puntuacion>6,4</puntuacion>
-    <comentarios>652</comentarios>
-    <instalaciones>
-        <piscina></piscina>
-    </instalaciones>
-    <precio>30€</precio>
-</alojamiento> 
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel del Marques</nombre>
+  <ciudad>Barcelona, ES</ciudad>
+  <texto>Este hotel se encuentra en el casco antiguo de la ciudad, cerca de la catedral y del barrio de Santa Cruz.</texto>
+  <puntuacion>4.7</puntuacion>
+  <comentarios>1298</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>false</gimnasio>
+    <entretenimiento>true</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>120</precio>
+</alojamiento>
 
 <alojamiento>
-    <tipo>Hotel</tipo>
-    <imagen></imagen>
-    <nombre>Paloma luxury</nombre>
-    <ciudad>La peña, Bilbao</ciudad>
-    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-    <puntuacion>6,4</puntuacion>
-    <comentarios>652</comentarios>
-    <instalaciones>
-        <piscina></piscina>
-    </instalaciones>
-    <precio>30€</precio>
-</alojamiento> 
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel del Bosque</nombre>
+  <ciudad>Barcelona, ES</ciudad>
+  <texto>Este hotel se encuentra en las montañas, rodeado de naturaleza y con vistas panorámicas de la ciudad.</texto>
+  <puntuacion>4.8</puntuacion>
+  <comentarios>1567</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>false</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>150</precio>
+</alojamiento>
 
 <alojamiento>
-    <tipo>Hotel</tipo>
-    <imagen></imagen>
-    <nombre>Hotel aldekoa</nombre>
-    <ciudad>La peña, Bilbao</ciudad>
-    <texto>oisaorosidfoi aodifugoi  oiadufoiasd foiausd foia usdiofu oaisdof asdu fiaiosudfoiuaoisdufo ia usdof</texto>
-    <puntuacion>6,4</puntuacion>
-    <comentarios>652</comentarios>
-    <instalaciones>
-        <piscina></piscina>
-    </instalaciones>
-    <precio>30€</precio>
-</alojamiento> 
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel Praga</nombre>
+  <ciudad>Praga, CZ</ciudad>
+  <texto>Este hotel se encuentra en pleno centro histórico de la ciudad, cerca del puente de Carlos y del castillo de Praga.</texto>
+  <puntuacion>4.7</puntuacion>
+  <comentarios>835</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>110</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel Caravelle</nombre>
+  <ciudad>Praga, CZ</ciudad>
+  <texto>Este hotel se encuentra en la zona de Vinohrady, cerca de la plaza de Wenceslao y de la Ópera de Praga.</texto>
+  <puntuacion>4.3</puntuacion>
+  <comentarios>410</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>95</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel Palace Praha</nombre>
+  <ciudad>Praga, CZ</ciudad>
+  <texto>Este hotel de lujo se encuentra en la zona de Nové Město, cerca de la plaza de la República y del Teatro Nacional de Praga.</texto>
+  <puntuacion>4.9</puntuacion>
+  <comentarios>1250</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>280</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>hotel.jpg</imagen>
+  <nombre>Hotel Josef</nombre>
+  <ciudad>Praga, CZ</ciudad>
+  <texto>Este hotel boutique se encuentra en la zona de Josefov, el barrio judío de la ciudad, cerca del puente de Carlos y de la plaza de la Ciudad Vieja.</texto>
+  <puntuacion>4.6</puntuacion>
+  <comentarios>587</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>150</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>https://example.com/hotel1.jpg</imagen>
+  <nombre>Grand Hotel Roma</nombre>
+  <ciudad>Roma, IT</ciudad>
+  <texto>El Grand Hotel Roma ofrece vistas panorámicas de la ciudad y una experiencia de alojamiento de lujo en el corazón de Roma. Sus habitaciones son elegantes y están equipadas con las últimas comodidades tecnológicas.</texto>
+  <puntuacion>9.2</puntuacion>
+  <comentarios>245</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>250</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>https://example.com/apartamento1.jpg</imagen>
+  <nombre>Roma Suite</nombre>
+  <ciudad>Roma, IT</ciudad>
+  <texto>En Roma Suite Apartments ofrecemos una ubicación céntrica en Roma y amplias suites equipadas con cocina y sala de estar. Este alojamiento es perfecto para aquellos que prefieren una mayor independencia y comodidad durante su estancia en la ciudad.</texto>
+  <puntuacion>8.9</puntuacion>
+  <comentarios>112</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>false</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>false</restaurante>
+  </instalaciones>
+  <precio>150</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>https://example.com/hostal1.jpg</imagen>
+  <nombre>Hostal Roma Centro</nombre>
+  <ciudad>Roma, IT</ciudad>
+  <texto>El Hostal Roma Centro es un lugar perfecto para aquellos que buscan un alojamiento económico y asequible en el corazón de Roma. Ofrece habitaciones básicas y limpias y una ubicación muy conveniente para explorar la ciudad a pie.</texto>
+  <puntuacion>7.2</puntuacion>
+  <comentarios>65</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>false</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>false</restaurante>
+  </instalaciones>
+  <precio>50</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>https://www.example.com/images/hotel1.jpg</imagen>
+  <nombre>Hotel Romano</nombre>
+  <ciudad>Roma,IT</ciudad>
+  <texto>El Hotel Roma ofrece vistas panorámicas a la ciudad eterna y habitaciones con aire acondicionado y conexión Wi-Fi gratuita. Además, cuenta con un restaurante en la azotea, un bar y una terraza.</texto>
+  <puntuacion>8.5</puntuacion>
+  <comentarios>1567</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>false</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>150</precio>
+</alojamiento>
+
+
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>https://example.com/hotel12.jpg</imagen>
+  <nombre>Hotel Mayfair</nombre>
+  <ciudad>Londres, UK</ciudad>
+  <texto>El Hotel Mayfair es un lujoso hotel situado en el corazón de Mayfair, uno de los barrios más exclusivos de Londres. Ofrece habitaciones elegantes y bien equipadas, así como una amplia variedad de servicios, como spa y centro de fitness.</texto>
+  <puntuacion>9.0</puntuacion>
+  <comentarios>437</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>340</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>https://example.com/hotel13.jpg</imagen>
+  <nombre>Hotel Victoria</nombre>
+  <ciudad>Londres, UK</ciudad>
+  <texto>El Hotel Victoria es un hotel de estilo victoriano situado en el centro de Londres, a pocos minutos a pie de la estación de tren Victoria. Ofrece habitaciones cómodas y bien equipadas, así como desayuno buffet y recepción 24 horas.</texto>
+  <puntuacion>8.2</puntuacion>
+  <comentarios>123</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>false</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>95</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>hotel1.jpg</imagen>
+  <nombre>The Savoy</nombre>
+  <ciudad>Londres, UK</ciudad>
+  <texto>Ubicado en pleno corazón de la ciudad, este lujoso hotel cuenta con habitaciones elegantes y un spa de primera categoría.</texto>
+  <puntuacion>9.2</puntuacion>
+  <comentarios>675</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>250</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>Hotel</tipo>
+  <imagen>hotel2.jpg</imagen>
+  <nombre>The Ritz London</nombre>
+  <ciudad>Londres, UK</ciudad>
+  <texto>Este icónico hotel de estilo neoclásico ofrece elegantes habitaciones y un servicio excepcional en el corazón de Londres.</texto>
+  <puntuacion>9.5</puntuacion>
+  <comentarios>425</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>true</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>310</precio>
+</alojamiento>
+
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>https://example.com/hotel1.jpg</imagen>
+  <nombre>Hotel Mitte</nombre>
+  <ciudad>Berlín, DE</ciudad>
+  <texto>Este hotel de lujo se encuentra en el corazón de Berlín, cerca de los principales lugares de interés turístico de la ciudad. El hotel cuenta con una amplia gama de instalaciones, como una piscina cubierta, un gimnasio y un restaurante.</texto>
+  <puntuacion>8.5</puntuacion>
+  <comentarios>127</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>150</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>https://example.com/hotel2.jpg</imagen>
+  <nombre>Hotel Alexander</nombre>
+  <ciudad>Berlín, DE</ciudad>
+  <texto>Nos encontramos Berlin centro, cerca de Alexanderplatz. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, un gimnasio y un restaurante.</texto>
+  <puntuacion>9.0</puntuacion>
+  <comentarios>92</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>180</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>https://example.com/hotel3.jpg</imagen>
+  <nombre>Hotel Tiergarten</nombre>
+  <ciudad>Berlín, DE</ciudad>
+  <texto>Este elegante hotel se encuentra en el barrio de Tiergarten de Berlín. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, gimnasio y restaurante.</texto>
+  <puntuacion>8.8</puntuacion>
+  <comentarios>65</comentarios>
+  <instalaciones>
+    <piscina>true</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>200</precio>
+</alojamiento>
+
+<alojamiento>
+  <tipo>hotel</tipo>
+  <imagen>https://www.hotel-berlin.com/wp-content/uploads/2018/10/Hotel-Berlin-Berlin-Exterior.jpg</imagen>
+  <nombre>Hotel Berlin Berlin</nombre>
+  <ciudad>Berlín, DE</ciudad>
+  <texto>El Hotel Berlin Berlin es un hotel de 4 estrellas ubicado en Berlín. Cuenta con un restaurante que sirve  platos locales e internacionales, ademas de un bar, gimnasio y WiFi en todo el hotel.</texto>
+  <puntuacion>8.9</puntuacion>
+  <comentarios>1234</comentarios>
+  <instalaciones>
+    <piscina>false</piscina>
+    <gimnasio>true</gimnasio>
+    <entretenimiento>false</entretenimiento>
+    <restaurante>true</restaurante>
+  </instalaciones>
+  <precio>150</precio>
+</alojamiento>
+
 
 
 </alojamientos>

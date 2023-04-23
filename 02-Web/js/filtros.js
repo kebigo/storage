@@ -1,3 +1,4 @@
+
 //Inicio filtros top
 const checkbox = document.querySelectorAll(".tipo-viaje input[type=checkbox]");
 
@@ -78,5 +79,5 @@ inputRange.forEach(input =>  {
     })
 });
 
-//FIN filtro precio
 
+//Recoger filtros
