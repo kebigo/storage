@@ -64,7 +64,7 @@ function cargarXML(xml){
       });
 
       texto = texto.slice(0, -1).toLowerCase();
-      document.querySelector(".alojamiento-image img",cloneCard).setAttribute("src", "./assets/img/" + texto + ".jpg") ;
+      document.querySelector(".alojamiento-image img",cloneCard).setAttribute("src", "./assets/img/alojamiento_main/" + texto + ".jpg") ;
 
       //Insertar enlace por id al boton
       document.querySelector(".alojamiento-extra .info-button", cloneCard).setAttribute("href", "query.html?id="+lista.snapshotItem(i).getAttribute("id"));
