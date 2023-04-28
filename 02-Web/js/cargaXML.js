@@ -24,6 +24,15 @@ function cargarXML(xml){
   cargarcontenido("'"+"Barcelona, ES"+"'")
   
   function cargarcontenido(ciudad) {
+
+    //Iniciar paginacion a 1
+    const botones = document.querySelectorAll(".pagination .page-link")
+    botones.forEach(e =>{
+      e.classList.remove("link-active");
+      botones[0].classList.add("link-active");
+      
+
+    })
  
     //Encontrar cards y su contenedor
     const abuelo = document.querySelector(".container-lg");
@@ -39,7 +48,13 @@ function cargarXML(xml){
   
     // Utilizar XPath para seleccionar los nodos de alojamiento con ciudad correspondiente
     lista = docXML.evaluate("//alojamiento[ciudad=" + ciudad + "]",docXML,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null);
-  
+
+
+      page4.innerHTML = "";
+      page2.innerHTML = "";
+      page3.innerHTML = "";
+     
+
     for (let i = 0; i < lista.snapshotLength; i++) {
       //Clonar el elemento original
       var cloneCard = hijo.cloneNode(true);
@@ -68,18 +83,71 @@ function cargarXML(xml){
 
       //Insertar enlace por id al boton
       document.querySelector(".alojamiento-extra .info-button", cloneCard).setAttribute("href", "query.html?id="+lista.snapshotItem(i).getAttribute("id"));
-
-
+      
 
       //Mostrar solo 4 cards por pagina
-      page.appendChild(cloneCard);
+      if(i < 4){
+        page.appendChild(cloneCard);
+      }else if(i>= 5 && i < 9){
+        page2.appendChild(cloneCard);
+      }else if(i >= 9 && i < 13){
+        page3.appendChild(cloneCard);
+      }else{
+        page4.appendChild(cloneCard);
+      }
+
+      
     }
+
   
     //Ocultar card original
 
     page.querySelector("#articuloOriginal").nextElementSibling.classList.replace("d-flex", "d-none")
 
 }
+
+  //Capturar click de botones de paginacion
+  const botones = document.querySelectorAll(".pagination .page-link")
+  botones[0].classList.add("link-active");
+  botones.forEach(e =>{
+    e.addEventListener("click", ()=>{
+
+      let numBtn = e.textContent;
+      
+      if(numBtn == 1){
+        page.classList.replace("d-none", "d-flex")
+        page2.classList.replace("d-flex", "d-none")
+        page3.classList.replace("d-flex", "d-none")
+        page4.classList.replace("d-flex", "d-none")
+      }else if(numBtn == 2){
+        page2.classList.replace("d-none", "d-flex")
+        page.classList.replace("d-flex", "d-none")
+        page3.classList.replace("d-flex", "d-none")
+        page4.classList.replace("d-flex", "d-none")
+      }else if(numBtn == 3){
+        page3.classList.replace("d-none", "d-flex")
+        page2.classList.replace("d-flex", "d-none")
+        page.classList.replace("d-flex", "d-none")
+        page4.classList.replace("d-flex", "d-none")
+      }else if(numBtn == 4){
+        page4.classList.replace("d-none", "d-flex")
+        page2.classList.replace("d-flex", "d-none")
+        page3.classList.replace("d-flex", "d-none")
+        page.classList.replace("d-flex", "d-none")
+      }
+
+      //Capturar boton activo
+
+      document.querySelector(".link-active").classList.remove("link-active");
+        
+      e.classList.add("link-active");
+
+
+    })
+  })
+
+  
+
 
 
 }
