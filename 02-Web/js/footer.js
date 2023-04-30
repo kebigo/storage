@@ -76,8 +76,6 @@ export class FooterPersonalizado extends HTMLElement {
       <div class="container legal col-7 text-center border-top mt-3 pt-4">
           <p class="text-white">Creado con 🤪   por Kevin P. y Bittor G.</p>
       </div>
-     
-      
 
   </footer>`
     }

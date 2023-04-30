@@ -3,6 +3,8 @@ export class HeaderPersonalizado extends HTMLElement {
     super();
     this.innerHTML = `
 
+  
+
     <header>
         
         <nav class="navbar navbar-expand-md bg-body-tertiary flex justify-content-center">

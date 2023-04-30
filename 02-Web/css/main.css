@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
 :root {
@@ -7,8 +8,6 @@
   --background:#13293e;
 }
 
-/* Reset Styles */
-/* Bootstrap Styles */
 /* Reset Styles */
 /* Bootstrap Styles */
 .navbar {
@@ -234,6 +233,50 @@ footer {
   background-color: var(--primary);
 }
 
+#seleccionarPasajeros, #opciones-destinos {
+  top: 4em;
+  right: 0;
+  width: 130%;
+  height: fit-content;
+  display: none;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 0.5em;
+  z-index: 2;
+}
+
+#opciones-destinos {
+  width: 100%;
+}
+
+#opciones-destinos span:not(:last-child) {
+  border-bottom: 1px solid #bbbbbb;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pasajero input {
+  border: 0;
+}
+
+.pasajero input:focus, select:focus {
+  outline: none;
+}
+
+select {
+  appearance: none;
+}
+
+@media (min-width: 576px) {
+  #seleccionarPasajeros {
+    left: 0;
+    width: 100%;
+  }
+}
 @media (min-width: 992px) {
   .buscador {
     border-radius: 20em;
