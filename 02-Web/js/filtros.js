@@ -1,11 +1,13 @@
+import { boton } from "./buscador.js";
+
 
 //Inicio filtros top
 const checkbox = document.querySelectorAll(".tipo-viaje input[type=checkbox]");
 
 
-checkbox.forEach( e =>{
-    e.addEventListener("click", ()=>{
-        checkbox.forEach((e) =>{
+checkbox.forEach(e => {
+    e.addEventListener("click", () => {
+        checkbox.forEach((e) => {
             e.checked = false;
         })
 
@@ -17,10 +19,10 @@ checkbox.forEach( e =>{
 //Inicio filtro busqueda
 const filters = document.querySelectorAll(".boton-filtros-main");
 
-filters.forEach(e =>{
-    e.addEventListener("click", () =>{
-      document.querySelector(".boton-active").classList.remove("boton-active");
-        
+filters.forEach(e => {
+    e.addEventListener("click", () => {
+        document.querySelector(".boton-active").classList.remove("boton-active");
+
         e.classList.add("boton-active");
     })
 })
@@ -38,46 +40,76 @@ var mediaQuery = window.matchMedia("(min-width: 992px)")
 
 
 minVal = parseInt(inputRange[0].value),
-maxVal = parseInt(inputRange[1].value);
+    maxVal = parseInt(inputRange[1].value);
 
 
-rangeText.forEach(rangeText =>{
+rangeText.forEach(rangeText => {
     rangeText.innerHTML = "<span>Rango: <strong>" + minVal + "€</strong> - <strong>" + maxVal + "€</strong></span>";
 
 })
 
-inputRange.forEach(input =>  {
+inputRange.forEach(input => {
 
-    input.addEventListener("input", ()=>{
+    input.addEventListener("input", () => {
 
         if (mediaQuery.matches) {
 
             minVal = parseInt(inputRange[2].value),
-            maxVal = parseInt(inputRange[3].value);
+                maxVal = parseInt(inputRange[3].value);
 
-            progress.forEach(progress =>{
-                progress.style.left = (minVal / inputRange[2].max) *100 + "%";
-                progress.style.right = 100 - (maxVal / inputRange[3].max) *100 + "%";
+            progress.forEach(progress => {
+                progress.style.left = (minVal / inputRange[2].max) * 100 + "%";
+                progress.style.right = 100 - (maxVal / inputRange[3].max) * 100 + "%";
             })
-        
-        
-        } else {
-  
-            minVal = parseInt(inputRange[0].value),
-            maxVal = parseInt(inputRange[1].value);
 
-            progress.forEach(progress =>{
-                progress.style.left = (minVal / inputRange[0].max) *100 + "%";
-                progress.style.right = 100 - (maxVal / inputRange[1].max) *100 + "%";
+
+        } else {
+
+            minVal = parseInt(inputRange[0].value),
+                maxVal = parseInt(inputRange[1].value);
+
+            progress.forEach(progress => {
+                progress.style.left = (minVal / inputRange[0].max) * 100 + "%";
+                progress.style.right = 100 - (maxVal / inputRange[1].max) * 100 + "%";
             })
         }
 
-        rangeText.forEach(rangeText =>{
+        rangeText.forEach(rangeText => {
             rangeText.innerHTML = "<span>Rango: <strong>" + minVal + "€</strong> - <strong>" + maxVal + "€</strong></span>";
-        
-        }) 
+
+        })
     })
 });
 
 
-//Recoger filtros
+
+export function obtenerFiltros() {
+    const elementosFiltros = document.querySelectorAll(".filters label input");
+    const filtros = [];
+    const filtroTipo = [];
+    const filtroInstalaciones = [];
+    const filtroPuntuacion = [];
+
+    elementosFiltros.forEach(e => {
+        if (e.checked == true) {
+            if (e.classList.contains("tipo")) {
+                filtroTipo.push(e.value);
+            } else if (e.classList.contains("instalaciones")) {
+                filtroInstalaciones.push(e.value);
+            } else if (e.classList.contains("puntuacion")) {
+                filtroPuntuacion.push(e.value);
+            }
+        }
+
+    })
+
+    filtros.push(filtroTipo, filtroInstalaciones, filtroPuntuacion);
+
+
+    return filtros;
+}
+
+
+
+
+//Añadir el tipo
