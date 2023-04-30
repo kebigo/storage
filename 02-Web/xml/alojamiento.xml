@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alojamientos>
-<alojamiento type="hotel" >
+<alojamiento type="hotel" id="1">
   <imagen>./assets/img/hotel1.jpg</imagen>
   <nombre>Hotel del Mar</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este es un hermoso hotel en el centro de la ciudad, a pocos minutos a pie de las principales atracciones turísticas.</texto>
-  <puntuacion>4.5</puntuacion>
+  <puntuacion>6,7</puntuacion>
   <comentarios>945</comentarios>
   <instalaciones>
     <piscina>true</piscina>
@@ -16,11 +16,11 @@
   <precio>100</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="2">
   <nombre>Hotel del Sol</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este hotel está situado en el corazón de la ciudad, cerca de la estación de metro y de muchos cocinas y tiendas.</texto>
-  <puntuacion>4.3</puntuacion>
+  <puntuacion>7,3</puntuacion>
   <comentarios>854</comentarios>
   <instalaciones>
     <piscina>false</piscina>
@@ -31,11 +31,11 @@
   <precio>80</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="3">
   <nombre>Hotel del Marques</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este hotel se encuentra en el casco antiguo de la ciudad, cerca de la catedral y del barrio de Santa Cruz.</texto>
-  <puntuacion>4.7</puntuacion>
+  <puntuacion>5,5</puntuacion>
   <comentarios>1298</comentarios>
   <instalaciones>
     <piscina>false</piscina>
@@ -46,11 +46,11 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="4">
   <nombre>Hotel del Bosque</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este hotel se encuentra en las montañas, rodeado de naturaleza y con vistas panorámicas de la ciudad.</texto>
-  <puntuacion>4.8</puntuacion>
+  <puntuacion>5</puntuacion>
   <comentarios>1567</comentarios>
   <instalaciones>
     <piscina>true</piscina>
@@ -61,11 +61,11 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="5">
   <nombre>Hotel Praga</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este hotel se encuentra en pleno centro histórico de la ciudad, cerca del puente de Carlos y del castillo de Praga.</texto>
-  <puntuacion>4.7</puntuacion>
+  <puntuacion>7,5</puntuacion>
   <comentarios>835</comentarios>
   <instalaciones>
     <piscina>false</piscina>
@@ -76,11 +76,11 @@
   <precio>110</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="6">
   <nombre>Hotel Caravelle</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este hotel se encuentra en la zona de Vinohrady, cerca de la plaza de Wenceslao y de la Ópera de Praga.</texto>
-  <puntuacion>4.3</puntuacion>
+  <puntuacion>8,4</puntuacion>
   <comentarios>410</comentarios>
   <instalaciones>
     <piscina>false</piscina>
@@ -91,11 +91,11 @@
   <precio>95</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="7">
   <nombre>Hotel Palace Praha</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este hotel de lujo se encuentra en la zona de Nové Město, cerca de la plaza de la República y del Teatro Nacional de Praga.</texto>
-  <puntuacion>4.9</puntuacion>
+  <puntuacion>9,2</puntuacion>
   <comentarios>1250</comentarios>
   <instalaciones>
     <piscina>true</piscina>
@@ -106,11 +106,11 @@
   <precio>280</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="8">
   <nombre>Hotel Josef</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este hotel boutique se encuentra en la zona de Josefov, el barrio judío de la ciudad, cerca del puente de Carlos y de la plaza de la Ciudad Vieja.</texto>
-  <puntuacion>4.6</puntuacion>
+  <puntuacion>6,6</puntuacion>
   <comentarios>587</comentarios>
   <instalaciones>
     <piscina>false</piscina>
@@ -121,7 +121,7 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="9">
   <nombre>Grand Hotel Roma</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>El Grand Hotel Roma ofrece vistas panorámicas de la ciudad y una experiencia de alojamiento de lujo en el corazón de Roma. Sus habitaciones son elegantes y están equipadas con las últimas comodidades tecnológicas.</texto>
@@ -136,7 +136,7 @@
   <precio>250</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="10">  
   <nombre>Roma Suite</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>En Roma Suite Apartments ofrecemos una ubicación céntrica en Roma y amplias suites equipadas con cocina y sala de estar. Este alojamiento es perfecto para aquellos que prefieren una mayor independencia y comodidad durante su estancia en la ciudad.</texto>
@@ -151,7 +151,7 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="11">  
   <nombre>Hostal Roma Centro</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>El Hostal Roma Centro es un lugar perfecto para aquellos que buscan un alojamiento económico y asequible en el corazón de Roma. Ofrece habitaciones básicas y limpias y una ubicación muy conveniente para explorar la ciudad a pie.</texto>
@@ -166,7 +166,7 @@
   <precio>50</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="12">  
   <nombre>Hotel Aurelio</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>El Hotel aurelio es un lugar perfecto para aquellos amantes de la historia. Alojate en el pleno centro de Roma y descubre el antiguo imperio.</texto>
@@ -181,7 +181,7 @@
   <precio>50</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="13">  
   <nombre>Hotel Romano</nombre>
   <ciudad>Roma,IT</ciudad>
   <texto>El Hotel Roma ofrece vistas panorámicas a la ciudad eterna y habitaciones con aire acondicionado y conexión Wi-Fi gratuita. Además, cuenta con un cocina en la azotea, un bar y una terraza.</texto>
@@ -198,7 +198,7 @@
 
 
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="14">  
   <nombre>Hotel Mayfair</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>El Hotel Mayfair es un lujoso hotel situado en el corazón de Mayfair, uno de los barrios más exclusivos de Londres. Ofrece habitaciones elegantes y bien equipadas, así como una amplia variedad de servicios, como spa y centro de fitness.</texto>
@@ -213,7 +213,7 @@
   <precio>340</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="15">  
   <nombre>Hotel Victoria</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>El Hotel Victoria es un hotel de estilo victoriano situado en el centro de Londres, a pocos minutos a pie de la estación de tren Victoria. Ofrece habitaciones cómodas y bien equipadas, así como desayuno buffet y recepción 24 horas.</texto>
@@ -228,7 +228,7 @@
   <precio>95</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="16">
   <nombre>The Savoy</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Ubicado en pleno corazón de la ciudad, este lujoso hotel cuenta con habitaciones elegantes y un spa de primera categoría.</texto>
@@ -243,7 +243,7 @@
   <precio>250</precio>
 </alojamiento>
 
-<alojamiento type="hotel">
+<alojamiento type="hotel" id="17">
   <nombre>The Ritz London</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este icónico hotel de estilo neoclásico ofrece elegantes habitaciones y un servicio excepcional en el corazón de Londres.</texto>
@@ -259,7 +259,7 @@
 </alojamiento>
 
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="18">  
   <nombre>Hotel Mitte</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Este hotel de lujo se encuentra en el corazón de Berlín, cerca de los principales lugares de interés turístico de la ciudad. El hotel cuenta con una amplia gama de instalaciones, como una piscina cubierta, un gimnasio y un cocina.</texto>
@@ -274,7 +274,7 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="19">  
   <nombre>Hotel Alexander</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Nos encontramos Berlin centro, cerca de Alexanderplatz. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, un gimnasio y un cocina.</texto>
@@ -289,7 +289,7 @@
   <precio>180</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="20">  
   <nombre>Hotel Tiergarten</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Este elegante hotel se encuentra en el barrio de Tiergarten de Berlín. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, gimnasio y cocina.</texto>
@@ -304,7 +304,7 @@
   <precio>200</precio>
 </alojamiento>
 
-<alojamiento type="hotel">  
+<alojamiento type="hotel" id="21">  
   <nombre>Hotel Berlin Berlin</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>El Hotel Berlin Berlin es un hotel de 4 estrellas ubicado en Berlín. Cuenta con un cocina que sirve  platos locales e internacionales, ademas de un bar, gimnasio y WiFi en todo el hotel.</texto>
@@ -319,7 +319,7 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="camping">   
+<alojamiento type="camping" id="22">   
    <nombre>Berlin Mitte</nombre>
    <ciudad>Berlín, DE</ciudad>
    <texto>El Camping Berlin Mitte se encuentra en el corazón de la ciudad, con fácil acceso a las principales atracciones turísticas.</texto>
@@ -334,7 +334,7 @@
    <precio>30</precio>
 </alojamiento>
 
-<alojamiento type="camping">   
+<alojamiento type="camping" id="23">   
    <nombre>Camping Platz</nombre>
    <ciudad>Berlín, DE</ciudad>
    <texto>Este camping se encuentra en la orilla del lago Wannsee y ofrece una experiencia única en la naturaleza a poca distancia del centro de Berlín.</texto>
@@ -349,7 +349,7 @@
    <precio>25</precio>
   </alojamiento>
 
-<alojamiento type="camping">   
+<alojamiento type="camping" id="24">   
    <nombre>Camping Berlin Köpenick</nombre>
    <ciudad>Berlín, DE</ciudad>
    <texto>Este camping está ubicado en el barrio de Köpenick, rodeado de bosques y a solo unos minutos del centro de la ciudad.</texto>
@@ -365,7 +365,7 @@
 </alojamiento>
 
 
-<alojamiento type="camping">   
+<alojamiento type="camping" id="25">   
    <nombre>Camping Spandau</nombre>
    <ciudad>Berlín, DE</ciudad>
    <texto>Este camping se encuentra en el barrio de Spandau, junto al río Havel y cerca del famoso castillo de Spandau.</texto>
@@ -380,7 +380,7 @@
    <precio>70</precio>
    </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="26">
   <nombre>Camping Barcelona</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Ubicado en la costa de Barcelona, este camping ofrece acceso directo a una playa privada y dispone de varias opciones de alojamiento, incluyendo tiendas de campaña y cabañas.</texto>
@@ -395,7 +395,7 @@
   <precio>45</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="27">
   <nombre>Camping Estrellas</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este camping situado en plena naturaleza ofrece una gran variedad de opciones de alojamiento, desde bungalows hasta tiendas de campaña, y cuenta con instalaciones deportivas y piscinas para niños y adultos.</texto>
@@ -410,7 +410,7 @@
   <precio>55</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="28">
   <nombre>Camping Masnou</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este camping situado a pocos metros de la playa cuenta con una amplia variedad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, y ofrece una gran cantidad de actividades para todas las edades.</texto>
@@ -425,7 +425,7 @@
   <precio>65</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="29">
   <nombre>Camping El Pla</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Ubicado en un entorno natural, este camping cuenta con una gran variedad de opciones de alojamiento y ofrece actividades para toda la familia, como senderismo y piscina.</texto>
@@ -440,7 +440,7 @@
   <precio>35</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="30">
   <nombre>Camping Sokol</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este camping se encuentra en las afueras de Praga, pero muy cerca de la estación de metro, lo que permite un fácil acceso al centro de la ciudad. Ofrece una gran cantidad de instalaciones y actividades, como piscina, parque infantil, cocina y barbacoa.</texto>
@@ -455,7 +455,7 @@
   <precio>40</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="31">
   <nombre>Camping Praha</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este camping situado en las afueras de Praga ofrece una gran cantidad de opciones de alojamiento en un entorno natural privilegiado, con actividades para todas las edades y comodidades modernas.</texto>
@@ -470,7 +470,7 @@
   <precio>55</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="32">
   <nombre>Camping Vltava</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este camping situado en las orillas del río Vltava ofrece alojamiento en tiendas de campaña y bungalows, con una amplia gama de actividades para todas las edades y comodidades modernas.</texto>
@@ -485,7 +485,7 @@
   <precio>60</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="33">
   <nombre>Camping Oase</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este camping situado en una zona tranquila a las afueras de Praga ofrece una gran variedad de opciones de alojamiento en tiendas de campaña y bungalows, con una amplia oferta de actividades y servicios para todas las edades.</texto>
@@ -500,7 +500,7 @@
   <precio>70</precio>
 </alojamiento>
 
-<alojamiento type="camping" >
+<alojamiento type="camping" id="34">
   <nombre>Camping Thames</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este camping se encuentra a orillas del río Támesis y cuenta con una gran variedad de actividades acuáticas, así como numerosas opciones de alojamiento en tiendas de campaña y bungalows. Además, dispone de un cocina con vistas al río.</texto>
@@ -515,7 +515,7 @@
   <precio>45</precio>
 </alojamiento>
 
-<alojamiento type="camping" >
+<alojamiento type="camping" id="35">
   <nombre>Camping Regent</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Ubicado en el parque Regent's Park. Con opciones de alojamiento en tiendas de campaña y una gran variedad de actividades al aire libre, es el lugar ideal para aquellos que buscan una escapada de la ciudad sin alejarse demasiado.</texto>
@@ -530,7 +530,7 @@
   <precio>60</precio>
 </alojamiento>
 
-<alojamiento type="camping" >
+<alojamiento type="camping" id="35" >
   <nombre>Camping Crystal</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Con vistas al palacio de Cristal, este camping es el lugar perfecto para aquellos que desean estar cerca de la ciudad de Londres, pero alejados del bullicio del centro. Tiendas de campaña y bungalows.</texto>
@@ -545,7 +545,7 @@
   <precio>50</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="36">
   <nombre>London Camping</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este camping se encuentra ubicado en una zona tranquila y rodeado de naturaleza, pero a pocos minutos del centro de Londres. Ofrece una amplia variedad de opciones de alojamiento, desde tiendas de campaña hasta caravanas.</texto>
@@ -560,7 +560,7 @@
   <precio>50</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="37">
   <nombre>Camping Village</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Este camping se encuentra en un lugar tranquilo y verde a las afueras de Roma. Dispone de una amplia variedad de bungalows y mobile homes para alojamiento y cuenta con una piscina y cocina.</texto>
@@ -575,7 +575,7 @@
   <precio>85</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="38">
   <nombre>Happy Camping</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Este camping ofrece una gran cantidad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, además de una gran cantidad de servicios e instalaciones, incluyendo una piscina, un bar y un cocina.</texto>
@@ -590,7 +590,7 @@
   <precio>70</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="39">
   <nombre>Camping Tiber</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Ubicado a las afueras de Roma, este camping cuenta con una gran cantidad de opciones de alojamiento, incluyendo tiendas de campaña, bungalows y apartamentos. Además, ofrece una piscina, un cocina y un bar.</texto>
@@ -605,7 +605,7 @@
   <precio>55</precio>
 </alojamiento>
 
-<alojamiento type="camping">
+<alojamiento type="camping" id="40">
   <nombre>Camping Capitol</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Situado en las afueras de Roma, este camping ofrece una amplia variedad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, y cuenta con una gran cantidad de servicios e instalaciones, como una piscina, un bar y un cocina.</texto>
@@ -620,7 +620,7 @@
   <precio>60</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="41">
   <nombre>Barceloneta</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Estos modernos apartamentos se encuentran en el barrio del Poble Nou, a solo 500 metros de la playa. Cuentan con una terraza con piscina y vistas panorámicas a la ciudad.</texto>
@@ -635,7 +635,7 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="42">
   <nombre>Paseo de Gracia</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Estos lujosos apartamentos están ubicados en el Paseo de Gracia, en pleno corazón de Barcelona, y ofrecen vistas impresionantes a la ciudad y a la emblemática Sagrada Familia.</texto>
@@ -650,7 +650,7 @@
   <precio>250</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="43">
   <nombre>Diagonal Mar</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Estos apartamentos se encuentran en el moderno barrio de Diagonal Mar, cerca del centro comercial y del centro de convenciones. Disponen de piscina al aire libre, gimnasio, wifi gratuito y cocina totalmente equipada.</texto>
@@ -666,7 +666,7 @@
 </alojamiento>
 
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="44">
   <nombre>Poble Sec</nombre>
   <ciudad>Barcelona, ES</ciudad>
   <texto>Este acogedor apartamento se encuentra en el barrio de Poble Sec, cerca del centro histórico de Barcelona. Dispone de todo lo necesario para una estancia confortable y agradable.</texto>
@@ -681,7 +681,7 @@
   <precio>80</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="45">
   <nombre>Torstraße</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Estos amplios y cómodos apartamentos están ubicados en el corazón de Berlín, a poca distancia de las principales atracciones turísticas. Cuentan con todas las comodidades necesarias para una estancia agradable y confortable.</texto>
@@ -696,7 +696,7 @@
   <precio>95</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="46">
   <nombre>Hackescher Berlin</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Estos elegantes apartamentos cuentan con una decoración moderna y están equipados con todas las comodidades necesarias para una estancia confortable. Ubicados en una zona céntrica de Berlín.</texto>
@@ -711,7 +711,7 @@
   <precio>110</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="47">
   <nombre>Schönhauser B&amp;B</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Estos modernos apartamentos ofrecen una amplia variedad de opciones de alojamiento para satisfacer las necesidades de todos los huéspedes. Cuentan con una excelente ubicación en el corazón de Berlín y están equipados con todas las comodidades.</texto>
@@ -726,7 +726,7 @@
   <precio>85</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="48">
   <nombre>Kreuzberg 17</nombre>
   <ciudad>Berlín, DE</ciudad>
   <texto>Este espacioso apartamento de estilo contemporáneo se encuentra en el barrio de Mitte, cerca de numerosos restaurantes y tiendas. Dispone de conexión Wi-Fi gratuita, TV de pantalla plana y cocina completa.</texto>
@@ -741,7 +741,7 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="49">
   <nombre>London Apartment</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este acogedor apartamento se encuentra en pleno centro de Londres, a poca distancia de las principales atracciones turísticas. Cuenta con una habitación, un baño y una cocina completamente equipada.</texto>
@@ -756,7 +756,7 @@
   <precio>100</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="50">
   <nombre>Cozy London Flat</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este bonito apartamento situado en una zona tranquila de Londres cuenta con dos habitaciones, una cocina equipada, un baño y una acogedora sala de estar. Ideal para una escapada en pareja o en familia.</texto>
@@ -771,7 +771,7 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="51">
   <nombre>London Riverside</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este moderno apartamento se encuentra a orillas del río Támesis, con vistas espectaculares al puente de la Torre y la Torre de Londres. Cuenta con dos habitaciones, dos baños, una cocina equipada y una amplia sala de estar.</texto>
@@ -786,7 +786,7 @@
   <precio>180</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="52">
   <nombre>Central Apartment</nombre>
   <ciudad>Londres, UK</ciudad>
   <texto>Este amplio apartamento se encuentra en el corazón de Londres, a poca distancia de las principales atracciones turísticas. Cuenta con tres habitaciones, dos baños, una cocina totalmente equipada y una sala de estar con vistas impresionantes de la ciudad.</texto>
@@ -801,7 +801,7 @@
   <precio>250</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="53">
   <nombre>Apartment Luxe</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este apartamento moderno y elegante se encuentra en el centro de Praga y cuenta con piscina, gimnasio, wifi y cocina totalmente equipada. Ofrece una vista impresionante de la ciudad y se encuentra cerca de todos los principales lugares de interés.</texto>
@@ -816,7 +816,7 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="54">
   <nombre>Karlova Loft</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este apartamento recién renovado se encuentra en el corazón de Praga y cuenta con una ubicación perfecta para explorar la ciudad. Ofrece piscina, gimnasio, wifi y cocina totalmente equipada para una estancia confortable.</texto>
@@ -831,7 +831,7 @@
   <precio>110</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="55">
   <nombre>Celetna Deluxe</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este amplio apartamento de lujo se encuentra en el corazón de Praga y cuenta con piscina, gimnasio, wifi y cocina totalmente equipada. Tiene una decoración elegante y acogedora, y ofrece todas las comodidades modernas para una estancia confortable.</texto>
@@ -846,7 +846,7 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="56">
   <nombre>Parizska Praga</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Este acogedor apartamento se encuentra en el centro histórico de Praga, a pocos minutos a pie de la Plaza de la Ciudad Vieja y el Puente de Carlos. Dispone de cocina equipada, wifi gratuito y vistas panorámicas a la ciudad.</texto>
@@ -861,7 +861,7 @@
   <precio>80</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="57">
   <nombre>Via del Corso</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Este cómodo apartamento está ubicado en pleno centro de Roma, a solo unos pasos de la Plaza Navona y del Panteón. Dispone de todas las comodidades necesarias para una estancia agradable en la ciudad eterna.</texto>
@@ -876,7 +876,7 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="58">
   <nombre>Condotti Studio</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Este elegante apartamento se encuentra a solo cinco minutos a pie del Coliseo y cuenta con todas las comodidades necesarias para una estancia confortable en la ciudad. Además, ofrece vistas panorámicas de la ciudad desde su terraza privada.</texto>
@@ -891,7 +891,7 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="59">
   <nombre>Campo de' Fiori</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Este espacioso apartamento se encuentra a solo unos pasos de la Fontana di Trevi y cuenta con una gran cantidad de tiendas, restaurantes y bares en los alrededores. Dispone de todas las comodidades necesarias para una estancia agradable en la ciudad.</texto>
@@ -906,7 +906,7 @@
   <precio>110</precio>
 </alojamiento>
 
-<alojamiento type="apartamento">
+<alojamiento type="apartamento" id="60">
   <nombre>Gladiatore 12</nombre>
   <ciudad>Roma, IT</ciudad>
   <texto>Este amplio apartamento se encuentra en una ubicación privilegiada en el corazón de Roma, cerca de los principales lugares de interés turístico. Dispone de cocina completamente equipada, conexión wifi gratuita y amplias zonas de estar y de descanso.</texto>
@@ -921,10 +921,10 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="61">
   <nombre>Can Gual</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Can Gual es una hermosa casa rural con vistas panorámicas a la montaña y una piscina privada. Ofrece alojamiento para hasta 10 personas, con 4 habitaciones dobles y una habitación individual.</texto>
+  <texto>Can Gual es una hermosa casa_rural con vistas panorámicas a la montaña y una piscina privada. Ofrece alojamiento para hasta 10 personas, con 4 habitaciones dobles y una habitación individual.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
@@ -936,10 +936,10 @@
   <precio>200</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="62">
   <nombre>Casa del Pi</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Esta casa rural de piedra se encuentra en un entorno natural privilegiado y ofrece una piscina exterior, un gimnasio y una cocina completamente equipada.</texto>
+  <texto>Esta casa_rural de piedra se encuentra en un entorno natural privilegiado y ofrece una piscina exterior, un gimnasio y una cocina completamente equipada.</texto>
   <puntuacion>8.9</puntuacion>
   <comentarios>98</comentarios>
   <instalaciones>
@@ -951,10 +951,10 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="63">
   <nombre>Masía Can Oliver</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>La Masía Can Oliver es una casa rural de estilo rústico situada en el corazón del Parque Natural de la Garrotxa, con capacidad para 8 personas. Ofrece una piscina exterior, un gimnasio y una cocina.</texto>
+  <texto>La Masía Can Oliver es una casa_rural de estilo rústico situada en el corazón del Parque Natural de la Garrotxa, con capacidad para 8 personas. Ofrece una piscina exterior, un gimnasio y una cocina.</texto>
   <puntuacion>9.2</puntuacion>
   <comentarios>140</comentarios>
   <instalaciones>
@@ -966,10 +966,10 @@
   <precio>180</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="64">
   <nombre>Masía El Molino</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Esta preciosa casa rural está situada en plena naturaleza y cuenta con unas vistas espectaculares. Dispone de amplias habitaciones, y una gran piscina al aire libre.</texto>
+  <texto>Esta preciosa casa_rural está situada en plena naturaleza y cuenta con unas vistas espectaculares. Dispone de amplias habitaciones, y una gran piscina al aire libre.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>45</comentarios>
   <instalaciones>
@@ -981,10 +981,10 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="65">
   <nombre>Domov Slovo</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Disfruta de una estancia en nuestra acogedora casa rural situada en plena naturaleza, pero a pocos minutos del centro histórico de Praga. Ofrecemos habitaciones amplias y luminosas, cocina totalmente equipada, piscina, gimnasio y conexión wifi gratuita.</texto>
+  <texto>Disfruta de una estancia en nuestra acogedora casa_rural situada en plena naturaleza, pero a pocos minutos del centro histórico de Praga. Ofrecemos habitaciones amplias y luminosas, cocina totalmente equipada, piscina, gimnasio y conexión wifi gratuita.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>50</comentarios>
   <instalaciones>
@@ -996,7 +996,7 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="66">
   <nombre>Sedm Lledna</nombre>
   <ciudad>Praga, CZ</ciudad>
   <texto>Vive una experiencia rural única en nuestra casa de campo situada en las afueras de Praga. Disfruta de la tranquilidad y el contacto con la naturaleza sin renunciar a las comodidades modernas. Contamos con piscina, gimnasio, wifi y cocina totalmente equipada.</texto>
@@ -1011,10 +1011,10 @@
   <precio>110</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="67">
   <nombre>Daleko Modrá Fialová</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Descubre la belleza del bosque de Praga alojándote en nuestra casa rural. Disfruta de la naturaleza en su estado puro y de unas instalaciones modernas que incluyen piscina, gimnasio, wifi y cocina totalmente equipada.</texto>
+  <texto>Descubre la belleza del bosque de Praga alojándote en nuestra casa_rural. Disfruta de la naturaleza en su estado puro y de unas instalaciones modernas que incluyen piscina, gimnasio, wifi y cocina totalmente equipada.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>42</comentarios>
   <instalaciones>
@@ -1026,10 +1026,10 @@
   <precio>100</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="68">
   <nombre>Domo Pití</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Relájate en nuestra casa rural situada en un hermoso prado rodeado de naturaleza y tranquilidad. Nuestras instalaciones modernas incluyen piscina, gimnasio, wifi y cocina totalmente equipada. A solo 30 minutos del centro histórico de Praga.</texto>
+  <texto>Relájate en nuestra casa_rural situada en un hermoso prado rodeado de naturaleza y tranquilidad. Nuestras instalaciones modernas incluyen piscina, gimnasio, wifi y cocina totalmente equipada. A solo 30 minutos del centro histórico de Praga.</texto>
   <puntuacion>8.3</puntuacion>
   <comentarios>27</comentarios>
   <instalaciones>
@@ -1041,10 +1041,10 @@
   <precio>90</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="69">
   <nombre>Greenwich Farm</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Esta encantadora casa rural se encuentra en pleno centro de Greenwich, a pocos minutos a pie del Observatorio Real y el Cutty Sark. La casa cuenta con un bonito jardín con piscina y un amplio comedor con chimenea para disfrutar de comidas y veladas acogedoras.</texto>
+  <texto>Esta encantadora casa_rural se encuentra en pleno centro de Greenwich, a pocos minutos a pie del Observatorio Real y el Cutty Sark. La casa cuenta con un bonito jardín con piscina y un amplio comedor con chimenea para disfrutar de comidas y veladas acogedoras.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
@@ -1056,10 +1056,10 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="70">
   <nombre>Landhouse George</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Esta casa rural con estilo victoriano se encuentra en el barrio de Kensington, cerca de los principales museos y atracciones de la ciudad. Los huéspedes pueden disfrutar de una estancia tranquila y relajante en un entorno elegante y cómodo.</texto>
+  <texto>Esta casa_rural con estilo victoriano se encuentra en el barrio de Kensington, cerca de los principales museos y atracciones de la ciudad. Los huéspedes pueden disfrutar de una estancia tranquila y relajante en un entorno elegante y cómodo.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>90</comentarios>
   <instalaciones>
@@ -1071,10 +1071,10 @@
   <precio>150</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="71">
   <nombre>Landhouse Camden</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Esta casa rural situada en el animado barrio de Camden Town ofrece una experiencia única para los amantes de la música y el arte. La casa cuenta con una decoración ecléctica y está equipada con todas las comodidades necesarias para una estancia confortable.</texto>
+  <texto>Esta casa_rural situada en el animado barrio de Camden Town ofrece una experiencia única para los amantes de la música y el arte. La casa cuenta con una decoración ecléctica y está equipada con todas las comodidades necesarias para una estancia confortable.</texto>
   <puntuacion>7.9</puntuacion>
   <comentarios>60</comentarios>
   <instalaciones>
@@ -1086,10 +1086,10 @@
   <precio>80</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="72">
   <nombre>Landhouse Hill</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Esta casa rural con encanto se encuentra en el corazón del barrio de Notting Hill, conocido por sus casas de colores y su animado mercado. La casa cuenta con un patio interior con jardín, perfecto para relajarse después de un día explorando la ciudad.</texto>
+  <texto>Esta casa_rural con encanto se encuentra en el corazón del barrio de Notting Hill, conocido por sus casas de colores y su animado mercado. La casa cuenta con un patio interior con jardín, perfecto para relajarse después de un día explorando la ciudad.</texto>
   <puntuacion>8.8</puntuacion>
   <comentarios>100</comentarios>
   <instalaciones>
@@ -1100,10 +1100,10 @@
   </instalaciones>
   </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="73">
   <nombre>Klaviatur Tisch</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta casa rural está situada en las afueras de Berlín y ofrece una experiencia tranquila y relajante con hermosas vistas de la naturaleza circundante. La casa cuenta con una amplia sala de estar, cocina totalmente equipada, tres dormitorios y dos baños.</texto>
+  <texto>Esta casa_rural está situada en las afueras de Berlín y ofrece una experiencia tranquila y relajante con hermosas vistas de la naturaleza circundante. La casa cuenta con una amplia sala de estar, cocina totalmente equipada, tres dormitorios y dos baños.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>50</comentarios>
   <instalaciones>
@@ -1115,10 +1115,10 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="74">
   <nombre>Gabel House</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta hermosa casa rural se encuentra en un bosque a las afueras de Berlín. La casa cuenta con dos dormitorios, una cocina totalmente equipada, una amplia sala de estar y dos baños. Además, la casa cuenta con una terraza con vistas al bosque.</texto>
+  <texto>Esta hermosa casa_rural se encuentra en un bosque a las afueras de Berlín. La casa cuenta con dos dormitorios, una cocina totalmente equipada, una amplia sala de estar y dos baños. Además, la casa cuenta con una terraza con vistas al bosque.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>
@@ -1130,10 +1130,10 @@
   <precio>110</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="75">
   <nombre>Deutsche Herberge</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta encantadora casa rural se encuentra en las montañas cerca de Berlín y ofrece impresionantes vistas panorámicas del paisaje circundante. La casa cuenta con dos dormitorios, una cocina totalmente equipada, una sala de estar y un baño. </texto>
+  <texto>Esta encantadora casa_rural se encuentra en las montañas cerca de Berlín y ofrece impresionantes vistas panorámicas del paisaje circundante. La casa cuenta con dos dormitorios, una cocina totalmente equipada, una sala de estar y un baño. </texto>
   <puntuacion>9.2</puntuacion>
   <comentarios>40</comentarios>
   <instalaciones>
@@ -1145,10 +1145,10 @@
   <precio>130</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="76">
   <nombre>Feuerzeug Ländlich</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta casa rural se encuentra en el corazón de Berlín, en el barrio de Mitte. Es perfecta para aquellos que buscan una escapada tranquila y relajante en la ciudad. La casa cuenta con una amplia sala de estar, cocina completamente equipada y dos dormitorios con baño privado.</texto>
+  <texto>Esta casa_rural se encuentra en el corazón de Berlín, en el barrio de Mitte. Es perfecta para aquellos que buscan una escapada tranquila y relajante en la ciudad. La casa cuenta con una amplia sala de estar, cocina completamente equipada y dos dormitorios con baño privado.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>
@@ -1160,10 +1160,10 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="77">
   <nombre>1AW3</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Esta hermosa casa rural cuenta con una ubicación privilegiada en la campiña de Roma, con vistas panorámicas a los alrededores. Ofrece una piscina exterior, gimnasio y cocina totalmente equipada.</texto>
+  <texto>Esta hermosa casa_rural cuenta con una ubicación privilegiada en la campiña de Roma, con vistas panorámicas a los alrededores. Ofrece una piscina exterior, gimnasio y cocina totalmente equipada.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>25</comentarios>
   <instalaciones>
@@ -1175,10 +1175,10 @@
   <precio>120</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="78">
   <nombre>Villetta La Vigna</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Ubicada en una hermosa finca en la campiña de Roma, esta casa rural ofrece una experiencia auténtica y relajante. Cuenta con piscina al aire libre, wifi gratuito y cocina totalmente equipada.</texto>
+  <texto>Ubicada en una hermosa finca en la campiña de Roma, esta casa_rural ofrece una experiencia auténtica y relajante. Cuenta con piscina al aire libre, wifi gratuito y cocina totalmente equipada.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>40</comentarios>
   <instalaciones>
@@ -1190,10 +1190,10 @@
   <precio>95</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="79">
   <nombre>Campagna Trattore</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Esta encantadora casa rural en la campiña de Roma ofrece una estancia tranquila y acogedora. Cuenta con una piscina exterior, wifi gratuito y cocina totalmente equipada. Ideal para una escapada en pareja o en familia.</texto>
+  <texto>Esta encantadora casa_rural en la campiña de Roma ofrece una estancia tranquila y acogedora. Cuenta con una piscina exterior, wifi gratuito y cocina totalmente equipada. Ideal para una escapada en pareja o en familia.</texto>
   <puntuacion>8.0</puntuacion>
   <comentarios>15</comentarios>
   <instalaciones>
@@ -1205,10 +1205,10 @@
   <precio>85</precio>
 </alojamiento>
 
-<alojamiento type="casa rural">
+<alojamiento type="casa_rural" id="80">
   <nombre>Villeta Pradera</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Ubicada en una hermosa pradera en la campiña de Roma, esta casa rural es el lugar perfecto para una escapada relajante. Cuenta con piscina al aire libre, gimnasio y cocina totalmente equipada.</texto>
+  <texto>Ubicada en una hermosa pradera en la campiña de Roma, esta casa_rural es el lugar perfecto para una escapada relajante. Cuenta con piscina al aire libre, gimnasio y cocina totalmente equipada.</texto>
   <puntuacion>8.8</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>

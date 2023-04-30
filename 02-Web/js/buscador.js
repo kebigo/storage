@@ -90,8 +90,13 @@ parametros[0] = "Barcelona, ES";
 
 //Guardar filtros al hacer click
 boton.addEventListener("click", ()=>{
-  
-  
+
+//Limpiar filtros
+const checkboxes = document.querySelectorAll(".filters label input:checked ");
+checkboxes.forEach(e =>{
+    e.checked = false;
+})
+
 //Limpiar array parametros
 parametros.length = 0;
 
