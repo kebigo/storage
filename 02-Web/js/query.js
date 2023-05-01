@@ -13,7 +13,6 @@ function cargarXML(xml) {
 
     //Obtener el id mediante la url
     let currentUrl = (window.location.href);
-    console.log(currentUrl)
 
     currentUrl = currentUrl.split("?");
 
@@ -21,14 +20,50 @@ function cargarXML(xml) {
     var docXML = xhr.responseXML;
 
     lista = docXML.evaluate("//alojamiento[@" + id + "]", docXML, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-    
+
 
     for (let i = 0; i < lista.snapshotLength; i++) {
 
+
         document.querySelector(".container-lg .sub-title").innerText = lista.snapshotItem(i).getElementsByTagName("ciudad")[0].textContent;
         document.querySelector(".container-lg .main-title ").innerText = lista.snapshotItem(i).getElementsByTagName("nombre")[0].textContent;
+        
+        //Obtener instalaciones
+        var instalaciones = lista.snapshotItem(i).getElementsByTagName('instalacion');
 
-        console.log(lista.snapshotItem(i).getElementsByTagName("instalaciones")[0])
+        var instalaciones_array = Array.from(instalaciones, function (elemento) {
+            return elemento.textContent;
+        });
+
+        instalaciones_array.forEach(e=>{
+            
+            const info_servicios = document.querySelector(".info-servicios ul")
+            const label = document.createElement("label")
+            const icono = document.createElement("i");
+
+            label.textContent= e ;
+
+            label.insertBefore(icono, label.childNodes[0]);
+
+
+            if(label.textContent == "Piscina"){
+                icono.classList.add("fa-solid",  "fa-water-ladder" , "fw-bold", "me-2")
+            }else if(label.textContent == "Gimnasio"){
+                icono.classList.add("fa-solid",  "fa-dumbbell", "me-2");
+            }else if(label.textContent == "Wifi"){
+                icono.classList.add("fa-solid", "fa-wifi", "me-2");
+            }else if(label.textContent == "Cocina"){
+                icono.classList.add("fa-solid" , "fa-kitchen-set", "me-2");
+
+            }
+            
+            
+            info_servicios.appendChild(label)
+
+        })
+
+
+
         //Obtener ruta de la imagen mediante el nombre
         let texto = "";
         const ruta = lista.snapshotItem(i).getElementsByTagName("nombre")[0].textContent.split(" ")
@@ -40,10 +75,15 @@ function cargarXML(xml) {
         document.querySelector(".imagen-hotel img").setAttribute("src", "./assets/img/alojamiento_main/" + texto + ".jpg");
 
         document.querySelector(".title").innerText = lista.snapshotItem(i).getElementsByTagName("nombre")[0].textContent;
+        document.querySelector(".info-text p").innerText = lista.snapshotItem(i).getElementsByTagName("descripcion")[0].textContent
     }
+
+
 
 }
 
+
+let reservedDates = [1];
 
 //Calendario disponibilidad
 const daysTag = document.querySelector(".days"),
@@ -66,15 +106,23 @@ const renderCalendar = () => {
         lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
     let liTag = "";
 
+    
+
     for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
         liTag += `<li class="inactive ">${lastDateofLastMonth - i + 1}</li>`;
     }
 
-    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
-        // adding active class to li if the current day, month, and year matched
+    for (let i = 1; i <= lastDateofMonth; i++) {
         let isToday = i === date.getDate() && currMonth === new Date().getMonth()
             && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday} ">${i}</li>`;
+
+        // Adding "reserved" class to li element if the date is reserved
+        let isReserved = reservedDates.includes(`${currYear}-${currMonth + 1}-${i}`);
+        if (isReserved) {
+            isToday += "reserved";
+        }
+
+        liTag += `<li class="${isToday}">${i}</li>`;
     }
 
     for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days

@@ -8,27 +8,48 @@
   <puntuacion>6,7</puntuacion>
   <comentarios>945</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>100</precio>
+  <descripcion>
+      Descubra la esencia de Barcelona alojándose en nuestro hotel de 5 estrellas ubicado en el corazón de la ciudad. Déjese cautivar por la arquitectura modernista que rodea nuestro hotel, mientras disfruta de la comodidad y el lujo que ofrecemos.
+      
+       Desde la piscina en la azotea, donde podrá disfrutar de impresionantes vistas de la ciudad, hasta nuestras habitaciones elegantes y cómodas, cada detalle ha sido pensado para su comodidad y bienestar. 
+       
+       Además, nuestro equipo de conserjes expertos está a su disposición para ayudarlo a planificar su estadía y garantizar que disfrute al máximo de todo lo que Barcelona tiene para ofrecer.
+   </descripcion>
+
+   <reservas>
+      <reserva>
+          <fecha_inicio></fecha_inicio>
+          <fecha_fin></fecha_fin>
+      </reserva>
+   
+   </reservas>
 </alojamiento>
 
 <alojamiento type="hotel" id="2">
   <nombre>Hotel del Sol</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Este hotel está situado en el corazón de la ciudad, cerca de la estación de metro y de muchos cocinas y tiendas.</texto>
+  <texto>Este hotel está situado en el corazón de la ciudad, cerca de la estación de metro y de muchos Cocinas y tiendas.</texto>
   <puntuacion>7,3</puntuacion>
   <comentarios>854</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>80</precio>
+  <descripcion>
+      Bienvenido a nuestro lujoso hotel ubicado en una de las zonas más vibrantes de Barcelona. Con un diseño moderno y elegante, nuestras habitaciones y suites ofrecen una escapada tranquila y relajante en medio de la ciudad. 
+      
+      Si está buscando un poco de emoción, explore las calles de Barcelona, repletas de bares de tapas, restaurantes y tiendas únicas. 
+      
+      En el hotel, podrá disfrutar de una cena de primera clase en nuestro restaurante gourmet, seguida de una copa de vino en nuestro bar en la azotea con vistas impresionantes de la ciudad.
+   </descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="3">
@@ -38,12 +59,17 @@
   <puntuacion>5,5</puntuacion>
   <comentarios>1298</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>
+    Este hotel se encuentra en el casco antiguo de la ciudad, cerca de la catedral y del barrio de Santa Cruz. Ofrecemos habitaciones amplias y elegantes, equipadas con todas las comodidades modernas. 
+    
+    Nuestros huéspedes pueden disfrutar de un delicioso desayuno buffet en nuestro restaurante, así como de una selección de platos locales e internacionales para el almuerzo y la cena. Para aquellos que desean relajarse, nuestro spa cuenta con una piscina cubierta, sauna y baño turco.
+    
+     Además, ofrecemos servicios de conserjería para ayudar a nuestros huéspedes a planificar su estancia en Barcelona y aprovechar al máximo su tiempo en esta vibrante ciudad.
+  </descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="4">
@@ -53,12 +79,17 @@
   <puntuacion>5</puntuacion>
   <comentarios>1567</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>
+    Este hotel se encuentra en el casco antiguo de la ciudad, cerca de la catedral y del barrio de Santa Cruz. Ofrecemos habitaciones amplias y elegantes, equipadas con todas las comodidades modernas.
+    
+    Nuestros huéspedes pueden disfrutar de un delicioso desayuno buffet en nuestro restaurante, así como de una selección de platos locales e internacionales para el almuerzo y la cena. Para aquellos que desean relajarse, nuestro spa cuenta con una piscina cubierta, sauna y baño turco.
+     
+    Además, ofrecemos servicios de conserjería para ayudar a nuestros huéspedes a planificar su estancia en Barcelona y aprovechar al máximo su tiempo en esta vibrante ciudad.
+  </descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="5">
@@ -68,12 +99,17 @@
   <puntuacion>7,5</puntuacion>
   <comentarios>835</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>
+    Este hotel se encuentra en el casco antiguo de la ciudad, cerca de la catedral y del barrio de Santa Cruz. Ofrecemos habitaciones amplias y elegantes, equipadas con todas las comodidades modernas.
+  
+    Nuestros huéspedes pueden disfrutar de un delicioso desayuno buffet en nuestro restaurante, así como de una selección de platos locales e internacionales para el almuerzo y la cena. Para aquellos que desean relajarse, nuestro spa cuenta con una piscina cubierta, sauna y baño turco.
+ 
+    Además, ofrecemos servicios de conserjería para ayudar a nuestros huéspedes a planificar su estancia en Barcelona y aprovechar al máximo su tiempo en esta vibrante ciudad.
+  </descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="6">
@@ -83,12 +119,16 @@
   <puntuacion>8,4</puntuacion>
   <comentarios>410</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>95</precio>
+   <descripcion>
+    El Hotel Barcelona Palace es un lugar de ensueño ubicado en el corazón de la ciudad, a solo unos pasos de los lugares turísticos más importantes. Este hotel de cinco estrellas cuenta con habitaciones amplias y lujosas que ofrecen todas las comodidades necesarias para disfrutar de una estancia inolvidable. 
+    
+    Además, el hotel dispone de un spa de primera clase, donde los huéspedes pueden relajarse y rejuvenecer con tratamientos de belleza y masajes. El restaurante del hotel es un destino gastronómico en sí mismo, con una amplia selección de platos exquisitos y vinos de alta calidad. 
+    
+  </descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="7">
@@ -98,12 +138,17 @@
   <puntuacion>9,2</puntuacion>
   <comentarios>1250</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>280</precio>
+    <descripcion>
+       Disfruta de una estancia inolvidable en el Hotel Palace Praha, situado en pleno corazón del casco antiguo de Praga. Con una ubicación privilegiada cerca de la catedral y del barrio de Santa Cruz, tendrás fácil acceso a las principales atracciones turísticas de la ciudad. 
+       
+       Nuestras habitaciones están equipadas con todo lo necesario para tu comodidad y relax, incluyendo Wi-Fi gratuito y cocina completa. Además, nuestro amable personal está a tu disposición las 24 horas para ayudarte en lo que necesites. Reserva ya tu habitación en el Hotel Palace Praha y vive una experiencia única en Barcelona.
+    </descripcion>
+
 </alojamiento>
 
 <alojamiento type="hotel" id="8">
@@ -113,12 +158,19 @@
   <puntuacion>6,6</puntuacion>
   <comentarios>587</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>Este hotel es un oasis de lujo y comodidad en el corazón de la ciudad. Con una amplia variedad de habitaciones y suites elegantes, el hotel es ideal para parejas en busca de una escapada romántica, así como para familias que buscan unas vacaciones relajantes. 
+  
+  Además, cuenta con un restaurante de alta calidad que sirve deliciosos platos locales e internacionales, así como con una terraza en la azotea con vistas impresionantes de la ciudad. 
+  
+  El personal es amable y servicial, y se esfuerza por hacer que la estancia de los huéspedes sea lo más cómoda y agradable posible.
+  </descripcion>
+
+  
+
 </alojamiento>
 
 <alojamiento type="hotel" id="9">
@@ -128,27 +180,35 @@
   <puntuacion>9.2</puntuacion>
   <comentarios>245</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>250</precio>
+  <descripcion>Si buscas un hotel con encanto, este es el lugar perfecto para ti. Este hotel de estilo colonial te transporta a otra época, con su exquisita decoración y su cuidado mobiliario. Las habitaciones son espaciosas y luminosas, y cuentan con todas las comodidades necesarias para que disfrutes de una estancia cómoda y relajante. 
+  
+  El hotel dispone de una amplia variedad de servicios, como una piscina al aire libre, un gimnasio y un bar. Además, su céntrica ubicación hace que sea fácil acceder a los principales puntos de interés de la ciudad.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="10">  
   <nombre>Roma Suite</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>En Roma Suite Apartments ofrecemos una ubicación céntrica en Roma y amplias suites equipadas con cocina y sala de estar. Este alojamiento es perfecto para aquellos que prefieren una mayor independencia y comodidad durante su estancia en la ciudad.</texto>
+  <texto>En Roma Suite Apartments ofrecemos una ubicación céntrica en Roma y amplias suites equipadas con Cocina y sala de estar. Este alojamiento es perfecto para aquellos que prefieren una mayor independencia y comodidad durante su estancia en la ciudad.</texto>
   <puntuacion>8.9</puntuacion>
   <comentarios>112</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>false</wifi>
-    <cocina>false</cocina>
+    <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>Este hotel boutique es el lugar perfecto para los viajeros que buscan una experiencia única y personalizada. El hotel se encuentra en un edificio histórico que ha sido restaurado con esmero, y cuenta con habitaciones de diseño elegante y confortable.
+  
+   El servicio es excepcional, con un personal amable y atento que se asegurará de que tu estancia sea perfecta. 
+   
+   El hotel dispone de un bar y un restaurante que sirve deliciosos platos de la cocina mediterránea, así como una terraza con impresionantes vistas de la ciudad.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="11">  
@@ -158,12 +218,17 @@
   <puntuacion>7.2</puntuacion>
   <comentarios>65</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>false</wifi>
-    <cocina>false</cocina>
+    <instalacion>Cocina</instalacion>
+    <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>50</precio>
+  <descripcion>Este hotel moderno y elegante es la opción perfecta para los viajeros que buscan un alojamiento de alta calidad. Las habitaciones son amplias y están equipadas con todas las comodidades modernas, como aire acondicionado y wifi gratuito.
+  
+   El hotel cuenta con una amplia variedad de servicios, como un gimnasio y una piscina cubierta, así como un restaurante que sirve platos de la cocina local e internacional. 
+   
+   Además, su ubicación en el centro de la ciudad lo convierte en una base perfecta para explorar los principales puntos de interés.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="12">  
@@ -173,27 +238,40 @@
   <puntuacion>7.2</puntuacion>
   <comentarios>65</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>false</wifi>
-    <cocina>false</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
+
   </instalaciones>
   <precio>50</precio>
+  <descripcion>Este hotel de lujo es la elección perfecta para aquellos que buscan un alojamiento exclusivo y sofisticado. Las habitaciones son amplias y están decoradas con elegancia, con todas las comodidades modernas que puedas desear.
+  
+   El hotel cuenta con una amplia variedad de servicios, como una piscina al aire libre, un gimnasio y un spa de lujo. Además, su ubicación en el corazón de la ciudad lo convierte en una base perfecta para explorar los principales puntos de interés. 
+   
+   Una estancia en este hotel es una experiencia verdaderamente inolvidable.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="13">  
   <nombre>Hotel Romano</nombre>
   <ciudad>Roma,IT</ciudad>
-  <texto>El Hotel Roma ofrece vistas panorámicas a la ciudad eterna y habitaciones con aire acondicionado y conexión Wi-Fi gratuita. Además, cuenta con un cocina en la azotea, un bar y una terraza.</texto>
+  <texto>El Hotel Roma ofrece vistas panorámicas a la ciudad eterna y habitaciones con aire acondicionado y conexión Wi-Fi gratuita. Además, cuenta con un Cocina en la azotea, un bar y una terraza.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>1567</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>
+Este hotel es el lugar perfecto para relajarse y desconectar del ajetreo y el bullicio de la ciudad. Con un ambiente tranquilo y acogedor, podrás disfrutar de unas vacaciones inolvidables en un entorno inigualable. 
+
+Las habitaciones están decoradas con buen gusto y equipadas con todas las comodidades necesarias para garantizar una estancia cómoda y confortable. 
+
+Además, el hotel cuenta con una amplia variedad de instalaciones y servicios que harán que te sientas como en casa. No pierdas la oportunidad de disfrutar de una experiencia única en uno de los hoteles más exclusivos de la ciudad.
+
+</descripcion>
 </alojamiento>
 
 
@@ -205,12 +283,20 @@
   <puntuacion>9.0</puntuacion>
   <comentarios>437</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>340</precio>
+  <descripcion>
+¿Buscas un lugar tranquilo y acogedor para tus vacaciones? Este hotel es el lugar perfecto para ti. Con una ubicación privilegiada en pleno centro de la ciudad, este hotel ofrece una gran variedad de servicios e instalaciones para que puedas disfrutar de una estancia cómoda y relajada.
+
+ Las habitaciones están equipadas con todas las comodidades necesarias para garantizar una estancia inolvidable, y el personal del hotel estará a tu disposición en todo momento para atender cualquier necesidad que puedas tener. 
+ 
+ No esperes más y reserva ahora en uno de los hoteles más exclusivos de la ciudad.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="15">  
@@ -220,12 +306,18 @@
   <puntuacion>8.2</puntuacion>
   <comentarios>123</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>95</precio>
+    <descripcion>
+
+  Este hotel es el lugar perfecto para aquellos que buscan un lugar tranquilo y acogedor para sus vacaciones. Con una ubicación privilegiada en pleno centro de la ciudad, podrás disfrutar de una gran variedad de servicios e instalaciones en un ambiente tranquilo y relajado.
+  
+   Las habitaciones están decoradas con buen gusto y equipadas con todas las comodidades necesarias para garantizar una estancia cómoda y confortable. Además, el hotel cuenta con una amplia variedad de restaurantes y bares donde podrás disfrutar de la mejor gastronomía local e internacional. 
+   
+   No pierdas la oportunidad de disfrutar de unas vacaciones inolvidables en uno de los hoteles más exclusivos de la ciudad.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="16">
@@ -235,12 +327,14 @@
   <puntuacion>9.2</puntuacion>
   <comentarios>675</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Gimnasio</instalacion>
   </instalaciones>
   <precio>250</precio>
+  <descripcion>
+  Este hotel es el lugar perfecto para aquellos que buscan un ambiente tranquilo y relajado para sus vacaciones. Con una ubicación privilegiada en pleno centro de la ciudad, podrás disfrutar de una gran variedad de servicios e instalaciones en un ambiente acogedor y confortable. Las habitaciones están equipadas con todas las comodidades necesarias para garantizar una estancia inolvidable, y el personal del hotel estará a tu disposición en todo momento para atender cualquier necesidad que puedas tener. Además, el hotel cuenta con una amplia variedad de restaurantes y bares donde podrás disfrutar de la mejor gastronomía local e internacional. Reserva ahora en uno de los hoteles más exclusivos de la ciudad y disfruta de unas vacaciones inolvidables.
+
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="17">
@@ -250,73 +344,93 @@
   <puntuacion>9.5</puntuacion>
   <comentarios>425</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>310</precio>
+  <descripcion>
+  Este hotel es el lugar perfecto para aquellos que buscan una escapada tranquila y relajante. Ofrece una amplia variedad de instalaciones, incluyendo una piscina exterior, un spa, un gimnasio y un restaurante de alta calidad. 
+  
+  Además, las habitaciones son modernas, espaciosas y están equipadas con todo lo necesario para una estancia cómoda.
+</descripcion>
 </alojamiento>
 
 
 <alojamiento type="hotel" id="18">  
   <nombre>Hotel Mitte</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Este hotel de lujo se encuentra en el corazón de Berlín, cerca de los principales lugares de interés turístico de la ciudad. El hotel cuenta con una amplia gama de instalaciones, como una piscina cubierta, un gimnasio y un cocina.</texto>
+  <texto>Este hotel de lujo se encuentra en el corazón de Berlín, cerca de los principales lugares de interés turístico de la ciudad. El hotel cuenta con una amplia gama de instalaciones, como una Piscina cubierta, un Gimnasio y un Cocina.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>127</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Cocina</instalacion>
+    <instalacion>Gimnasio</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>
+  Si buscas un hotel de lujo en el corazón de la ciudad, este es el lugar para ti. Con vistas impresionantes y una ubicación privilegiada, este hotel es perfecto para aquellos que quieren explorar la ciudad a fondo.
+  
+   Las instalaciones incluyen un spa, un gimnasio y un restaurante gourmet, mientras que las habitaciones están decoradas con elegancia y cuentan con todas las comodidades modernas.
+</descripcion>
+
 </alojamiento>
 
 <alojamiento type="hotel" id="19">  
   <nombre>Hotel Alexander</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Nos encontramos Berlin centro, cerca de Alexanderplatz. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, un gimnasio y un cocina.</texto>
+  <texto>Nos encontramos Berlin centro, cerca de Alexanderplatz. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, un Gimnasio y un Cocina.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>92</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
   </instalaciones>
   <precio>180</precio>
+  <descripcion>
+  Este hotel se encuentra en un edificio histórico con un encanto único y una decoración elegante y moderna. Las habitaciones son espaciosas y luminosas, y algunas tienen vistas impresionantes de la ciudad. 
+  
+  Además, el hotel cuenta con una piscina exterior, un gimnasio y un restaurante con una amplia variedad de platos locales e internacionales.
+</descripcion>
+
 </alojamiento>
 
 <alojamiento type="hotel" id="20">  
   <nombre>Hotel Tiergarten</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Este elegante hotel se encuentra en el barrio de Tiergarten de Berlín. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, gimnasio y cocina.</texto>
+  <texto>Este elegante hotel se encuentra en el barrio de Tiergarten de Berlín. Las habitaciones están equipadas con todas las comodidades modernas, y el hotel cuenta con una amplia gama de instalaciones, como un spa, Gimnasio y Cocina.</texto>
   <puntuacion>8.8</puntuacion>
   <comentarios>65</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>200</precio>
+  <descripcion>
+  Si buscas un hotel de diseño único y moderno, este es el lugar perfecto para ti. Con una ubicación privilegiada en el centro de la ciudad, este hotel cuenta con habitaciones decoradas con estilo y equipadas con todas las comodidades modernas.
+  
+   Además, el hotel dispone de un spa, un gimnasio y un restaurante que sirve cocina de alta calidad.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="hotel" id="21">  
   <nombre>Hotel Berlin Berlin</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>El Hotel Berlin Berlin es un hotel de 4 estrellas ubicado en Berlín. Cuenta con un cocina que sirve  platos locales e internacionales, ademas de un bar, gimnasio y WiFi en todo el hotel.</texto>
+  <texto>El Hotel Berlin Berlin es un hotel de 4 estrellas ubicado en Berlín. Cuenta con un Cocina que sirve  platos locales e internacionales, ademas de un bar, Gimnasio y Wifi en todo el hotel.</texto>
   <puntuacion>8.9</puntuacion>
   <comentarios>1234</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>false</wifi>
-    <cocina>true</cocina>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>
+  Este hotel es ideal para aquellos que buscan una experiencia de lujo en un entorno tranquilo y relajante. Con una ubicación privilegiada en la costa, el hotel cuenta con una amplia variedad de instalaciones, incluyendo una piscina exterior, un spa y un restaurante de alta calidad. 
+  
+  Las habitaciones son amplias y luminosas, y algunas tienen vistas impresionantes al mar.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="camping" id="22">   
@@ -326,12 +440,13 @@
    <puntuacion>8.5</puntuacion>
    <comentarios>120</comentarios>
    <instalaciones>
-       <piscina>true</piscina>
-       <gimnasio>false</gimnasio>
-       <wifi>true</wifi>
-       <cocina>true</cocina>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Gimnasio</instalacion>
    </instalaciones>
    <precio>30</precio>
+  <descripcion>Este camping está ubicado en medio de un frondoso bosque, rodeado de naturaleza y tranquilidad. Ofrece una amplia variedad de actividades al aire libre, como senderismo, ciclismo y escalada. Además, cuenta con modernas instalaciones, incluyendo una piscina climatizada y un restaurante con deliciosas opciones gastronómicas.</descripcion>
+
+   
 </alojamiento>
 
 <alojamiento type="camping" id="23">   
@@ -341,12 +456,11 @@
    <puntuacion>9.0</puntuacion>
    <comentarios>85</comentarios>
    <instalaciones>
-       <piscina>true</piscina>
-       <gimnasio>false</gimnasio>
-       <wifi>true</wifi>
-       <cocina>false</cocina>
+      <instalacion>Gimnasio</instalacion>
    </instalaciones>
    <precio>25</precio>
+   <descripcion>Si buscas un camping con todas las comodidades para toda la familia, este es el lugar perfecto. Con piscina, parque infantil, restaurante y actividades para todas las edades, disfrutarás de unas vacaciones inolvidables en un entorno natural incomparable.</descripcion>
+
   </alojamiento>
 
 <alojamiento type="camping" id="24">   
@@ -356,12 +470,13 @@
    <puntuacion>8.0</puntuacion>
    <comentarios>70</comentarios>
    <instalaciones>
-       <piscina>true</piscina>
-       <gimnasio>false</gimnasio>
-       <wifi>true</wifi>
-       <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
    </instalaciones>
    <precio>35</precio>
+   <descripcion>Este camping a pie de playa te ofrece la posibilidad de dormir bajo las estrellas mientras escuchas el sonido de las olas. Con acceso directo a la playa y todas las comodidades necesarias, podrás disfrutar del mar y el sol como nunca antes.</descripcion>
+
 </alojamiento>
 
 
@@ -372,12 +487,14 @@
    <puntuacion>7.5</puntuacion>
    <comentarios>50</comentarios>
    <instalaciones>
-       <piscina>true</piscina>
-       <gimnasio>false</gimnasio>
-       <wifi>false</wifi>
-       <cocina>false</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
    </instalaciones>
    <precio>70</precio>
+   <descripcion>Si lo que buscas es desconectar de la ciudad y el estrés, este camping en plena montaña te ofrecerá un ambiente tranquilo y acogedor. Con actividades para toda la familia y una ubicación privilegiada, podrás disfrutar de la naturaleza en estado puro.</descripcion>
+
    </alojamiento>
 
 <alojamiento type="camping" id="26">
@@ -387,27 +504,30 @@
   <puntuacion>8.5</puntuacion>
   <comentarios>100</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>45</precio>
+  <descripcion>Este camping en plena naturaleza es el lugar perfecto para los amantes del turismo activo. Con acceso directo a rutas de senderismo, escalada y deportes acuáticos, disfrutarás de unas vacaciones llenas de emociones y aventuras.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="27">
   <nombre>Camping Estrellas</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Este camping situado en plena naturaleza ofrece una gran variedad de opciones de alojamiento, desde bungalows hasta tiendas de campaña, y cuenta con instalaciones deportivas y piscinas para niños y adultos.</texto>
+  <texto>Este camping situado en plena naturaleza ofrece una gran variedad de opciones de alojamiento, desde bungalows hasta tiendas de campaña, y cuenta con instalaciones deportivas y Piscinas para niños y adultos.</texto>
   <puntuacion>7.9</puntuacion>
   <comentarios>65</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
   </instalaciones>
   <precio>55</precio>
+  <descripcion>Este camping es ideal para aquellos que buscan un lugar tranquilo y relajante en medio de la naturaleza. Rodeado de montañas y bosques, ofrece numerosas rutas de senderismo y actividades al aire libre. Las instalaciones son modernas y bien mantenidas, con baños limpios y una piscina climatizada. 
+  
+  Además, el personal es amable y servicial, siempre dispuesto a ayudar con cualquier cosa que necesite. En resumen, es el lugar perfecto para desconectar y disfrutar de unas vacaciones en plena naturaleza.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="28">
@@ -417,42 +537,58 @@
   <puntuacion>8.2</puntuacion>
   <comentarios>80</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>65</precio>
+  <descripcion>Si estás buscando un camping familiar en un entorno tranquilo y natural, este es el lugar perfecto para ti. Situado en medio de una exuberante vegetación y con acceso directo a una hermosa playa, ofrece un sinfín de actividades para toda la familia. 
+  
+  Los niños pueden disfrutar del parque infantil y de la piscina mientras los adultos pueden relajarse en la terraza con una bebida refrescante. Las instalaciones son limpias y bien mantenidas, y el personal es muy amable y servicial. 
+  
+  En resumen, es el lugar ideal para unas vacaciones familiares relajantes y divertidas.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="29">
   <nombre>Camping El Pla</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Ubicado en un entorno natural, este camping cuenta con una gran variedad de opciones de alojamiento y ofrece actividades para toda la familia, como senderismo y piscina.</texto>
+  <texto>Ubicado en un entorno natural, este camping cuenta con una gran variedad de opciones de alojamiento y ofrece actividades para toda la familia, como senderismo y Piscina.</texto>
   <puntuacion>7.6</puntuacion>
   <comentarios>50</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Cocina</instalacion>
+
   </instalaciones>
   <precio>35</precio>
+
+  <descripcion>Si buscas un camping en el que puedas disfrutar de la belleza del mar Mediterráneo, no busques más. Este camping está situado justo en la costa, con acceso directo a una hermosa playa de arena. Las instalaciones son modernas y bien mantenidas, con baños limpios y una piscina climatizada. 
+  
+  Además, el personal es amable y servicial, siempre dispuesto a ayudar con cualquier cosa que necesite.
+  
+   En resumen, es el lugar perfecto para disfrutar del sol, la playa y el mar en unas vacaciones inolvidables.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="30">
   <nombre>Camping Sokol</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Este camping se encuentra en las afueras de Praga, pero muy cerca de la estación de metro, lo que permite un fácil acceso al centro de la ciudad. Ofrece una gran cantidad de instalaciones y actividades, como piscina, parque infantil, cocina y barbacoa.</texto>
+  <texto>Este camping se encuentra en las afueras de Praga, pero muy cerca de la estación de metro, lo que permite un fácil acceso al centro de la ciudad. Ofrece una gran cantidad de instalaciones y actividades, como Piscina, parque infantil, Cocina y barbacoa.</texto>
   <puntuacion>7.8</puntuacion>
   <comentarios>56</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>40</precio>
+  <descripcion>Este camping es perfecto para aquellos que buscan un ambiente relajado y acogedor. Rodeado de montañas y bosques, ofrece numerosas rutas de senderismo y actividades al aire libre. Las instalaciones son limpias y bien mantenidas, con baños modernos y una piscina climatizada.
+  
+   Además, el personal es muy amable y servicial, siempre dispuesto a ayudar con cualquier cosa que necesite. 
+   
+   En resumen, es el lugar ideal para desconectar y disfrutar de unas vacaciones en plena naturaleza.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="31">
@@ -462,12 +598,16 @@
   <puntuacion>7.8</puntuacion>
   <comentarios>45</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Wifi</instalacion>
+ 
   </instalaciones>
   <precio>55</precio>
+  <descripcion>Este camping es ideal para aquellos que buscan unas vacaciones en familia en un ambiente tranquilo y natural. Situado en medio de una exuberante vegetación y con acceso directo a una hermosa playa, ofrece un sinfín de actividades para toda la familia. 
+  
+  Los niños pueden disfrutar del parque infantil y de la piscina mientras los adultos pueden relajarse en la terraza con una bebida refrescante. Las instalaciones son limpias y bien mantenidas, y el personal es muy amable y servicial. 
+  
+  En resumen, es el lugar perfecto para unas vacaciones familiares relajantes y divertidas.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="32">
@@ -477,12 +617,14 @@
   <puntuacion>8.5</puntuacion>
   <comentarios>92</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>60</precio>
+
+  <descripcion>
+    Este camping es ideal para aquellos que buscan la paz y tranquilidad de la naturaleza. Rodeado de montañas y con un río a pocos metros, ofrece una gran variedad de actividades al aire libre. Las instalaciones están muy bien cuidadas y el personal es muy amable y servicial.
+</descripcion>
+  
 </alojamiento>
 
 <alojamiento type="camping" id="33">
@@ -492,27 +634,37 @@
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>70</precio>
+  <descripcion>Si estás buscando una escapada al aire libre, este camping en plena naturaleza es el lugar perfecto para ti. Rodeado de montañas y bosques, este camping te permitirá desconectar y disfrutar de la tranquilidad del entorno. 
+  
+  Con numerosas actividades al aire libre para toda la familia, como senderismo, bicicleta de montaña, pesca y kayak, no te aburrirás durante tu estancia.
+  
+   Además, el camping cuenta con modernas instalaciones, incluyendo una piscina, pista de tenis, restaurante y bar. ¡No te lo pierdas! </descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="34">
   <nombre>Camping Thames</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Este camping se encuentra a orillas del río Támesis y cuenta con una gran variedad de actividades acuáticas, así como numerosas opciones de alojamiento en tiendas de campaña y bungalows. Además, dispone de un cocina con vistas al río.</texto>
+  <texto>Este camping se encuentra a orillas del río Támesis y cuenta con una gran variedad de actividades acuáticas, así como numerosas opciones de alojamiento en tiendas de campaña y bungalows. Además, dispone de un Cocina con vistas al río.</texto>
   <puntuacion>7.8</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>45</precio>
+  <descripcion>Si te gusta acampar pero no quieres renunciar a las comodidades, este camping es perfecto para ti. Con amplias parcelas para acampar, caravanas y tiendas glamping, este camping ofrece una experiencia de camping de lujo. 
+  
+  Las instalaciones incluyen una piscina, restaurante, bar y tienda de comestibles, además de actividades organizadas para toda la familia, como clases de yoga y talleres de artesanía.
+  
+   Además, el camping se encuentra en una ubicación privilegiada cerca de la playa y del centro de la ciudad. </descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="35">
@@ -522,12 +674,16 @@
   <puntuacion>8.5</puntuacion>
   <comentarios>90</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>false</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
   </instalaciones>
   <precio>60</precio>
+  <descripcion>Este camping es la opción ideal para aquellos que buscan un entorno tranquilo y natural para acampar. Ubicado en un bosque de pinos junto a un río, el camping ofrece una gran cantidad de actividades al aire libre para disfrutar, como senderismo, pesca y natación. 
+  
+  También hay instalaciones modernas, como una piscina, restaurante y bar, así como una tienda de comestibles en el lugar para satisfacer todas tus necesidades. 
+  
+  Si buscas una escapada en contacto con la naturaleza, este camping es para ti. </descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="35" >
@@ -537,12 +693,17 @@
   <puntuacion>7.2</puntuacion>
   <comentarios>65</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>false</cocina>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
+   
   </instalaciones>
   <precio>50</precio>
+  <descripcion>Si buscas una escapada relajante en la naturaleza, este camping es el lugar perfecto para ti. Con una ubicación tranquila junto a un río y rodeado de montañas, este camping te permitirá disfrutar de la belleza natural de la zona.
+  
+  Las instalaciones incluyen una piscina, un bar y un restaurante, así como una tienda de comestibles en el lugar. 
+  
+  Además, el camping ofrece actividades al aire libre para toda la familia, como senderismo, pesca y kayak. ¡No te pierdas esta oportunidad de escapar de la ciudad! </descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="36">
@@ -552,87 +713,101 @@
   <puntuacion>7.5</puntuacion>
   <comentarios>56</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>50</precio>
+  <descripcion>Si estás buscando una experiencia de camping única, no busques más allá de este camping en un entorno montañoso. Con amplias parcelas para acampar, caravanas y tiendas de campaña glamping, este camping ofrece una estancia de camping cómoda y elegante. 
+  
+  Las instalaciones incluyen una piscina, un bar y un restaurante, así como actividades organizadas para toda la familia, como clases de yoga y talleres de artesanía.
+  
+   Además, el camping se encuentra en una ubicación privilegiada cerca de las atracciones turísticas de la zona. </descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="37">
   <nombre>Camping Village</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Este camping se encuentra en un lugar tranquilo y verde a las afueras de Roma. Dispone de una amplia variedad de bungalows y mobile homes para alojamiento y cuenta con una piscina y cocina.</texto>
+  <texto>Este camping se encuentra en un lugar tranquilo y verde a las afueras de Roma. Dispone de una amplia variedad de bungalows y mobile homes para alojamiento y cuenta con una Piscina y Cocina.</texto>
   <puntuacion>7.9</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>85</precio>
+
+  <descripcion>
+Este camping está situado en un lugar espectacular, rodeado de bosques y montañas. Ofrece una gran cantidad de actividades para toda la familia, como senderismo, pesca, piragüismo y ciclismo. Las instalaciones son modernas y muy bien equipadas, y el personal es muy amable y atento.
+</descripcion>
+ 
 </alojamiento>
 
 <alojamiento type="camping" id="38">
   <nombre>Happy Camping</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Este camping ofrece una gran cantidad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, además de una gran cantidad de servicios e instalaciones, incluyendo una piscina, un bar y un cocina.</texto>
+  <texto>Este camping ofrece una gran cantidad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, además de una gran cantidad de servicios e instalaciones, incluyendo una Piscina, un bar y un Cocina.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>70</precio>
+  <descripcion>
+Este camping es perfecto para los amantes de la naturaleza y la tranquilidad. Situado en un hermoso bosque, ofrece una gran variedad de actividades al aire libre, como senderismo, pesca y ciclismo. Las instalaciones son excelentes y el personal es muy amable y servicial.
+</descripcion>
+
 </alojamiento>
 
 <alojamiento type="camping" id="39">
   <nombre>Camping Tiber</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Ubicado a las afueras de Roma, este camping cuenta con una gran cantidad de opciones de alojamiento, incluyendo tiendas de campaña, bungalows y apartamentos. Además, ofrece una piscina, un cocina y un bar.</texto>
+  <texto>Ubicado a las afueras de Roma, este camping cuenta con una gran cantidad de opciones de alojamiento, incluyendo tiendas de campaña, bungalows y apartamentos. Además, ofrece una Piscina, un Cocina y un bar.</texto>
   <puntuacion>7.8</puntuacion>
   <comentarios>60</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>55</precio>
+  <descripcion>
+Este camping está situado en una ubicación privilegiada, cerca de la playa y rodeado de naturaleza. Ofrece una gran cantidad de actividades para toda la familia, como senderismo, pesca, piragüismo y ciclismo. Las instalaciones son modernas y muy bien equipadas, y el personal es muy amable y atento.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="camping" id="40">
   <nombre>Camping Capitol</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Situado en las afueras de Roma, este camping ofrece una amplia variedad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, y cuenta con una gran cantidad de servicios e instalaciones, como una piscina, un bar y un cocina.</texto>
+  <texto>Situado en las afueras de Roma, este camping ofrece una amplia variedad de opciones de alojamiento, desde tiendas de campaña hasta bungalows, y cuenta con una gran cantidad de servicios e instalaciones, como una Piscina, un bar y un Cocina.</texto>
   <puntuacion>8.0</puntuacion>
   <comentarios>75</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>60</precio>
+  <descripcion>
+Este camping es el lugar perfecto para aquellos que buscan la tranquilidad de la naturaleza. Situado en un hermoso bosque, ofrece una gran variedad de actividades al aire libre, como senderismo, pesca y ciclismo. Las instalaciones son excelentes y el personal es muy amable y servicial.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="41">
   <nombre>Barceloneta</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Estos modernos apartamentos se encuentran en el barrio del Poble Nou, a solo 500 metros de la playa. Cuentan con una terraza con piscina y vistas panorámicas a la ciudad.</texto>
+  <texto>Estos modernos apartamentos se encuentran en el barrio del Poble Nou, a solo 500 metros de la playa. Cuentan con una terraza con Piscina y vistas panorámicas a la ciudad.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
+
   </instalaciones>
   <precio>120</precio>
+  <descripcion>Este amplio y moderno apartamento se encuentra en el corazón de la ciudad, a poca distancia a pie de numerosos restaurantes y tiendas. Cuenta con dos habitaciones, dos baños y una gran sala de estar con vistas panorámicas. Además, dispone de una cocina completamente equipada y una terraza privada perfecta para disfrutar de una copa de vino al atardecer.</descripcion>
+
+  
 </alojamiento>
 
 <alojamiento type="apartamento" id="42">
@@ -642,27 +817,29 @@
   <puntuacion>9.5</puntuacion>
   <comentarios>150</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Gimnasio</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>250</precio>
+  <descripcion>Este acogedor apartamento está situado en una tranquila zona residencial a las afueras de la ciudad. Cuenta con una habitación doble, una cocina completamente equipada y una pequeña sala de estar con televisión por cable. Además, los huéspedes pueden disfrutar de la piscina comunitaria y del jardín con zona de barbacoa.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="43">
   <nombre>Diagonal Mar</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Estos apartamentos se encuentran en el moderno barrio de Diagonal Mar, cerca del centro comercial y del centro de convenciones. Disponen de piscina al aire libre, gimnasio, wifi gratuito y cocina totalmente equipada.</texto>
+  <texto>Estos apartamentos se encuentran en el moderno barrio de Diagonal Mar, cerca del centro comercial y del centro de convenciones. Disponen de Piscina al aire libre, Gimnasio, Wifi gratuito y Cocina totalmente equipada.</texto>
   <puntuacion>8.9</puntuacion>
   <comentarios>80</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>Este luminoso apartamento se encuentra en el centro de la ciudad, cerca de la plaza principal y de los principales lugares turísticos. Cuenta con una habitación doble, una cocina completamente equipada y una sala de estar con sofá cama. Además, dispone de una amplia terraza con vistas impresionantes de la ciudad.</descripcion>
+
 </alojamiento>
 
 
@@ -673,12 +850,12 @@
   <puntuacion>8.5</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>80</precio>
+  <descripcion>Este elegante apartamento se encuentra en un edificio histórico en el corazón de la ciudad. Cuenta con dos habitaciones dobles, una cocina completamente equipada y una amplia sala de estar con chimenea y muebles de diseño. Además, dispone de una terraza privada con vistas a la ciudad.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="45">
@@ -688,12 +865,13 @@
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+      <instalacion>Piscina</instalacion>
+      <instalacion>Wifi</instalacion>
+      <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>95</precio>
+  <descripcion>Este moderno y espacioso apartamento está situado en una zona tranquila de la ciudad, cerca de los principales lugares de interés turístico. Cuenta con tres habitaciones dobles, una cocina completamente equipada y una gran sala de estar con televisión por cable y sofá cama. Además, dispone de una amplia terraza con vistas panorámicas.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="46">
@@ -703,12 +881,13 @@
   <puntuacion>8.9</puntuacion>
   <comentarios>95</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+   <instalacion>Wifi</instalacion>
+   <instalacion>Gimnasio</instalacion>
+   <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>Este encantador apartamento se encuentra en el casco antiguo de la ciudad, a poca distancia a pie de los principales lugares de interés turístico. Cuenta con una habitación doble, una cocina completamente equipada y una sala de estar con sofá cama. Además, dispone de una pequeña terraza perfecta para tomar el desayuno.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="47">
@@ -718,147 +897,162 @@
   <puntuacion>8.7</puntuacion>
   <comentarios>80</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+   <instalacion>Wifi</instalacion>
+   <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>85</precio>
+  <descripcion>Este amplio apartamento se encuentra en una zona tranquila y residencial a las afueras de la ciudad. Cuenta con tres habitaciones dobles, una cocina completamente equipada y una gran sala de estar con televisión por cable. Además, dispone de una amplia terraza con vistas al jardín comunitario y a la piscina.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="48">
   <nombre>Kreuzberg 17</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Este espacioso apartamento de estilo contemporáneo se encuentra en el barrio de Mitte, cerca de numerosos restaurantes y tiendas. Dispone de conexión Wi-Fi gratuita, TV de pantalla plana y cocina completa.</texto>
+  <texto>Este espacioso apartamento de estilo contemporáneo se encuentra en el barrio de Mitte, cerca de numerosos restaurantes y tiendas. Dispone de conexión Wi-Fi gratuita, TV de pantalla plana y Cocina completa.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+   <instalacion>Piscina</instalacion>
+   <instalacion>Wifi</instalacion>
+   <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>Este moderno apartamento se encuentra en una zona céntrica de la ciudad, cerca de numerosos bares y restaurantes. Cuenta con dos habitaciones dobles, una cocina completamente equipada y una gran sala de estar con televisión por cable y sofá cama. Además, dispone de una terraza privada con vistas a la ciudad.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="49">
   <nombre>London Apartment</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Este acogedor apartamento se encuentra en pleno centro de Londres, a poca distancia de las principales atracciones turísticas. Cuenta con una habitación, un baño y una cocina completamente equipada.</texto>
+  <texto>Este acogedor apartamento se encuentra en pleno centro de Londres, a poca distancia de las principales atracciones turísticas. Cuenta con una habitación, un baño y una Cocina completamente equipada.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>23</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+   <instalacion>Wifi</instalacion>
+   <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>100</precio>
+  <descripcion>Este acogedor apartamento se encuentra en un edificio histórico en el corazón de la ciudad, a poca distancia a pie de los principales lugares de interés turístico. Cuenta con una habitación doble, una cocina completamente equipada y una sala de estar con sofá cama. Además, dispone de una pequeña terraza con vistas a la ciudad.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="50">
   <nombre>Cozy London Flat</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Este bonito apartamento situado en una zona tranquila de Londres cuenta con dos habitaciones, una cocina equipada, un baño y una acogedora sala de estar. Ideal para una escapada en pareja o en familia.</texto>
+  <texto>Este bonito apartamento situado en una zona tranquila de Londres cuenta con dos habitaciones, una Cocina equipada, un baño y una acogedora sala de estar. Ideal para una escapada en pareja o en familia.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>37</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>
+Este lujoso apartamento se encuentra en el corazón de la ciudad, con vistas panorámicas a los principales lugares de interés. Cuenta con una amplia sala de estar, una cocina moderna y totalmente equipada y dos dormitorios con cómodas camas. Además, dispone de una gran terraza donde disfrutar de las vistas mientras se toma una copa de vino.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="51">
   <nombre>London Riverside</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Este moderno apartamento se encuentra a orillas del río Támesis, con vistas espectaculares al puente de la Torre y la Torre de Londres. Cuenta con dos habitaciones, dos baños, una cocina equipada y una amplia sala de estar.</texto>
+  <texto>Este moderno apartamento se encuentra a orillas del río Támesis, con vistas espectaculares al puente de la Torre y la Torre de Londres. Cuenta con dos habitaciones, dos baños, una Cocina equipada y una amplia sala de estar.</texto>
   <puntuacion>9.3</puntuacion>
   <comentarios>45</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>180</precio>
+  <descripcion>
+Este apartamento es perfecto para aquellos que buscan alojamiento tranquilo y agradable en la ciudad. Cuenta con un ambiente cálido y acogedor con una decoración elegante y moderna. Dispone de una cocina totalmente equipada, dos habitaciones confortables y un baño limpio y ordenado. Además, cuenta con una terraza con vistas al jardín comunitario, perfecta para relajarse después de un largo día explorando la ciudad.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="52">
   <nombre>Central Apartment</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Este amplio apartamento se encuentra en el corazón de Londres, a poca distancia de las principales atracciones turísticas. Cuenta con tres habitaciones, dos baños, una cocina totalmente equipada y una sala de estar con vistas impresionantes de la ciudad.</texto>
+  <texto>Este amplio apartamento se encuentra en el corazón de Londres, a poca distancia de las principales atracciones turísticas. Cuenta con tres habitaciones, dos baños, una Cocina totalmente equipada y una sala de estar con vistas impresionantes de la ciudad.</texto>
   <puntuacion>9.5</puntuacion>
   <comentarios>60</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>250</precio>
+  <descripcion>
+Este amplio apartamento es perfecto para familias o grupos grandes que buscan un alojamiento cómodo en la ciudad. Cuenta con una gran sala de estar, una cocina moderna y totalmente equipada, tres dormitorios con camas dobles y dos baños. Además, cuenta con una terraza con vistas a la ciudad donde disfrutar de un desayuno al aire libre o una cena romántica.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="53">
   <nombre>Apartment Luxe</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Este apartamento moderno y elegante se encuentra en el centro de Praga y cuenta con piscina, gimnasio, wifi y cocina totalmente equipada. Ofrece una vista impresionante de la ciudad y se encuentra cerca de todos los principales lugares de interés.</texto>
+  <texto>Este apartamento moderno y elegante se encuentra en el centro de Praga y cuenta con Piscina, Gimnasio, Wifi y Cocina totalmente equipada. Ofrece una vista impresionante de la ciudad y se encuentra cerca de todos los principales lugares de interés.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>
+Este acogedor apartamento es perfecto para aquellos que buscan una escapada romántica en la ciudad. Cuenta con una decoración elegante y moderna, una cómoda cama doble y una cocina totalmente equipada. Además, cuenta con una pequeña terraza con vistas a la ciudad, donde se puede disfrutar de una copa de vino mientras se contempla el atardecer.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="54">
   <nombre>Karlova Loft</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Este apartamento recién renovado se encuentra en el corazón de Praga y cuenta con una ubicación perfecta para explorar la ciudad. Ofrece piscina, gimnasio, wifi y cocina totalmente equipada para una estancia confortable.</texto>
+  <texto>Este apartamento recién renovado se encuentra en el corazón de Praga y cuenta con una ubicación perfecta para explorar la ciudad. Ofrece Piscina, Gimnasio, Wifi y Cocina totalmente equipada para una estancia confortable.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>70</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+  <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>
+Este moderno apartamento es perfecto para aquellos que buscan alojamiento en el centro de la ciudad. Cuenta con una amplia sala de estar, una cocina totalmente equipada y dos dormitorios con cómodas camas. Además, dispone de una terraza con vistas panorámicas a la ciudad donde se puede disfrutar de una cena al aire libre o tomar el sol.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="55">
   <nombre>Celetna Deluxe</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Este amplio apartamento de lujo se encuentra en el corazón de Praga y cuenta con piscina, gimnasio, wifi y cocina totalmente equipada. Tiene una decoración elegante y acogedora, y ofrece todas las comodidades modernas para una estancia confortable.</texto>
+  <texto>Este amplio apartamento de lujo se encuentra en el corazón de Praga y cuenta con Piscina, Gimnasio, Wifi y Cocina totalmente equipada. Tiene una decoración elegante y acogedora, y ofrece todas las comodidades modernas para una estancia confortable.</texto>
   <puntuacion>8.8</puntuacion>
   <comentarios>95</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>
+Este apartamento se encuentra en el corazón del casco antiguo de la ciudad, con vistas a los monumentos históricos más emblemáticos. Cuenta con una decoración moderna y elegante, una amplia sala de estar, una cocina totalmente equipada y dos dormitorios cómodos. Además, dispone de una terraza con vistas a la ciudad donde disfrutar de un desayuno al aire libre o una cena romántica.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="56">
   <nombre>Parizska Praga</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Este acogedor apartamento se encuentra en el centro histórico de Praga, a pocos minutos a pie de la Plaza de la Ciudad Vieja y el Puente de Carlos. Dispone de cocina equipada, wifi gratuito y vistas panorámicas a la ciudad.</texto>
+  <texto>Este acogedor apartamento se encuentra en el centro histórico de Praga, a pocos minutos a pie de la Plaza de la Ciudad Vieja y el Puente de Carlos. Dispone de Cocina equipada, Wifi gratuito y vistas panorámicas a la ciudad.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>37</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>80</precio>
+  <descripcion>
+Este amplio apartamento es perfecto para aquellos que buscan alojamiento en el centro de la ciudad. Cuenta con una amplia sala de estar, una cocina totalmente equipada y tres dormitorios con cómodas camas. Además, dispone de una terraza con vistas a la ciudad donde disfrutar de una cena al aire libre o tomar el sol.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="apartamento" id="57">
@@ -868,12 +1062,14 @@
   <puntuacion>9.0</puntuacion>
   <comentarios>35</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+   <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>Si buscas una experiencia de lujo, no busques más allá de nuestros apartamentos. Cada uno de nuestros espaciosos y modernos apartamentos ofrece un ambiente elegante y relajado, con todas las comodidades y comodidades que necesitas para sentirte como en casa. 
+  
+  Desde cocinas totalmente equipadas hasta balcones con vistas impresionantes, nuestros apartamentos son el lugar perfecto para disfrutar de unas vacaciones inolvidables.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="58">
@@ -883,12 +1079,15 @@
   <puntuacion>8.8</puntuacion>
   <comentarios>22</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
+    <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>¿Quieres disfrutar de unas vacaciones de ensueño? ¡Nuestros apartamentos son la elección perfecta! Ubicados en el corazón de la ciudad, nuestros apartamentos son amplios, cómodos y están diseñados para satisfacer todas tus necesidades. 
+  
+  Desde las modernas instalaciones hasta la decoración elegante y el ambiente acogedor, nuestros apartamentos son la mejor manera de experimentar todo lo que la ciudad tiene para ofrecer.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="59">
@@ -898,162 +1097,198 @@
   <puntuacion>8.5</puntuacion>
   <comentarios>15</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>¿Quieres sentirte como en casa durante tus vacaciones? Nuestros apartamentos son la respuesta. Diseñados para ofrecer la combinación perfecta de confort, estilo y conveniencia, nuestros apartamentos están equipados con todas las comodidades que necesitas para disfrutar de unas vacaciones relajantes e inolvidables.
+  
+   Desde las modernas cocinas hasta los amplios salones y las impresionantes vistas, nuestros apartamentos tienen todo lo que necesitas para una escapada perfecta.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="apartamento" id="60">
   <nombre>Gladiatore 12</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Este amplio apartamento se encuentra en una ubicación privilegiada en el corazón de Roma, cerca de los principales lugares de interés turístico. Dispone de cocina completamente equipada, conexión wifi gratuita y amplias zonas de estar y de descanso.</texto>
+  <texto>Este amplio apartamento se encuentra en una ubicación privilegiada en el corazón de Roma, cerca de los principales lugares de interés turístico. Dispone de Cocina completamente equipada, conexión Wifi gratuita y amplias zonas de estar y de descanso.</texto>
   <puntuacion>9.4</puntuacion>
   <comentarios>55</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Gimnasio</instalacion>
+    <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>¿Quieres escapar del bullicio de la ciudad? Nuestros apartamentos son el refugio perfecto. Ubicados en una zona tranquila y apacible, nuestros apartamentos ofrecen un ambiente relajado y cómodo, con todas las comodidades y servicios que necesitas para disfrutar de unas vacaciones tranquilas y rejuvenecedoras.
+  
+   Desde las amplias terrazas hasta los jardines bien cuidados, nuestros apartamentos son el lugar perfecto para escapar del estrés y la ansiedad de la vida cotidiana.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="61">
   <nombre>Can Gual</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Can Gual es una hermosa casa_rural con vistas panorámicas a la montaña y una piscina privada. Ofrece alojamiento para hasta 10 personas, con 4 habitaciones dobles y una habitación individual.</texto>
+  <texto>Can Gual es una hermosa casa_rural con vistas panorámicas a la montaña y una Piscina privada. Ofrece alojamiento para hasta 10 personas, con 4 habitaciones dobles y una habitación individual.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>200</precio>
+  <descripcion>Si buscas un lugar donde desconectar y disfrutar de la naturaleza, una casa rural es la opción perfecta. Rodeada de paisajes impresionantes y en plena tranquilidad, podrás disfrutar de una estancia única en familia o con amigos. 
+  
+  Además, muchas casas rurales cuentan con actividades como senderismo, paseos a caballo o degustaciones de productos locales. No lo pienses más y reserva ya tu casa rural para unas vacaciones inolvidables.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="62">
   <nombre>Casa del Pi</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Esta casa_rural de piedra se encuentra en un entorno natural privilegiado y ofrece una piscina exterior, un gimnasio y una cocina completamente equipada.</texto>
+  <texto>Esta casa_rural de piedra se encuentra en un entorno natural privilegiado y ofrece una Piscina exterior, un Gimnasio y una Cocina completamente equipada.</texto>
   <puntuacion>8.9</puntuacion>
   <comentarios>98</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>Las casas rurales son una opción ideal para aquellos que buscan alejarse del ruido y el estrés de la ciudad. Con un ambiente acogedor y tranquilo, podrás disfrutar de la naturaleza y desconectar por completo.
+  
+   Además, muchas casas rurales cuentan con chimeneas y barbacoas para que puedas cocinar y pasar una velada inolvidable con tus seres queridos. ¡Reserva ya tu casa rural y vive una experiencia única!</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="63">
   <nombre>Masía Can Oliver</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>La Masía Can Oliver es una casa_rural de estilo rústico situada en el corazón del Parque Natural de la Garrotxa, con capacidad para 8 personas. Ofrece una piscina exterior, un gimnasio y una cocina.</texto>
+  <texto>La Masía Can Oliver es una casa_rural de estilo rústico situada en el corazón del Parque Natural de la Garrotxa, con capacidad para 8 personas. Ofrece una Piscina exterior, un Gimnasio y una Cocina.</texto>
   <puntuacion>9.2</puntuacion>
   <comentarios>140</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+   <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>180</precio>
+  <descripcion>¿Quieres escaparte de la ciudad y disfrutar de la tranquilidad del campo? Entonces una casa rural es la opción ideal para ti. Con todas las comodidades que necesitas para una estancia cómoda y agradable, podrás disfrutar de la naturaleza y descansar como nunca antes.
+  
+   Además, muchas casas rurales cuentan con piscina, jardín y barbacoa para que puedas relajarte y disfrutar de tu tiempo libre como más te guste.</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="64">
   <nombre>Masía El Molino</nombre>
   <ciudad>Barcelona, ES</ciudad>
-  <texto>Esta preciosa casa_rural está situada en plena naturaleza y cuenta con unas vistas espectaculares. Dispone de amplias habitaciones, y una gran piscina al aire libre.</texto>
+  <texto>Esta preciosa casa_rural está situada en plena naturaleza y cuenta con unas vistas espectaculares. Dispone de amplias habitaciones, y una gran Piscina al aire libre.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>45</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>Si estás buscando un lugar tranquilo donde disfrutar de tus vacaciones, una casa rural puede ser la opción perfecta para ti. Situada en plena naturaleza, podrás respirar aire fresco y desconectar del bullicio de la ciudad.
+  
+   Además, muchas casas rurales cuentan con actividades para toda la familia, como senderismo, paseos a caballo o visitas a bodegas. ¡Reserva ya tu casa rural y vive una experiencia inolvidable!</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="65">
   <nombre>Domov Slovo</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Disfruta de una estancia en nuestra acogedora casa_rural situada en plena naturaleza, pero a pocos minutos del centro histórico de Praga. Ofrecemos habitaciones amplias y luminosas, cocina totalmente equipada, piscina, gimnasio y conexión wifi gratuita.</texto>
+  <texto>Disfruta de una estancia en nuestra acogedora casa_rural situada en plena naturaleza, pero a pocos minutos del centro histórico de Praga. Ofrecemos habitaciones amplias y luminosas, Cocina totalmente equipada, Piscina, Gimnasio y conexión Wifi gratuita.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>50</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>¿Necesitas desconectar del estrés y la rutina? Entonces una casa rural es la opción perfecta para ti. Con un ambiente acogedor y tranquilo, podrás disfrutar de la naturaleza y relajarte por completo. Además, muchas casas rurales cuentan con todas las comodidades que necesitas para una estancia cómoda y agradable. 
+  
+  ¡No lo pienses más y reserva ya tu casa rural!</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="66">
   <nombre>Sedm Lledna</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Vive una experiencia rural única en nuestra casa de campo situada en las afueras de Praga. Disfruta de la tranquilidad y el contacto con la naturaleza sin renunciar a las comodidades modernas. Contamos con piscina, gimnasio, wifi y cocina totalmente equipada.</texto>
+  <texto>Vive una experiencia rural única en nuestra casa de campo situada en las afueras de Praga. Disfruta de la tranquilidad y el contacto con la naturaleza sin renunciar a las comodidades modernas. Contamos con Piscina, Gimnasio, Wifi y Cocina totalmente equipada.</texto>
   <puntuacion>8.8</puntuacion>
   <comentarios>35</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+
+  <descripcion>Si buscas un lugar tranquilo donde desconectar de la ciudad, una casa rural es la opción ideal para ti. Rodeada de naturaleza y en plena tranquilidad, podrás disfrutar de unos días de descanso y relax. Además, muchas casas rurales cuentan con piscina, jardín y barbacoa para que puedas disfrutar de tu tiempo libre como más te guste. 
+  
+  ¡Reserva ya tu casa rural y vive una experiencia única!</descripcion>
+
 </alojamiento>
 
 <alojamiento type="casa_rural" id="67">
   <nombre>Daleko Modrá Fialová</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Descubre la belleza del bosque de Praga alojándote en nuestra casa_rural. Disfruta de la naturaleza en su estado puro y de unas instalaciones modernas que incluyen piscina, gimnasio, wifi y cocina totalmente equipada.</texto>
+  <texto>Descubre la belleza del bosque de Praga alojándote en nuestra casa_rural. Disfruta de la naturaleza en su estado puro y de unas instalaciones modernas que incluyen Piscina, Gimnasio, Wifi y Cocina totalmente equipada.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>42</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Gimnasio</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>100</precio>
+  <descripcion>
+En la montaña y rodeada de un paisaje natural incomparable, esta casa rural de estilo rústico ofrece un ambiente tranquilo y relajante. Con capacidad para hasta 8 personas, dispone de piscina exterior y barbacoa para disfrutar de agradables comidas al aire libre. 
+
+Además, cuenta con sala de juegos y biblioteca para los días más frescos y lluviosos. Ideal para disfrutar en familia o con amigos de una escapada al campo.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="68">
   <nombre>Domo Pití</nombre>
   <ciudad>Praga, CZ</ciudad>
-  <texto>Relájate en nuestra casa_rural situada en un hermoso prado rodeado de naturaleza y tranquilidad. Nuestras instalaciones modernas incluyen piscina, gimnasio, wifi y cocina totalmente equipada. A solo 30 minutos del centro histórico de Praga.</texto>
+  <texto>Relájate en nuestra casa_rural situada en un hermoso prado rodeado de naturaleza y tranquilidad. Nuestras instalaciones modernas incluyen Piscina, Gimnasio, Wifi y Cocina totalmente equipada. A solo 30 minutos del centro histórico de Praga.</texto>
   <puntuacion>8.3</puntuacion>
   <comentarios>27</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+     <instalacion>Cocina</instalacion>
+      <instalacion>Wifi</instalacion>
+
   </instalaciones>
   <precio>90</precio>
+  <descripcion>
+Esta acogedora casa rural de estilo andaluz ofrece un ambiente cálido y familiar, perfecto para unas vacaciones relajadas en la naturaleza. Con capacidad para hasta 6 personas, dispone de jardín con piscina y barbacoa, así como de una amplia terraza con vistas espectaculares al campo.
+
+ Su decoración rústica y tradicional crea un ambiente acogedor y confortable para disfrutar de unos días de descanso y desconexión.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="69">
   <nombre>Greenwich Farm</nombre>
   <ciudad>Londres, UK</ciudad>
-  <texto>Esta encantadora casa_rural se encuentra en pleno centro de Greenwich, a pocos minutos a pie del Observatorio Real y el Cutty Sark. La casa cuenta con un bonito jardín con piscina y un amplio comedor con chimenea para disfrutar de comidas y veladas acogedoras.</texto>
+  <texto>Esta encantadora casa_rural se encuentra en pleno centro de Greenwich, a pocos minutos a pie del Observatorio Real y el Cutty Sark. La casa cuenta con un bonito jardín con Piscina y un amplio comedor con chimenea para disfrutar de comidas y veladas acogedoras.</texto>
   <puntuacion>9.1</puntuacion>
   <comentarios>120</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>
+Situada en plena naturaleza, esta casa rural de estilo provenzal es ideal para desconectar del estrés de la ciudad y disfrutar de la tranquilidad del campo. Con capacidad para hasta 10 personas, dispone de piscina exterior y jardín con barbacoa, así como de amplios espacios comunes como salón con chimenea y cocina totalmente equipada. 
+
+Perfecta para disfrutar en familia o con amigos de unos días de descanso y relax.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="70">
@@ -1063,12 +1298,16 @@
   <puntuacion>8.5</puntuacion>
   <comentarios>90</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Cocina</instalacion>
+      <instalacion>Wifi</instalacion>
   </instalaciones>
   <precio>150</precio>
+  <descripcion>
+En un entorno natural de gran belleza se encuentra esta casa rural de estilo colonial, con capacidad para hasta 12 personas. Rodeada de naturaleza y con amplios espacios al aire libre, dispone de piscina exterior, barbacoa y un amplio jardín para disfrutar de la tranquilidad del campo. 
+
+Además, cuenta con un amplio salón con chimenea y una cocina totalmente equipada para hacer de la estancia una experiencia inolvidable.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="71">
@@ -1078,12 +1317,16 @@
   <puntuacion>7.9</puntuacion>
   <comentarios>60</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>80</precio>
+  <descripcion>
+Esta preciosa casa rural de estilo moderno está situada en un entorno natural incomparable, rodeada de montañas y naturaleza. Con capacidad para hasta 8 personas, dispone de amplias terrazas con vistas espectaculares al campo y a la piscina exterior, así como de una zona de barbacoa para disfrutar de agradables comidas al aire libre.
+
+ En el interior, su decoración minimalista y elegante crea un ambiente tranquilo y acogedor para disfrutar de unos días de descanso y relax.
+</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="72">
@@ -1093,131 +1336,137 @@
   <puntuacion>8.8</puntuacion>
   <comentarios>100</comentarios>
   <instalaciones>
-    <piscina>false</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
   </instalaciones>
+  <precio>85</precio>
+  <descripcion>
+Situada en un entorno natural privilegiado, esta casa rural de estilo rústico es ideal para disfrutar de unos días de tranquilidad y relax en plena naturaleza. Con capacidad para hasta 10 personas, dispone de amplios espacios comunes como salón con chimenea y cocina totalmente equipada, así como de una terraza con vistas espectaculares al campo. 
+
+Además, cuenta con piscina exterior y zona de barbacoa para disfrutar de agradables comidas al aire libre.
+</descripcion>
   </alojamiento>
 
 <alojamiento type="casa_rural" id="73">
   <nombre>Klaviatur Tisch</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta casa_rural está situada en las afueras de Berlín y ofrece una experiencia tranquila y relajante con hermosas vistas de la naturaleza circundante. La casa cuenta con una amplia sala de estar, cocina totalmente equipada, tres dormitorios y dos baños.</texto>
+  <texto>Esta casa_rural está situada en las afueras de Berlín y ofrece una experiencia tranquila y relajante con hermosas vistas de la naturaleza circundante. La casa cuenta con una amplia sala de estar, Cocina totalmente equipada, tres dormitorios y dos baños.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>50</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>Si estás buscando desconectar de la rutina y pasar unos días en plena naturaleza, no dudes en reservar una casa rural. Disfrutarás de la tranquilidad y la paz que solo te puede ofrecer el campo. Además, muchas de estas casas están equipadas con todas las comodidades para que no eches de menos la ciudad.</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="74">
   <nombre>Gabel House</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta hermosa casa_rural se encuentra en un bosque a las afueras de Berlín. La casa cuenta con dos dormitorios, una cocina totalmente equipada, una amplia sala de estar y dos baños. Además, la casa cuenta con una terraza con vistas al bosque.</texto>
+  <texto>Esta hermosa casa_rural se encuentra en un bosque a las afueras de Berlín. La casa cuenta con dos dormitorios, una Cocina totalmente equipada, una amplia sala de estar y dos baños. Además, la casa cuenta con una terraza con vistas al bosque.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>¿Quieres vivir una experiencia diferente? Alójate en una casa rural. Con su arquitectura tradicional, sus muebles rústicos y su ambiente acogedor, te sentirás como en otra época. Además, podrás disfrutar de actividades al aire libre como senderismo, rutas en bicicleta o paseos a caballo. ¡No te arrepentirás!</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="75">
   <nombre>Deutsche Herberge</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta encantadora casa_rural se encuentra en las montañas cerca de Berlín y ofrece impresionantes vistas panorámicas del paisaje circundante. La casa cuenta con dos dormitorios, una cocina totalmente equipada, una sala de estar y un baño. </texto>
+  <texto>Esta encantadora casa_rural se encuentra en las montañas cerca de Berlín y ofrece impresionantes vistas panorámicas del paisaje circundante. La casa cuenta con dos dormitorios, una Cocina totalmente equipada, una sala de estar y un baño. </texto>
   <puntuacion>9.2</puntuacion>
   <comentarios>40</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+    <instalacion>Piscina</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>130</precio>
+  <descripcion>¿Buscas un lugar tranquilo donde desconectar del ruido de la ciudad? Las casas rurales son perfectas para ello. Además de la paz y la tranquilidad que te ofrecen, podrás disfrutar de la belleza del paisaje y de la naturaleza que te rodea. ¡No te lo pienses más y reserva tu casa rural!</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="76">
   <nombre>Feuerzeug Ländlich</nombre>
   <ciudad>Berlín, DE</ciudad>
-  <texto>Esta casa_rural se encuentra en el corazón de Berlín, en el barrio de Mitte. Es perfecta para aquellos que buscan una escapada tranquila y relajante en la ciudad. La casa cuenta con una amplia sala de estar, cocina completamente equipada y dos dormitorios con baño privado.</texto>
+  <texto>Esta casa_rural se encuentra en el corazón de Berlín, en el barrio de Mitte. Es perfecta para aquellos que buscan una escapada tranquila y relajante en la ciudad. La casa cuenta con una amplia sala de estar, Cocina completamente equipada y dos dormitorios con baño privado.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>Si te gusta el turismo rural y quieres vivir una experiencia única, te recomendamos alojarte en una casa rural. Podrás disfrutar de la naturaleza y de la vida en el campo, además de probar la gastronomía local y conocer a gente auténtica. ¡No te lo pierdas!</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="77">
   <nombre>1AW3</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Esta hermosa casa_rural cuenta con una ubicación privilegiada en la campiña de Roma, con vistas panorámicas a los alrededores. Ofrece una piscina exterior, gimnasio y cocina totalmente equipada.</texto>
+  <texto>Esta hermosa casa_rural cuenta con una ubicación privilegiada en la campiña de Roma, con vistas panorámicas a los alrededores. Ofrece una Piscina exterior, Gimnasio y Cocina totalmente equipada.</texto>
   <puntuacion>9.0</puntuacion>
   <comentarios>25</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+        <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>120</precio>
+  <descripcion>¿Quieres alejarte de la ciudad y pasar unos días en plena naturaleza? Las casas rurales son una opción perfecta. Disfrutarás de la tranquilidad y la belleza del entorno, y además podrás realizar actividades como senderismo, paseos a caballo o avistamiento de aves. ¡Reserva ya tu casa rural!</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="78">
   <nombre>Villetta La Vigna</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Ubicada en una hermosa finca en la campiña de Roma, esta casa_rural ofrece una experiencia auténtica y relajante. Cuenta con piscina al aire libre, wifi gratuito y cocina totalmente equipada.</texto>
+  <texto>Ubicada en una hermosa finca en la campiña de Roma, esta casa_rural ofrece una experiencia auténtica y relajante. Cuenta con Piscina al aire libre, Wifi gratuito y Cocina totalmente equipada.</texto>
   <puntuacion>8.5</puntuacion>
   <comentarios>40</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Piscina</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>95</precio>
+  <descripcion>Si estás pensando en hacer una escapada de fin de semana, una casa rural es una excelente opción. Podrás desconectar del estrés diario y disfrutar de la naturaleza y la tranquilidad del campo. Además, muchas de estas casas cuentan con todas las comodidades necesarias para que no te falte de nada.</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="79">
   <nombre>Campagna Trattore</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Esta encantadora casa_rural en la campiña de Roma ofrece una estancia tranquila y acogedora. Cuenta con una piscina exterior, wifi gratuito y cocina totalmente equipada. Ideal para una escapada en pareja o en familia.</texto>
+  <texto>Esta encantadora casa_rural en la campiña de Roma ofrece una estancia tranquila y acogedora. Cuenta con una Piscina exterior, Wifi gratuito y Cocina totalmente equipada. Ideal para una escapada en pareja o en familia.</texto>
   <puntuacion>8.0</puntuacion>
   <comentarios>15</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>false</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>85</precio>
+  <descripcion>¿Quieres disfrutar de unas vacaciones diferentes? Alójate en una casa rural. Podrás vivir una experiencia única, rodeado de naturaleza y disfrutando de la tranquilidad y el silencio que solo te ofrece el campo. ¡No lo pienses más y reserva ya tu casa rural!</descripcion>
 </alojamiento>
 
 <alojamiento type="casa_rural" id="80">
   <nombre>Villeta Pradera</nombre>
   <ciudad>Roma, IT</ciudad>
-  <texto>Ubicada en una hermosa pradera en la campiña de Roma, esta casa_rural es el lugar perfecto para una escapada relajante. Cuenta con piscina al aire libre, gimnasio y cocina totalmente equipada.</texto>
+  <texto>Ubicada en una hermosa pradera en la campiña de Roma, esta casa_rural es el lugar perfecto para una escapada relajante. Cuenta con Piscina al aire libre, Gimnasio y Cocina totalmente equipada.</texto>
   <puntuacion>8.8</puntuacion>
   <comentarios>30</comentarios>
   <instalaciones>
-    <piscina>true</piscina>
-    <gimnasio>true</gimnasio>
-    <wifi>true</wifi>
-    <cocina>true</cocina>
+       <instalacion>Piscina</instalacion>
+     <instalacion>Gimnasio</instalacion>
+     <instalacion>Wifi</instalacion>
+     <instalacion>Cocina</instalacion>
   </instalaciones>
   <precio>110</precio>
+  <descripcion>Si buscas un lugar donde relajarte y desconectar de la ciudad, una casa rural es una opción perfecta. Podrás disfrutar de la tranquilidad y la paz que solo te puede ofrecer el campo, además de probar la gastronomía local y realizar actividades al aire libre. ¡Reserva ya tu casa rural!</descripcion>
 </alojamiento>
 
 </alojamientos>

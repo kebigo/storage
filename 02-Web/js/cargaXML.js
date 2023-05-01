@@ -30,6 +30,7 @@ function cargarXML(xml){
 
      filtros = obtenerFiltros();
 
+
     const todosVacios = filtros.every(arr => arr.length === 0);
     if (!todosVacios) {
 
@@ -155,7 +156,7 @@ function cargarXML(xml){
     
     }
 
-}
+  }
 
   //Paginacion
   function paginacion(){
@@ -205,7 +206,7 @@ function cargarXML(xml){
 
   
   //Crear nuevas cards
-function crearHijos(nuevaCard){
+  function crearHijos(nuevaCard){
   //Alojamiento-image
   const alojamiento_image = document.createElement("div");
   alojamiento_image.classList.add("alojamiento-image", "col-12", "col-md-3", "me-4", "me-lg-5", "me-xl-4" , "me-xxl-0")
@@ -217,7 +218,7 @@ function crearHijos(nuevaCard){
   const puntuacion = document.createElement("div")
   puntuacion.classList.add("puntuacion", "d-flex" ,"justify-content-center",  "h-auto", "d-sm-none" , "ms-2",  "mt-4")
   const reviews = document.createElement("div");
-  reviews.classList.add("reviews",  "col-10",  "ps-xxl-5");
+  reviews.classList.add("reviews",  "col",  "ps-xxl-5");
   const puntuacion_title = document.createElement("h4");
   puntuacion_title.classList.add("puntuacion-title", "fw-bold");
  const  puntuacion_subtitle = document.createElement("h5");
@@ -305,5 +306,5 @@ function crearHijos(nuevaCard){
 
   
 
-}
+  }
 }
