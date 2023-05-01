@@ -100,6 +100,7 @@ public class transporte {
         System.out.println("Tipo: "+tipo);
         System.out.println("Origen: "+origen);
         System.out.println("Destino: "+destino);
+        System.out.println("Extras: "+puntuacion);
         System.out.println("Extras: "+extras);
         System.out.println("Precio: "+precio);
         System.out.println("*****************************");
@@ -107,6 +108,7 @@ public class transporte {
     public void leer(Scanner teclado){
             System.out.println("Identificador del transporte");
             this.idTransporte = teclado.nextInt();
+            teclado.nextLine();
             System.out.println("tipo de transporte");
             this.tipo = teclado.nextLine().toLowerCase();
             System.out.println("origen de viaje");
@@ -115,9 +117,14 @@ public class transporte {
             this.destino = teclado.nextLine().toLowerCase();
             System.out.println("Que extras contiene?");
             this.extras = teclado.nextLine().toLowerCase();
+            System.out.println("Que puntuacion contiene?");
+            this.puntuacion = teclado.nextInt();
             System.out.println("precio?");
             this.precio = teclado.nextInt();
-            System.out.println("Se agrego el usuario correctamente");
+            System.out.println("Se agrego el transporte correctamente");
+            /*
+             * TryAndCatch
+             */
     }
     
 }

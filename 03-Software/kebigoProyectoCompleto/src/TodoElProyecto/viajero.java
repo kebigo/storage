@@ -96,8 +96,19 @@ public class viajero extends persona {
 
     @Override
     public void leer(Scanner teclado) {
+        teclado.nextLine();
+        System.out.println("Nombre DNI");
+        this.DNI = teclado.nextLine().toLowerCase();
         System.out.println("Nombre viajero");
         this.nombre = teclado.nextLine().toLowerCase();
+        System.out.println("Apellido viajero");
+        this.apellido = teclado.nextLine().toLowerCase();
+        System.out.println("Email viajero");
+        this.email = teclado.nextLine().toLowerCase();
+        System.out.println("Telefono viajero");
+        this.telefono = teclado.nextLine().toLowerCase();
+        System.out.println("VacunasCOVID viajero");
+        this.vacunasCOVID = teclado.nextInt();
     }
 
 }

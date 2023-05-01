@@ -104,12 +104,13 @@ public class empleado extends persona {
     public void print() {
         System.out.println(super.toString() + "Nombre: " + nombre + "\n" +
                 "Apellido: " + apellido + "\n" + "Email: " + email + "\n" + "Telefono: " + telefono + "\n"
-                +"Contraseña"+Contraseña+"\n"+ "Departamento: " + departamento + "\n" + "Rol" + rol + "]");
+                +"Contraseña"+Contraseña+"\n"+ "Departamento: " + departamento + "\n" + "Rol: " + rol + "]");
         System.out.println("**********************************************");
     }
 
     @Override
     public void leer(Scanner teclado) {
+        teclado.nextLine();
         System.out.println("Nombre empelado");
         this.nombre = teclado.nextLine().toLowerCase();
         System.out.println("Apellido empleado");
@@ -145,5 +146,24 @@ public class empleado extends persona {
         System.out.println("Que rol toma?");
         this.rol = teclado.nextLine().toLowerCase();
         System.out.println("Se agrego el usuario correctamente");
+    }
+
+    public boolean esAdministrador(empleado empleado) {
+        // Verificar que el empleado no sea nulo
+        if (empleado == null) {
+            return false;
+        }
+        // Verificar que el DNI del empleado coincide con el DNI del objeto actual
+        if (!this.DNI.equals(empleado.getDNI())) {
+            return false;
+        }
+        // Verificar que el rol del empleado sea "admin" o "administrador"
+        /*
+         * Se recupera el rol del empleado usando el método "getRol" y se compara con las cadenas de caracteres "admin" 
+         * y "administrador" usando el método "equalsIgnoreCase" (que ignora mayúsculas y minúsculas). 
+         * Si el rol coincide con cualquiera de estas dos cadenas, la función devuelve "true", de lo contrario devuelve "false".
+         */
+        String rol = empleado.getRol();
+        return rol != null && (rol.equalsIgnoreCase("admin") || rol.equalsIgnoreCase("administrador"));
     }
 }

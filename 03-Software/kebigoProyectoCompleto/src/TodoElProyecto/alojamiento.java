@@ -109,6 +109,7 @@ public class alojamiento {
     public void leer(Scanner teclado){
         System.out.println("Identificador del alojamiento");
         this.idAlojamiento = teclado.nextInt();
+        teclado.nextLine();
         System.out.println("tipo de alojamiento");
         this.tipo = teclado.nextLine().toLowerCase();
         System.out.println("Donde Se Ubica El Alojamiento");
