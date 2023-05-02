@@ -8,18 +8,22 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.sql.Date;
 /**
  * Esta es la clase principal del programa
  * Realiza las operaciones principales del programa.
  * 
+ * @author KevinYBittor
  */
 
 public class agenciamain {
-    
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        /**
+         * Principalmente recoge de la base de datos toda la informacion y la extrae a
+         * la aplicacion
+         */
         Scanner teclado = new Scanner(System.in);
         ArrayList<empleado> empleadosArray = new ArrayList<empleado>();
         ArrayList<transporte> transportesArray = new ArrayList<transporte>();
@@ -34,29 +38,28 @@ public class agenciamain {
         alojamiento Alojamiento;
         paquete Paquete;
         boolean admin = false;
-        Date fecha;
-        LocalDate fechaLocalDate;
+        String fecha;
+        boolean ModificadoFactura = false;
         boolean Modificado = false;
         factura ac = new factura();
         ArrayList<factura> facturaArrayList = new ArrayList<factura>();
-        try { 
+        try {
             FileInputStream fis = new FileInputStream("factura.dat");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            while (fis.available()>0) {
+            while (fis.available() > 0) {
                 ac = (factura) ois.readObject();
                 facturaArrayList.add(ac);
             }
             fis.close();
             ois.close();
-        }   catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }   catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-        }   catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
 
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
@@ -170,7 +173,7 @@ public class agenciamain {
                     email = (String) rs.getObject("email");
                     telefono = (String) rs.getObject("telefono");
                     contrasena = (String) rs.getObject("contrasena");
-                    vacunasCOVID = (int) rs.getObject("departamento");
+                    vacunasCOVID = (int) rs.getObject("vacunasCOVID");
                     viajerosArray.add(new viajero(DNI, nombre, apellido, email, telefono, contrasena, vacunasCOVID));
                 }
 
@@ -270,7 +273,7 @@ public class agenciamain {
             ResultSet rs = st.executeQuery("SELECT * FROM reservaalojamiento;");
             int IDAlojamiento = 0;
             String DNI = "";
-            Date Fecha = new Date(0000 - 00 - 00);
+            String Fecha = "";
             double precio = 0;
             if (rs.first()) {
                 // si hay registros
@@ -280,7 +283,7 @@ public class agenciamain {
                 while (rs.next()) {
                     IDAlojamiento = (int) rs.getObject("IDAlojamiento");
                     DNI = (String) rs.getObject("DNI");
-                    Fecha = (Date) rs.getObject("fecha");
+                    Fecha = (String) rs.getObject("fecha");
                     precio = (double) rs.getObject("precio");
                     reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, Fecha, precio));
                 }
@@ -304,7 +307,7 @@ public class agenciamain {
             ResultSet rs = st.executeQuery("SELECT * FROM reservatransporte;");
             int IDTransporte = 0;
             String DNI = "";
-            Date Fecha = new Date(0000 - 00 - 00);
+            String Fecha = "";
             double precio = 0;
             if (rs.first()) {
                 // si hay registros
@@ -314,7 +317,7 @@ public class agenciamain {
                 while (rs.next()) {
                     IDTransporte = (int) rs.getObject("IDTransporte");
                     DNI = (String) rs.getObject("DNI");
-                    Fecha = (Date) rs.getObject("fecha");
+                    Fecha = (String) rs.getObject("fecha");
                     precio = (double) rs.getObject("precio");
                     reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, Fecha, precio));
                 }
@@ -338,7 +341,7 @@ public class agenciamain {
             ResultSet rs = st.executeQuery("SELECT * FROM reservapaquete;");
             int IDPaquete = 0;
             String DNI = "";
-            Date Fecha = new Date(0000 - 00 - 00);
+            String Fecha = "";
             double precio = 0;
             if (rs.first()) {
                 // si hay registros
@@ -348,7 +351,7 @@ public class agenciamain {
                 while (rs.next()) {
                     IDPaquete = (int) rs.getObject("IDPaquete");
                     DNI = (String) rs.getObject("DNI");
-                    Fecha = (Date) rs.getObject("fecha");
+                    Fecha = (String) rs.getObject("fecha");
                     precio = (double) rs.getObject("precio");
                     reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, Fecha, precio));
                 }
@@ -380,6 +383,7 @@ public class agenciamain {
         boolean ModificadoReTra = false;
         boolean ModificadoTransporte = false;
         boolean ModificadoViajero = false;
+        String dni = "";
         // AGREGAR FECHA ELIMINACIÓN
         // INSERT INTO TABLE1 (fecha_eliminación) VALUES(sysdate());
         while (intentos > 0 && !login) {
@@ -393,27 +397,27 @@ public class agenciamain {
                 if (CrearUsuario.equals("si")) {
                     viajero a = new viajero();
                     a.leer(teclado);
-                    login = true;
                     viajerosArray.add(a);
+                    intentos = 3;
+                    ModificadoViajero = true;
                 }
             }
-            System.out.println("LOGIN");
-            System.out.println("Email");
-            email = teclado.next();
-            System.out.println("Contraseña");
-            contraseña = teclado.next();
-            for (empleado e : empleadosArray) {
-                if (email.equals(e.getEmail())) {
-                    if (contraseña.equals(e.getContraseña())) {
-                        login = true;
-                        nombre = e.getNombre();
-                        empleado = true;
-                        if (e.esAdministrador(e)) {
-                            admin = true;
+            if (!login) {
+                System.out.println("LOGIN");
+                System.out.println("Email");
+                email = teclado.next();
+                System.out.println("Contraseña");
+                contraseña = teclado.next();
+                for (empleado e : empleadosArray) {
+                    if (email.equals(e.getEmail())) {
+                        if (contraseña.equals(e.getContraseña())) {
+                            login = true;
+                            nombre = e.getNombre();
+                            empleado = true;
+                            if (e.esAdministrador(e)) {
+                                admin = true;
+                            }
                         }
-                        /*
-                         * Metodo saber si es administrador o no
-                         */
                     }
                 }
             }
@@ -421,6 +425,7 @@ public class agenciamain {
                 if (email.equals(e.getEmail())) {
                     if (contraseña.equals(e.getContraseña())) {
                         login = true;
+                        dni = e.getDNI();
                     }
                 }
             }
@@ -447,7 +452,16 @@ public class agenciamain {
                         System.out.println(" 5- Ver Trans/Aloj/Paquete");
                         System.out.println(" 6- eliminar Trans/ALoj/Paquete");
                         System.out.println("Opciones: ");
-                        opcion = teclado.nextInt();
+                        /**
+                         * Try And Catch que para evitar colapso de la aplicacion por poner numero
+                         */
+                        try {
+                            opcion = teclado.nextInt();
+                        } catch (InputMismatchException e) {
+                            System.out.println("Ingrese un numero de 0 a 6 por favor");
+                            teclado.nextLine();
+                            opcion = -1;
+                        }
                         if (opcion < 0 || opcion > 8) {
                             System.out.println("Por favor, elija una opcion valida por favor");
                         }
@@ -482,7 +496,13 @@ public class agenciamain {
                                 System.out.println("2- Alojamiento");
                                 System.out.println("3- Paquete");
                                 System.out.println("opcion:");
-                                opcion2 = teclado.nextInt();
+                                try {
+                                    opcion2 = teclado.nextInt();
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Ingrese un numero de 0 a 3 por favor");
+                                    teclado.nextLine();
+                                    opcion2 = -1;
+                                }
                                 if (opcion2 < 0 || opcion2 > 3) {
                                     System.out.println("Por favor, elija una opcion valida por favor");
                                 }
@@ -557,7 +577,13 @@ public class agenciamain {
                                 System.out.println("2- Alojamiento");
                                 System.out.println("3- Paquete");
                                 System.out.println("opcion:");
-                                opcion2 = teclado.nextInt();
+                                try {
+                                    opcion2 = teclado.nextInt();
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Ingrese un numero de 0 a 3 por favor");
+                                    teclado.nextLine();
+                                    opcion2 = -1;
+                                }
                                 if (opcion2 < 0 || opcion2 > 3) {
                                     System.out.println("Por favor, elija una opcion valida por favor");
                                 }
@@ -592,7 +618,13 @@ public class agenciamain {
                                 System.out.println("2- Alojamiento");
                                 System.out.println("3- Paquete");
                                 System.out.println("opcion:");
-                                opcion2 = teclado.nextInt();
+                                try {
+                                    opcion2 = teclado.nextInt();
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Ingrese un numero de 0 a 3 por favor");
+                                    teclado.nextLine();
+                                    opcion2 = -1;
+                                }
                                 if (opcion2 < 0 || opcion2 > 3) {
                                     System.out.println("Por favor, elija una opcion valida por favor");
                                 }
@@ -651,132 +683,309 @@ public class agenciamain {
                     }
                 } else if (login && !empleado) {
                     int opcion2 = 0;
-                    while (opcion < 0 || opcion > 8) {
+                    do {
                         System.out.println(" 0- Salir del Programa");
                         System.out.println(" 1- Ver Trans/Aloj/Paquete");
                         System.out.println(" 2- hacer una reserva");
                         System.out.println(" 3- Ver reservas");
                         System.out.println(" 4- Cancelar una reserva");
                         System.out.println(" 5- Crear Factura");
+                        System.out.println(" 6- Ver Factura");
                         System.out.println("Opciones: ");
-                        opcion = teclado.nextInt();
+                        try {
+                            opcion = teclado.nextInt();
+                        } catch (InputMismatchException e) {
+                            System.out.println("Ingrese un numero de 0 a 5 por favor");
+                            teclado.nextLine();
+                            opcion = -1;
+                        }
                         if (opcion < 0 || opcion > 8) {
                             System.out.println("Por favor, elija una opcion valida valido");
                         }
-                    }
-                    switch (opcion) {
-                        case 1:
-                        opcion2 = 0;
-                        
-                        System.out.println("Que desea ver");
-                        System.out.println("1- Transporte");
-                        System.out.println("2- Alojamiento");
-                        System.out.println("3- Paquete");
-                        System.out.println("opcion:");
-                        opcion2 = teclado.nextInt();
-                        if (opcion2 < 0 || opcion2 > 3) {
-                            System.out.println("Por favor, elija una opcion valida por favor");
-                        }
-                        
-                        switch (opcion2) {
+
+                        switch (opcion) {
                             case 1:
-                            for (transporte t : transportesArray) {
-                                t.print();
-                            }
-                            break;
-                            case 2:
-                            for (alojamiento a : alojamientosArray) {
-                                a.print();
-                            }
-                            break;
-                            case 3:
-                            for (paquete p : paquetesArray) {
-                                p.print();
-                            }
-                            break;
-                        }
-                        break;
-                        case 2:
-                        System.out.println("Que quieres reservar?");
-                        
-                        opcion2 = 0;
-                            System.out.println("0- Salir");
-                            System.out.println("1- Transporte");
-                            System.out.println("2- Alojamiento");
-                            System.out.println("3- Paquete");
+                                opcion2 = 0;
+
+                                System.out.println("Que desea ver");
+                                System.out.println("1- Transporte");
+                                System.out.println("2- Alojamiento");
+                                System.out.println("3- Paquete");
                                 System.out.println("opcion:");
                                 opcion2 = teclado.nextInt();
                                 if (opcion2 < 0 || opcion2 > 3) {
                                     System.out.println("Por favor, elija una opcion valida por favor");
                                 }
-                            
-                            switch (opcion2) {
-                                case 1:
-                                Transporte = new transporte();
-                                int idtransporte = 0;
-                                boolean encontrado = false;
-                                String dni = "";
-                                double precio = 0;
-                                fecha = new Date(0000 - 00 - 00);
 
-                                for (transporte a : transportesArray) {
-                                    a.print();
-                                }
-
-                                System.out.println("Escribe el id del transporte que desea reservar");
-                                idtransporte = teclado.nextInt();
-                                for (transporte t : transportesArray) {
-                                    if (t.idTransporte == idtransporte) {
-                                        precio = t.getPrecio();
-                                        encontrado = true;
+                                switch (opcion2) {
+                                    case 1:
+                                        for (transporte t : transportesArray) {
+                                            t.print();
                                         }
-                                    }
-                                    if (!encontrado) {
-                                        System.err.println("No se a encontrado ningun transporte ");
-                                    }
-                                    for (viajero v : viajerosArray) {
-                                        if (email.equals(v.getEmail())) {
-                                            dni = v.getDNI();
-                                            fechaLocalDate = LocalDate.now();
-                                            fecha = java.sql.Date.valueOf(fechaLocalDate);
-                                        }
-                                    }
-                                    reservaTransportes.add(new reservaTransporte(idtransporte, dni, fecha, precio));
-                                    break;
+                                        break;
                                     case 2:
-                                    for (alojamiento a : alojamientosArray) {
-                                        a.print();
-                                    }
-                                    break;
+                                        for (alojamiento a : alojamientosArray) {
+                                            a.print();
+                                        }
+                                        break;
                                     case 3:
-                                    for (paquete p : paquetesArray) {
-                                        p.print();
-                                    }
-                                    break;
+                                        for (paquete p : paquetesArray) {
+                                            p.print();
+                                        }
+                                        break;
                                 }
                                 break;
-                            }
+                            case 2:
+                                System.out.println("Que quieres reservar?");
+
+                                opcion2 = 0;
+                                System.out.println("0- Salir");
+                                System.out.println("1- Transporte");
+                                System.out.println("2- Alojamiento");
+                                System.out.println("3- Paquete");
+                                System.out.println("opcion:");
+                                opcion2 = teclado.nextInt();
+                                if (opcion2 < 0 || opcion2 > 3) {
+                                    System.out.println("Por favor, elija una opcion valida por favor");
+                                }
+
+                                switch (opcion2) {
+                                    case 1:
+
+                                        int idtransporte = 0;
+                                        boolean encontrado = false;
+                                        dni = "";
+                                        double precio = 0;
+                                        fecha = "";
+
+                                        for (transporte a : transportesArray) {
+                                            a.print();
+                                        }
+
+                                        System.out.println("Escribe el id del transporte que desea reservar");
+                                        idtransporte = teclado.nextInt();
+                                        for (transporte t : transportesArray) {
+                                            if (t.idTransporte == idtransporte) {
+                                                precio = t.getPrecio();
+                                                encontrado = true;
+                                            }
+                                        }
+                                        if (encontrado) {
+                                            LocalDate currentDate = LocalDate.now();
+                                            String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                                            for (viajero v : viajerosArray) {
+                                                if (email.equals(v.getEmail())) {
+                                                    dni = v.getDNI();
+                                                    fecha = formattedDate;
+                                                }
+                                            }
+                                            reservaTransportes.add(new reservaTransporte(idtransporte, dni, fecha, precio));
+                                            System.out.println("Su transporte a sido reservado");
+                                            ModificadoReTra = true;
+                                        }
+                                        if (!encontrado) {
+                                            System.err.println("No se a encontrado ningun transporte ");
+                                        }
+                                        break;
+                                    case 2:
+                                        int idAlojamiento = 0;
+                                        encontrado = false;
+                                        dni = "";
+                                        precio = 0;
+                                        fecha = "";
+
+                                        for (alojamiento a : alojamientosArray) {
+                                            a.print();
+                                        }
+
+                                        System.out.println("Escribe el id del alojamiento que desea reservar");
+                                        idAlojamiento = teclado.nextInt();
+                                        for (alojamiento t : alojamientosArray) {
+                                            if (t.idAlojamiento == idAlojamiento) {
+                                                precio = t.getPrecio();
+                                                encontrado = true;
+                                            }
+                                        }
+                                        if (encontrado) {
+                                            LocalDate currentDate = LocalDate.now();
+                                            String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                                            for (viajero v : viajerosArray) {
+                                                if (email.equals(v.getEmail())) {
+                                                    dni = v.getDNI();
+                                                    fecha = formattedDate;
+                                                }
+                                            }
+                                            reservaAlojamientos
+                                                    .add(new reservaAlojamiento(idAlojamiento, dni, fecha, precio));
+                                            System.out.println("Su alojamiento a sido reservado");
+                                            ModificadoReAl = true;
+                                        }
+                                        if (!encontrado) {
+                                            System.err.println("No se a encontrado ningun alojamiento ");
+                                        }
+
+                                        break;
+                                    case 3:
+                                        int idpaquete = 0;
+                                        encontrado = false;
+                                        dni = "";
+                                        precio = 0;
+                                        fecha = "";
+                                        for (paquete p : paquetesArray) {
+                                            p.print();
+                                        }
+                                        System.out.println("Escribe el id del transporte que desea reservar");
+                                        idAlojamiento = teclado.nextInt();
+                                        for (paquete t : paquetesArray) {
+                                            if (t.idPaquete == idpaquete) {
+                                                precio = t.getPrecio();
+                                                encontrado = true;
+                                            }
+                                        }
+                                        if (encontrado) {
+                                            LocalDate currentDate = LocalDate.now();
+                                            String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                                            for (viajero v : viajerosArray) {
+                                                System.out.println(email);
+                                                if (email.equals(v.getEmail())) {
+                                                    dni = v.getDNI();
+                                                    fecha = formattedDate;
+                                                }
+                                            }
+                                            reservaPaquetes.add(new reservaPaquete(idpaquete, dni, fecha, precio));
+                                            System.out.println("Su paquete a sido reservado");
+                                            ModificadoRePa = true;
+                                        }
+                                        if (!encontrado) {
+                                            System.err.println("No se a encontrado ningun paquete ");
+                                        }
+                                        break;
+                                }
+                                break;
+                            case 3:
+                                for (viajero v : viajerosArray) {
+                                    if (email.equals(v.getEmail())) {
+                                        dni = v.getDNI();
+                                    }
+                                }
+                                for (reservaAlojamiento p : reservaAlojamientos) {
+                                    if (dni.equals(p.getDNI())) {
+                                        p.print();
+                                    }
+
+                                }
+                                for (reservaTransporte p : reservaTransportes) {
+                                    if (dni.equals(p.getDNI())) {
+                                        p.print();
+                                    }
+                                }
+                                for (reservaPaquete p : reservaPaquetes) {
+                                    if (dni.equals(p.getDNI())) {
+                                        p.print();
+                                    }
+                                }
+                                break;
+                            case 4:
+                            
+                                for (viajero v : viajerosArray) {
+                                    if (email.equals(v.getEmail())) {
+                                        dni = v.getDNI();
+                                    }
+                                }
+                                opcion2 = 0;
+                                System.out.println("Elimina las reservas de:");
+                                System.out.println("0- Salir");
+                                System.out.println("1- Transporte");
+                                System.out.println("2- Alojamiento");
+                                System.out.println("3- Paquete");
+                                System.out.println("opcion:");
+                                opcion2 = teclado.nextInt();
+                                if (opcion2 < 0 || opcion2 > 3) {
+                                    System.out.println("Por favor, elija una opcion valida por favor");
+                                }
+
+                                switch (opcion2) {
+                                    case 1:
+                                    for (reservaTransporte p : reservaTransportes) {
+                                        if (dni.equals(p.getDNI())) {
+                                            reservaTransportes.remove(p);
+                                        }
+                                        ModificadoReTra = true;
+                                    }
+                                        break;
+                                    case 2:
+                                    for (reservaAlojamiento p : reservaAlojamientos) {
+                                        if (dni.equals(p.getDNI())) {
+                                            reservaAlojamientos.remove(p);
+                                        }
+                                        ModificadoReAl = true;
+                                    }
+                                        break;
+                                    case 3:
+                                    for (reservaPaquete p : reservaPaquetes) {
+                                        if (dni.equals(p.getDNI())) {
+                                            reservaPaquetes.remove(p);
+                                        }
+                                        ModificadoRePa = true;
+                                    }
+                                        break;
+                                }
+                                break;
+                                case 5:
+                                int cantidad=0;
+                                cantidad = facturaArrayList.size();
+                                LocalDate currentDate = LocalDate.now();
+                                String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                                
+                                factura f = new factura(cantidad, dni, formattedDate, new  ArrayList<LineaFactura>());
+                                for (reservaPaquete p : reservaPaquetes) {
+                                    if (dni.equals(p.getDNI())) {
+                                        f.añadirLinea(p.getIDPaquete(), p.getPrecio());
+                                    }
+                                }
+                                for (reservaPaquete p : reservaPaquetes) {
+                                    if (dni.equals(p.getDNI())) {
+                                        f.añadirLinea(p.getIDPaquete(), p.getPrecio());
+                                    }
+                                }
+                                for (reservaPaquete p : reservaPaquetes) {
+                                    if (dni.equals(p.getDNI())) {
+                                        f.añadirLinea(p.getIDPaquete(), p.getPrecio());
+                                    }
+                                }
+                                facturaArrayList.add(f);
+                                ModificadoFactura = true;
+                                Modificado = true;
+                                break;
+                                case 6:
+                                    for (factura fa : facturaArrayList) {
+                                        if (fa.getDNI().equals(dni)) {
+                                            fa.print();
+                                        }
+                                    }
+                                break;
                         }
-                        opcion = -1;
                     } while (opcion != 0);
-                    teclado.close();
                 }
-                if (Modificado) {
-                    try {
-            FileOutputStream fos=new FileOutputStream("factura.dat");
-            ObjectOutputStream oos = new ObjectOutputStream (fos);
-    
-            for (factura cc : facturaArrayList) {
-                oos.writeObject(cc);
-            }
-        oos.close();
-        fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            } while (opcion != 0);
+            teclado.close();
         }
-    }
+        if (Modificado) {
+            try {
+                FileOutputStream fos = new FileOutputStream("factura.dat");
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+                for (factura cc : facturaArrayList) {
+                    oos.writeObject(cc);
+                }
+                oos.close();
+                fos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         if (ModificadoEmpleado) {
             try {
                 Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
@@ -839,6 +1048,7 @@ public class agenciamain {
                     origen = t.getOrigen();
                     puntuacion = t.getPuntuacion();
                     extras = t.getExtras();
+
                     st.executeUpdate("INSERT INTO transporte VALUES ('" + idTransporte + "','" + precio + "','" +
                             tipo + "','" + destino + "','" + origen + "','" + puntuacion + "','" + extras + "')");
                 }
@@ -873,6 +1083,7 @@ public class agenciamain {
                     telefono = v.getTelefono();
                     contrasena = v.getContraseña();
                     vacunasCOVID = v.getVacunasCOVID();
+                    st.executeUpdate("CALL insertar_persona('" + DNI + "')");
                     st.executeUpdate("INSERT INTO viajero VALUES ('" + DNI + "','" + Nombre + "','" +
                             apellido + "','" + Email + "','" + telefono + "','" + contrasena + "','" + vacunasCOVID
                             + "')");
@@ -959,7 +1170,7 @@ public class agenciamain {
                 st.executeUpdate("DELETE FROM reservaalojamiento;");
                 int IDAlojamiento = 0;
                 String DNI = "";
-                Date Fecha = new Date(0000 - 00 - 00);
+                String Fecha = "";
                 double precio = 0;
                 for (reservaAlojamiento ra : reservaAlojamientos) {
                     IDAlojamiento = ra.getIDAlojamiento();
@@ -988,7 +1199,7 @@ public class agenciamain {
                 st.executeUpdate("DELETE FROM reservatransporte;");
                 int IDTransporte = 0;
                 String DNI = "";
-                Date Fecha = new Date(0000 - 00 - 00);
+                String Fecha = "";
                 double precio = 0;
                 for (reservaTransporte rt : reservaTransportes) {
                     IDTransporte = rt.getIDTransporte();
@@ -1016,7 +1227,7 @@ public class agenciamain {
                 st.executeUpdate("DELETE FROM reservapaquete;");
                 int IDPaquete = 0;
                 String DNI = "";
-                Date Fecha = new Date(0000 - 00 - 00);
+                String Fecha = "";
                 double precio = 0;
                 for (reservaTransporte rt : reservaTransportes) {
                     IDPaquete = rt.getIDTransporte();
@@ -1025,6 +1236,35 @@ public class agenciamain {
                     precio = rt.getPrecio();
                     st.executeUpdate("INSERT INTO reservapaquete VALUES ('" + IDPaquete + "','" + DNI + "','" +
                             Fecha + "','" + precio + "')");
+                }
+                // cierro la conexion
+                conexion.close();
+            } catch (SQLException e) {
+                // si NO se ha conectado correctamente
+                e.printStackTrace();
+                System.out.println("Error de Conexión");
+            }
+        }
+        if (ModificadoFactura) {
+
+            try {
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+                // si se ha conectado correctamente
+                System.out.println("Conexión Correcta.");
+                Statement st = conexion.createStatement();
+                st.executeUpdate("DELETE FROM factura;");
+                int IDFactura = 0;
+                String DNI = "";
+                String Fecha = "";
+                double total = 0;
+                for (factura rt : facturaArrayList) {
+                    IDFactura = rt.getIDFactura();
+                    IDFactura += 1;
+                    DNI = rt.getDNI();
+                    Fecha = rt.getFecha();
+                    total = rt.getTotal();
+                    st.executeUpdate("INSERT INTO factura VALUES ('" + IDFactura + "','" + DNI + "','" +
+                            Fecha + "','" + total + "')");
                 }
                 // cierro la conexion
                 conexion.close();

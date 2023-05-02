@@ -1,18 +1,22 @@
 package TodoElProyecto;
-import java.sql.Date;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class factura implements facturacion {
+/**
+ * Constructor para el factura
+ */
+
+public class factura implements facturacion, Serializable {
     protected int IDFactura;
     protected String DNI;
-    protected Date fecha;
+    protected String fecha;
     protected ArrayList<LineaFactura> lineasfactura = new ArrayList<>();
-    protected int total;
+    protected double total;
 
     public factura() {
         this.IDFactura = 0;
         this.DNI = "";
-        this.fecha = new Date(0000-00-00);
+        this.fecha = "";
         this.lineasfactura = new ArrayList<LineaFactura>();
     }
 
@@ -23,7 +27,7 @@ public class factura implements facturacion {
         this.lineasfactura = f.lineasfactura;
     }
 
-    public factura(int i, String d, Date f, int t, ArrayList<LineaFactura> array) {
+    public factura(int i, String d, String f, ArrayList<LineaFactura> array) {
         this.IDFactura = i;
         this.DNI = d;
         this.fecha = f;
@@ -33,14 +37,16 @@ public class factura implements facturacion {
     public factura(int i, String d, int t, ArrayList<LineaFactura> array) {
         this.IDFactura = i;
         this.DNI = d;
-        this.fecha = new Date(0000-00-00);
+        this.fecha = "";
         this.lineasfactura = array;
     }
 
-    public void añadirLinea(String Codigo, double Total) {
+    public void añadirLinea(int Codigo, double Total) {
         lineasfactura.add(new LineaFactura(Codigo, Total));
     }
-
+    /**
+     * Metodo para sacar por pantalla la informacion de la factura
+     */
     public void print() {
         System.out.println();
         System.out.println("**********************************************************");
@@ -54,8 +60,11 @@ public class factura implements facturacion {
         System.out.println(calcularTotal());
         System.out.println("**********************************************************");
     }
-
+    
     @Override
+    /**
+     * Metodo que calcula el total de la factura
+     */
     public double calcularTotal() {
         double totalLinea = 0;
         for (int i = 0; i < lineasfactura.size(); i++) {
@@ -83,15 +92,15 @@ public class factura implements facturacion {
         this.DNI = DNI;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return this.fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public int getTotal() {
+    public double getTotal() {
         return this.total;
     }
 

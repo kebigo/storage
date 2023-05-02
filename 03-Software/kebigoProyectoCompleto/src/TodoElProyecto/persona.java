@@ -2,6 +2,10 @@ package TodoElProyecto;
 
 import java.util.Scanner;
 
+/**
+ * Constructor para el persona, CLASE abstracta
+ */
+
 public abstract class persona {
     protected String DNI;
     
@@ -25,9 +29,12 @@ public abstract class persona {
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
-
+/**
+ * Metodos abstracto de leer y pasar por pantalla (print)
+ */
     public abstract void print();
     public abstract void leer(Scanner teclado);
+
     @Override
     public String toString() {
         return ("Persona:[DNI: "+DNI+"\n");

@@ -2,6 +2,9 @@ package TodoElProyecto;
 
 import java.util.Scanner;
 
+/**
+ * Constructor para el alojamiento
+ */
 public class alojamiento {
     protected int idAlojamiento;
     protected double precio;
@@ -96,6 +99,10 @@ public class alojamiento {
     public void setInstalaciones(String instalaciones) {
         this.instalaciones = instalaciones;
     }
+    /**
+     * Metodo para pasar toda la informacion por pantalla
+     * No devuelven nada
+     */
     public void print(){
         System.out.println("IDAlojamiento: "+idAlojamiento);
         System.out.println("Tipo: "+tipo);
@@ -106,6 +113,10 @@ public class alojamiento {
         System.out.println("Precio: "+precio);
         System.out.println("********************************");
     }
+    /**
+     * Metodo que lee toda la informacion del viajero por teclado
+     * @param teclado El parametro teclado define que la informacion será ingresada mediante un Scanner
+     */
     public void leer(Scanner teclado){
         System.out.println("Identificador del alojamiento");
         this.idAlojamiento = teclado.nextInt();

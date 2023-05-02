@@ -1,6 +1,9 @@
 package TodoElProyecto;
 import java.util.Scanner;
 
+/**
+ * Constructor para el transporte
+ */
 public class transporte {
     protected int idTransporte;
     protected double precio;
@@ -95,6 +98,9 @@ public class transporte {
     public void setExtras(String extras) {
         this.extras = extras;
     }
+    /**
+     * Metodo que pasa toda la informacion del viajero por pantalla
+     */
     public void print(){
         System.out.println("IDTransporte: "+idTransporte);
         System.out.println("Tipo: "+tipo);
@@ -105,6 +111,10 @@ public class transporte {
         System.out.println("Precio: "+precio);
         System.out.println("*****************************");
     }
+    /**
+     * Metodo que lee toda la informacion del viajero por teclado
+     * @param teclado El parametro teclado define que la informacion será ingresada mediante un Scanner
+     */
     public void leer(Scanner teclado){
             System.out.println("Identificador del transporte");
             this.idTransporte = teclado.nextInt();

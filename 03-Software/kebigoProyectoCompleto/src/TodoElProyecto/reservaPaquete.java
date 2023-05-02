@@ -1,18 +1,19 @@
 package TodoElProyecto;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 
+/**
+ * Constructor para el reservaPaquete
+ */
 public class reservaPaquete {
     protected int IDPaquete;
     protected String DNI;
-    protected Date fecha;
+    protected String fecha;
     protected double precio;
 
     public reservaPaquete() {
         this.IDPaquete = 0;
         this.DNI = "";
-        this.fecha = new Date(0000-00-00);
+        this.fecha = "";
         this.precio = 0;
     }
 
@@ -23,7 +24,7 @@ public class reservaPaquete {
         this.precio = r.precio;
     }
 
-    public reservaPaquete(int i, String d, Date f, double p) {
+    public reservaPaquete(int i, String d, String f, double p) {
         this.IDPaquete = i;
         this.DNI = d;
         this.fecha = f;
@@ -33,7 +34,7 @@ public class reservaPaquete {
     public reservaPaquete(int i, String d, double p) {
         this.IDPaquete = i;
         this.DNI = d;
-        this.fecha = new Date(0000-00-00);
+        this.fecha = "";
         this.precio = p;
     }
 
@@ -53,11 +54,11 @@ public class reservaPaquete {
         this.DNI = DNI;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return this.fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -68,13 +69,13 @@ public class reservaPaquete {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
+    /**
+     * Metodo que pasa toda la informacion del viajero por pantalla
+     */
     public void print() {
         System.out.println("IDPaquete: " + IDPaquete);
         System.out.println("DNI: " + DNI);
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-        String fechaString = formato.format(fecha);
-        System.out.println("Fecha: " + fechaString);
+        System.out.println("Fecha: " + fecha);
         System.out.println("Precio: " + precio);
         System.out.println("****************************");
     }

@@ -1,18 +1,19 @@
 package TodoElProyecto;
 
-import java.text.SimpleDateFormat;
-import java.sql.Date;
 
+/**
+ * Constructor para el reserva de alojamiento
+ */
 public class reservaAlojamiento {
     protected int IDAlojamiento;
     protected String DNI;
-    protected Date fecha;
+    protected String fecha;
     protected double precio;
 
     public reservaAlojamiento() {
         this.IDAlojamiento = 0;
         this.DNI = "";
-        this.fecha = new Date(0000-00-00);
+        this.fecha = "";
         this.precio = 0;
     }
 
@@ -23,7 +24,7 @@ public class reservaAlojamiento {
         this.precio = r.precio;
     }
 
-    public reservaAlojamiento(int i, String d, Date f, double p) {
+    public reservaAlojamiento(int i, String d, String f, double p) {
         this.IDAlojamiento = i;
         this.DNI = d;
         this.fecha = f;
@@ -33,7 +34,7 @@ public class reservaAlojamiento {
     public reservaAlojamiento(int i, String d, double p) {
         this.IDAlojamiento = i;
         this.DNI = d;
-        this.fecha = new Date(0000-00-00);
+        this.fecha = "";
         this.precio = p;
     }
 
@@ -53,11 +54,11 @@ public class reservaAlojamiento {
         this.DNI = DNI;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return this.fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -68,13 +69,13 @@ public class reservaAlojamiento {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
+    /**
+     * Metodo que pasa toda la informacion del viajero por pantalla
+     */
     public void print() {
         System.out.println("IDAlojamiento: " + IDAlojamiento);
         System.out.println("DNI: " + DNI);
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-        String fechaString = formato.format(fecha);
-        System.out.println("Fecha: " + fechaString);
+        System.out.println("Fecha: " + fecha);
         System.out.println("Precio : " + precio);
     }
 }

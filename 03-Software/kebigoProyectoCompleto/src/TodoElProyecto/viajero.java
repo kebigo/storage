@@ -1,6 +1,8 @@
 package TodoElProyecto;
 import java.util.Scanner;
-
+/**
+ * Constructor para el viajero
+ */
 public class viajero extends persona {
     protected String nombre;
     protected String apellido;
@@ -9,6 +11,9 @@ public class viajero extends persona {
     protected String Contraseña;
     protected int vacunasCOVID;
 
+    /**
+     * Constructor para la inforamacion sobre el usuario viajero
+     */
     public viajero() {
         super();
         this.nombre = "";
@@ -88,23 +93,31 @@ public class viajero extends persona {
     }
 
     @Override
+    /**
+     * Metodo que pasa toda la informacion del viajero por pantalla
+     */
     public void print() {
         System.out.println(super.toString()+ "Nombre: " + nombre + "\n" +
         "Apellido: " + apellido + "\n" + "Email: " + email + "\n" + "Telefono: " + telefono + "\n" + "vacunasCOVID: " + vacunasCOVID + "]");
         System.out.println("**********************************************");
     }
-
+    /**
+     * Metodo que lee toda la informacion del viajero por teclado
+     * @param teclado El parametro teclado define que la informacion será ingresada mediante un Scanner
+     */
     @Override
     public void leer(Scanner teclado) {
         teclado.nextLine();
-        System.out.println("Nombre DNI");
-        this.DNI = teclado.nextLine().toLowerCase();
+        System.out.println("DNI");
+        this.DNI = teclado.nextLine().toUpperCase();
         System.out.println("Nombre viajero");
         this.nombre = teclado.nextLine().toLowerCase();
         System.out.println("Apellido viajero");
         this.apellido = teclado.nextLine().toLowerCase();
         System.out.println("Email viajero");
         this.email = teclado.nextLine().toLowerCase();
+        System.out.println("Constraseña viajero");
+        this.Contraseña = teclado.nextLine();
         System.out.println("Telefono viajero");
         this.telefono = teclado.nextLine().toLowerCase();
         System.out.println("VacunasCOVID viajero");

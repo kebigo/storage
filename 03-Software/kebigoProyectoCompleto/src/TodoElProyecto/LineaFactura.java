@@ -1,20 +1,23 @@
 package TodoElProyecto;
 
+/**
+ * Constructor para crear una linea en la facturacion
+*/
 public class LineaFactura {
 
-	public String Codigo;
+	public int Codigo;
 	public double totalLinea;
 
-	public LineaFactura(String Codigo, double totalLinea) {
+	public LineaFactura(int Codigo, double totalLinea) {
 		this.Codigo = Codigo;
 		this.totalLinea = totalLinea;
 	}
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return Codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(int codigo) {
 		Codigo = codigo;
 	}
 

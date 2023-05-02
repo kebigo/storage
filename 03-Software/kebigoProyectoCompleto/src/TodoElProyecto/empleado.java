@@ -1,7 +1,9 @@
 package TodoElProyecto;
 
     import java.util.Scanner;
-
+/**
+ * Constructor para el empleado
+ */
 public class empleado extends persona {
     protected String nombre;
     protected String apellido;
@@ -99,7 +101,9 @@ public class empleado extends persona {
     public void setContraseña(String Contraseña) {
         this.Contraseña = Contraseña;
     }
-
+    /**
+     * Metodo para pasar la informacion del empleado por pantalla
+     */
     @Override
     public void print() {
         System.out.println(super.toString() + "Nombre: " + nombre + "\n" +
@@ -107,10 +111,15 @@ public class empleado extends persona {
                 +"Contraseña"+Contraseña+"\n"+ "Departamento: " + departamento + "\n" + "Rol: " + rol + "]");
         System.out.println("**********************************************");
     }
-
+    /**
+     * Metodo que lee toda la informacion del viajero por teclado
+     * @param teclado El parametro teclado define que la informacion será ingresada mediante un Scanner
+     */
     @Override
     public void leer(Scanner teclado) {
         teclado.nextLine();
+        System.out.println("Nombre DNI");
+        this.DNI = teclado.nextLine().toUpperCase();
         System.out.println("Nombre empelado");
         this.nombre = teclado.nextLine().toLowerCase();
         System.out.println("Apellido empleado");
@@ -147,7 +156,11 @@ public class empleado extends persona {
         this.rol = teclado.nextLine().toLowerCase();
         System.out.println("Se agrego el usuario correctamente");
     }
-
+    /**
+     * Metodo que ve si el empelado es administrador o no
+     * @param empelado El parametro empleado define que la informacion será de un objecto empleado
+     * @return Devuelve un booleando de true si es administrador o false si no lo es
+     */
     public boolean esAdministrador(empleado empleado) {
         // Verificar que el empleado no sea nulo
         if (empleado == null) {
@@ -158,7 +171,7 @@ public class empleado extends persona {
             return false;
         }
         // Verificar que el rol del empleado sea "admin" o "administrador"
-        /*
+        /**
          * Se recupera el rol del empleado usando el método "getRol" y se compara con las cadenas de caracteres "admin" 
          * y "administrador" usando el método "equalsIgnoreCase" (que ignora mayúsculas y minúsculas). 
          * Si el rol coincide con cualquiera de estas dos cadenas, la función devuelve "true", de lo contrario devuelve "false".

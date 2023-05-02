@@ -2,6 +2,9 @@ package TodoElProyecto;
 
 import java.util.Scanner;
 
+/**
+ * Constructor para el paquete
+ */
 public class paquete {
     protected int idPaquete;
     protected int idTransporte;
@@ -64,6 +67,10 @@ public class paquete {
     public String toString() {
         return ("IDPaquete: "+idPaquete+"\n"+"IDTrasporte: "+idTransporte+"\n"+"IDAlojamiento: "+idAlojamiento+"\n"+"Precio: "+precio);
     }
+    /**
+     * Metodo para pasar toda la informacion por pantalla
+     * No devuelven nada
+     */
     public void print(){
         System.out.println("IDAlojamiento: "+idPaquete);
         System.out.println("IDAlojamiento: "+idAlojamiento);
@@ -71,7 +78,10 @@ public class paquete {
         System.out.println("Precio: "+precio);
         System.out.println("********************************");
     }
-
+    /**
+     * Metodo que lee toda la informacion del viajero por teclado
+     * @param teclado El parametro teclado define que la informacion será ingresada mediante un Scanner
+     */
     public void leer(Scanner teclado){
         System.out.println("Identificador del alojamiento");
         this.idPaquete = teclado.nextInt();
