@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="transportes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="transporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="destino" type="xs:string" />
+              <xs:element name="salida">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="dia" type="xs:string" />
+                    <xs:element name="hora" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="llegada">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="dia" type="xs:string" />
+                    <xs:element name="hora" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="duracion" type="xs:string" />
+              <xs:element name="compañia">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string" />
+                    <xs:element minOccurs="0" name="logo" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="precio" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="optional" />
+            <xs:attribute name="tipo" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

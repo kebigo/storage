@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alojamientos>
+<alojamientos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./alojamientos.xsd">
+
 <alojamiento type="hotel" id="1">
   <imagen>./assets/img/hotel1.jpg</imagen>
   <nombre>Hotel del Mar</nombre>
