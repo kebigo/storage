@@ -1,6 +1,6 @@
 .imagen-hotel {
     margin-top: -3em;
-    height: 40em;
+    height: 20em;
    
 }
 .imagen-hotel img{
@@ -104,4 +104,16 @@ header .current-date{
 }
 .days li:not(.active):hover::before{
   background: #f2f2f2;
+}
+
+.reserved{
+    background-color: red;
+}
+
+@media (min-width: 768px) {
+  .imagen-hotel {
+    height: 40em;
+   
+}
+
 }

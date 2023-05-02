@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<transportes>
+    <transporte type="Avion">
+        <destino>Barcelona, ES</destino>
+        <salida>
+            <dia>BIO • 14/08</dia>
+            <hora>17:20</hora>
+        </salida>
+        <llegada>
+            <dia>14/08</dia>
+            <hora>18:20</hora>
+        </llegada>
+        <duracion>2h</duracion>
+        <compañia>
+            <nombre>Iberia</nombre>
+        </compañia>
+        <precio>75€</precio>
+    </transporte>
+
+     <transporte type="Avion">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 15/06</dia>
+      <hora>10:30</hora>
+    </salida>
+    <llegada>
+      <dia>15/06</dia>
+      <hora>12:45</hora>
+    </llegada>
+    <duracion>2h 15m</duracion>
+    <compañia>
+      <nombre>Air Europa</nombre>
+      <logo>Air Europa.png</logo>
+    </compañia>
+    <precio>85€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 20/06</dia>
+      <hora>14:15</hora>
+    </salida>
+    <llegada>
+      <dia>20/06</dia>
+      <hora>15:45</hora>
+    </llegada>
+    <duracion>1h 30m</duracion>
+    <compañia>
+      <nombre>Vueling</nombre>
+      <logo>vueling.png</logo>
+    </compañia>
+    <precio>50€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO •10/09</dia>
+      <hora>07:00</hora>
+    </salida>
+    <llegada>
+      <dia>10/09</dia>
+      <hora>10:00</hora>
+    </llegada>
+    <duracion>3h</duracion>
+    <compañia>
+      <nombre>Ryanair</nombre>
+      <logo>airfrance.png</logo>
+    </compañia>
+    <precio>50€</precio>
+  </transporte>
+
+   <transporte type="Tren">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 05/07</dia>
+      <hora>11:00</hora>
+    </salida>
+    <llegada>
+      <dia>05/07</dia>
+      <hora>13:00</hora>
+    </llegada>
+    <duracion>2h</duracion>
+    <compañia>
+      <nombre>Renfe</nombre>
+      <logo>renfe.png</logo>
+    </compañia>
+    <precio>35€</precio>
+  </transporte>
+
+  <transporte type = "Tren">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 12/07</dia>
+      <hora>16:30</hora>
+    </salida>
+    <llegada>
+      <dia>12/07</dia>
+      <hora>19:30</hora>
+    </llegada>
+    <duracion>3h</duracion>
+    <compañia>
+      <nombre>Renfe</nombre>
+      <logo>ave.png</logo>
+    </compañia>
+    <precio>70€</precio>
+  </transporte>
+
+  <transporte type="Tren">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 22/06</dia>
+      <hora>08:00</hora>
+    </salida>
+    <llegada>
+      <dia>22/06</dia>
+      <hora>12:00</hora>
+    </llegada>
+    <duracion>4h</duracion>
+    <compañia>
+      <nombre>Ouigo</nombre>
+      <logo>alsa.png</logo>
+    </compañia>
+    <precio>25€</precio>
+  </transporte>
+
+
+    <transporte type="Tren">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 29/06</dia>
+      <hora>14:30</hora>
+    </salida>
+    <llegada>
+      <dia>29/06</dia>
+      <hora>18:00</hora>
+    </llegada>
+    <duracion>3h30min</duracion>
+    <compañia>
+      <nombre>Thalys</nombre>
+      <logo>socibus.png</logo>
+    </compañia>
+    <precio>20€</precio>
+  </transporte>
+
+    <transporte type="Autobus">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 10/07</dia>
+      <hora>09:00</hora>
+    </salida>
+    <llegada>
+      <dia>10/07</dia>
+      <hora>19:00</hora>
+    </llegada>
+    <duracion>10h</duracion>
+    <compañia>
+      <nombre>Alsa</nombre>
+      <logo>balearia.png</logo>
+    </compañia>
+    <precio>50€</precio>
+  </transporte>
+
+ <transporte type="Autobus">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 15/07</dia>
+      <hora>16:00</hora>
+    </salida>
+    <llegada>
+      <dia>15/07</dia>
+      <hora>22:00</hora>
+    </llegada>
+    <duracion>6h</duracion>
+    <compañia>
+      <nombre>Monbus</nombre>
+      <logo>bluestar.png</logo>
+    </compañia>
+    <precio>80€</precio>
+  </transporte>
+
+  <transporte type="Autobus">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 17/07</dia>
+      <hora>10:00</hora>
+    </salida>
+    <llegada>
+      <dia>17/07</dia>
+      <hora>13:00</hora>
+    </llegada>
+    <duracion>3h</duracion>
+    <compañia>
+      <nombre>Eurolines</nombre>
+      <logo>blablacar.png</logo>
+    </compañia>
+    <precio>15€</precio>
+  </transporte>
+
+  <transporte type="Autobus">
+    <destino>Barcelona, ES</destino>
+    <salida>
+      <dia>BIO • 24/07</dia>
+      <hora>15:30</hora>
+    </salida>
+    <llegada>
+      <dia>24/07</dia>
+      <hora>20:00</hora>
+    </llegada>
+    <duracion>4h30min</duracion>
+    <compañia>
+      <nombre>Renfe</nombre>
+      <logo>amovens.png</logo>
+    </compañia>
+    <precio>20€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 03/09</dia>
+      <hora>09:00</hora>
+    </salida>
+    <llegada>
+      <dia>07/09</dia>
+      <hora>18:00</hora>
+    </llegada>
+    <duracion>4d 9h</duracion>
+    <compañia>
+      <nombre>Air europa</nombre>
+      <logo>fredolsen.png</logo>
+    </compañia>
+    <precio>320€</precio>
+  </transporte>
+
+   <transporte type="Avion">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 15/09</dia>
+      <hora>17:00</hora>
+    </salida>
+    <llegada>
+      <dia>20/09</dia>
+      <hora>10:00</hora>
+    </llegada>
+    <duracion>4d 17h</duracion>
+    <compañia>
+      <nombre>Vueling</nombre>
+      <logo>grimaldi.png</logo>
+    </compañia>
+    <precio>550€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 20/06</dia>
+      <hora>07:00</hora>
+    </salida>
+    <llegada>
+      <dia>20/06</dia>
+      <hora>18:00</hora>
+    </llegada>
+    <duracion>11h</duracion>
+    <compañia>
+      <nombre>Air Europa</nombre>
+      <logo>rentalcars.png</logo>
+    </compañia>
+    <precio>60€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 02/07</dia>
+      <hora>08:30</hora>
+    </salida>
+    <llegada>
+      <dia>02/07</dia>
+      <hora>20:30</hora>
+    </llegada>
+    <duracion>12h</duracion>
+    <compañia>
+      <nombre>Volotea</nombre>
+      <logo>hertz.png</logo>
+    </compañia>
+    <precio>90€</precio>
+  </transporte>
+
+  <transporte type="Tren">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 10/09</dia>
+      <hora>09:30</hora>
+    </salida>
+    <llegada>
+      <dia>10/09</dia>
+      <hora>14:30</hora>
+    </llegada>
+    <duracion>5h</duracion>
+    <compañia>
+      <nombre>SNCF</nombre>
+      <logo>airfrance.png</logo>
+    </compañia>
+    <precio>120€</precio>
+  </transporte>
+
+  <transporte type="Tren">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 15/09</dia>
+      <hora>12:00</hora>
+    </salida>
+    <llegada>
+      <dia>15/09</dia>
+      <hora>18:00</hora>
+    </llegada>
+    <duracion>6h</duracion>
+    <compañia>
+      <nombre>Eurostar</nombre>
+      <logo>europcar.png</logo>
+    </compañia>
+    <precio>80€</precio>
+  </transporte>
+
+  <transporte type="Tren">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 15/10</dia>
+      <hora>08:00</hora>
+    </salida>
+    <llegada>
+      <dia>15/10</dia>
+      <hora>12:30</hora>
+    </llegada>
+    <duracion>4h 30min</duracion>
+    <compañia>
+      <nombre>Ouigo</nombre>
+      <logo>americanairlines.png</logo>
+    </compañia>
+    <precio>350€</precio>
+  </transporte>
+
+  <transporte type="Tren">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 20/11</dia>
+      <hora>23:45</hora>
+    </salida>
+    <llegada>
+      <dia>21/11</dia>
+      <hora>14:20</hora>
+    </llegada>
+    <duracion>12h 35min</duracion>
+    <compañia>
+      <nombre>Trenitalia</nombre>
+      <logo>emirates.png</logo>
+    </compañia>
+    <precio>700€</precio>
+  </transporte>
+
+    <transporte type="Autobus">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 05/09</dia>
+      <hora>12:00</hora>
+    </salida>
+    <llegada>
+      <dia>05/09</dia>
+      <hora>15:30</hora>
+    </llegada>
+    <duracion>3h 30min</duracion>
+    <compañia>
+      <nombre>Flixbus</nombre>
+      <logo>Lufthansa.png</logo>
+    </compañia>
+    <precio>120€</precio>
+  </transporte>
+
+<transporte type="Autobus">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 10/10</dia>
+      <hora>19:15</hora>
+    </salida>
+    <llegada>
+      <dia>11/10</dia>
+      <hora>10:45</hora>
+    </llegada>
+    <duracion>10h 30min</duracion>
+    <compañia>
+      <nombre>Eurolines</nombre>
+      <logo>delta.png</logo>
+    </compañia>
+    <precio>500€</precio>
+  </transporte>
+
+  <transporte type="Autobus">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 15/11</dia>
+      <hora>09:00</hora>
+    </salida>
+    <llegada>
+      <dia>16/11</dia>
+      <hora>07:30</hora>
+    </llegada>
+    <duracion>10h 30min</duracion>
+    <compañia>
+      <nombre>Flixbus</nombre>
+      <logo>ana.png</logo>
+    </compañia>  
+    <precio>800€</precio>
+  </transporte>
+
+   <transporte type="Autobus">
+    <destino>Praga, CZ</destino>
+    <salida>
+      <dia>BIO • 20/12</dia>
+      <hora>14:45</hora>
+    </salida>
+    <llegada>
+      <dia>20/12</dia>
+      <hora>17:30</hora>
+    </llegada>
+    <duracion>2h 45min</duracion>
+    <compañia>
+      <nombre>Eurolines</nombre>
+      <logo>alitalia.png</logo>
+    </compañia>
+    <precio>100€</precio>
+  </transporte>
+
+   <transporte type="Avion">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 01/07</dia>
+      <hora>16:30</hora>
+    </salida>
+    <llegada>
+      <dia>01/07</dia>
+      <hora>22:15</hora>
+    </llegada>
+    <duracion>5h 45min</duracion>
+    <compañia>
+      <nombre>Air Europa</nombre>
+      <logo>delta.png</logo>
+    </compañia>
+    <precio>500€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 15/08</dia>
+      <hora>11:00</hora>
+    </salida>
+    <llegada>
+      <dia>15/08</dia>
+      <hora>15:30</hora>
+    </llegada>
+    <duracion>4h 30min</duracion>
+    <compañia>
+      <nombre>Iberia</nombre>
+      <logo>aircanada.png</logo>
+    </compañia>
+    <precio>250€</precio>
+  </transporte>
+
+ <transporte type="Avion">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 23/08</dia>
+      <hora>08:00</hora>
+    </salida>
+    <llegada>
+      <dia>23/08</dia>
+      <hora>15:30</hora>
+    </llegada>
+    <duracion>7h 30min</duracion>
+    <compañia>
+      <nombre>Ryanair</nombre>
+      <logo>united.png</logo>
+    </compañia>
+    <precio>650€</precio>
+  </transporte>
+
+  <transporte type="Avion">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 05/09</dia>
+      <hora>14:00</hora>
+    </salida>
+    <llegada>
+      <dia>05/09</dia>
+      <hora>17:30</hora>
+    </llegada>
+    <duracion>3h 30min</duracion>
+    <compañia>
+      <nombre>KLM</nombre>
+      <logo>southwest.png</logo>
+    </compañia>
+    <precio>300€</precio>
+  </transporte>
+
+   <transporte type="Tren">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 16/09</dia>
+      <hora>22:30</hora>
+    </salida>
+    <llegada>
+      <dia>17/09</dia>
+      <hora>18:10</hora>
+    </llegada>
+    <duracion>19h 40min</duracion>
+    <compañia>
+      <nombre>SNCF</nombre>
+      <logo>qantas.png</logo>
+    </compañia>
+    <precio>1000€</precio>
+  </transporte>
+
+    <transporte type="Tren">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 22/09</dia>
+      <hora>09:00</hora>
+    </salida>
+    <llegada>
+      <dia>22/09</dia>
+      <hora>17:30</hora>
+    </llegada>
+    <duracion>8h 30min</duracion>
+    <compañia>
+      <nombre>Thalys</nombre>
+      <logo>japanairlines.png</logo>
+    </compañia>
+    <precio>600€</precio>
+  </transporte>
+
+ <transporte type="Tren">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 05/11</dia>
+      <hora>13:45</hora>
+    </salida>
+    <llegada>
+      <dia>05/11</dia>
+      <hora>20:30</hora>
+    </llegada>
+    <duracion>11h 45min</duracion>
+    <compañia>
+      <nombre>Ouigo</nombre>
+      <logo>delta.png</logo>
+    </compañia>
+    <precio>800€</precio>
+  </transporte>
+  
+<transporte type="Tren">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 12/11</dia>
+      <hora>18:15</hora>
+    </salida>
+    <llegada>
+      <dia>13/11</dia>
+      <hora>10:45</hora>
+    </llegada>
+    <duracion>15h 30min</duracion>
+    <compañia>
+      <nombre>SNCF</nombre>
+      <logo>qantas.png</logo>
+    </compañia>
+    <precio>1200€</precio>
+  </transporte>
+
+  <transporte type="Autobus">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 15/12</dia>
+      <hora>10:30</hora>
+    </salida>
+    <llegada>
+      <dia>15/12</dia>
+      <hora>14:45</hora>
+    </llegada>
+    <duracion>4h 15min</duracion>
+    <compañia>
+      <nombre>Flixbus</nombre>
+      <logo>Lufthansa.png</logo>
+    </compañia>
+    <precio>150€</precio>
+  </transporte>
+
+   <transporte type="Autobus">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 23/12</dia>
+      <hora>08:00</hora>
+    </salida>
+    <llegada>
+      <dia>23/12</dia>
+      <hora>10:30</hora>
+    </llegada>
+    <duracion>2h 30min</duracion>
+    <compañia>
+      <nombre>Eurolines</nombre>
+      <logo>alitalia.png</logo>
+    </compañia>
+    <precio>120€</precio>
+  </transporte>
+
+<transporte type="Autobus">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 05/02</dia>
+      <hora>15:20</hora>
+    </salida>
+    <llegada>
+      <dia>05/02</dia>
+      <hora>23:45</hora>
+    </llegada>
+    <duracion>8h 25min</duracion>
+    <compañia>
+      <nombre>Ouibus</nombre>
+      <logo>delta.png</logo>
+    </compañia>
+    <precio>500€</precio>
+  </transporte>
+  
+<transporte type="Autobus">
+    <destino>Berlín, DE</destino>
+    <salida>
+      <dia>BIO • 18/03</dia>
+      <hora>11:15</hora>
+    </salida>
+    <llegada>
+      <dia>19/03</dia>
+      <hora>08:30</hora>
+    </llegada>
+    <duracion>13h 15min</duracion>
+    <compañia>
+      <nombre>Ouibus</nombre>
+      <logo>ana.png</logo>
+    </compañia>
+    <precio>800€</precio>
+  </transporte>
+
+<transporte type="Avion">
+    <destino>Londres, UK</destino>
+    <salida>
+      <dia>BIO • 20/06</dia>
+      <hora>09:30</hora>
+    </salida>
+    <llegada>
+      <dia>20/06</dia>
+      <hora>16:45</hora>
+    </llegada>
+    <duracion>7h 15min</duracion>
+    <compañia>
+      <nombre>KLM</nombre>
+      <logo>united.png</logo>
+    </compañia>
+    <precio>400€</precio>
+  </transporte>
+
+<transporte type="Avion">
+    <destino>Londres, UK</destino>
+    <salida>
+      <dia>BIO • 01/09</dia>
+      <hora>19:00</hora>
+    </salida>
+    <llegada>
+      <dia>02/09</dia>
+      <hora>09:20</hora>
+    </llegada>
+    <duracion>14h 20min</duracion>
+    <compañia>
+      <nombre>Iberia</nombre>
+      <logo>qantas.png</logo>
+    </compañia>
+    <precio>1200€</precio>
+  </transporte>
+
+   <transporte type="Avion">
+    <destino>Londres, UK</destino>
+    <salida>
+      <dia>BIO • 10/07</dia>
+      <hora>08:00</hora>
+    </salida>
+    <llegada>
+      <dia>10/07</dia>
+      <hora>10:30</hora>
+    </llegada>
+    <duracion>2h 30min</duracion>
+    <compañia>
+      <nombre>Air Europa</nombre>
+      <logo>renfe.png</logo>
+    </compañia>
+    <precio>30€</precio>
+  </transporte>
+
+   <transporte type="Avion">
+    <destino>Londres, UK</destino>
+    <salida>
+      <dia>BIO • 15/08</dia>
+      <hora>13:45</hora>
+    </salida>
+    <llegada>
+      <dia>15/08</dia>
+      <hora>20:30</hora>
+    </llegada>
+    <duracion>6h 45min</duracion>
+    <compañia>
+      <nombre>Iberia</nombre>
+      <logo>aircanada.png</logo>
+    </compañia>
+    <precio>550€</precio>
+  </transporte>
+
+    <transporte type="Tren">
+    <destino>Londres, UK</destino>
+    <salida>
+      <dia>BIO • 02/11</dia>
+      <hora>20:00</hora>
+    </salida>
+    <llegada>
+      <dia>03/11</dia>
+      <hora>16:30</hora>
+    </llegada>
+    <duracion>16h 30min</duracion>
+    <compañia>
+      <nombre>Ouigo</nombre>
+      <logo>japanairlines.png</logo>
+    </compañia>
+    <precio>900€</precio>
+  </transporte>
+
+<transporte type="Tren">
+    <destino>Londres, UK</destino>
+    <salida>
+      <dia>BIO • 25/07</dia>
+      <hora>09:00</hora>
+    </salida>
+    <llegada>
+      <dia>25/07</dia>
+      <hora>14:45</hora>
+    </llegada>
+    <duracion>5h 45min</duracion>
+    <compañia>
+      <nombre>Trenitalia</nombre>
+      <logo>delta.png</logo>
+    </compañia>
+    <precio>400€</precio>
+  </transporte>
+
+  <transporte type="Tren">
+  <destino>Londres, UK</destino>
+  <salida>
+    <dia>BIO • 20/09</dia>
+    <hora>14:30</hora>
+  </salida>
+  <llegada>
+    <dia>20/09</dia>
+    <hora>18:45</hora>
+  </llegada>
+  <duracion>4h 15min</duracion>
+  <compañia>
+    <nombre>SNCF</nombre>
+    <logo>renfe.png</logo>
+  </compañia>
+  <precio>65€</precio>
+</transporte>
+
+<transporte type="Tren">
+  <destino>Londres, UK</destino>
+  <salida>
+    <dia>BIO • 10/10</dia>
+    <hora>19:30</hora>
+  </salida>
+  <llegada>
+    <dia>11/10</dia>
+    <hora>09:45</hora>
+  </llegada>
+  <duracion>9h 15min</duracion>
+  <compañia>
+    <nombre>Eurostar</nombre>
+    <logo>delta.png</logo>
+  </compañia>
+  <precio>800€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Londres, UK</destino>
+  <salida>
+    <dia>BIO • 20/07</dia>
+    <hora>08:00</hora>
+  </salida>
+  <llegada>
+    <dia>20/07</dia>
+    <hora>16:30</hora>
+  </llegada>
+  <duracion>8h 30min</duracion>
+  <compañia>
+    <nombre>Ouibus</nombre>
+    <logo>nationalexpress.png</logo>
+  </compañia>
+  <precio>50€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Londres, UK</destino>
+  <salida>
+    <dia>BIO • 23/07</dia>
+    <hora>15:30</hora>
+  </salida>
+  <llegada>
+    <dia>24/07</dia>
+    <hora>10:00</hora>
+  </llegada>
+  <duracion>18h 30min</duracion>
+  <compañia>
+    <nombre>Eurolines</nombre>
+    <logo>nationalexpress.png</logo>
+  </compañia>
+  <precio>50€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Londres, UK</destino>
+  <salida>
+    <dia>BIO • 22/06</dia>
+    <hora>14:45</hora>
+  </salida>
+  <llegada>
+    <dia>22/06</dia>
+    <hora>19:30</hora>
+  </llegada>
+  <duracion>4h 45min</duracion>
+  <compañia>
+    <nombre>Flixbus</nombre>
+    <logo>renfe.png</logo>
+  </compañia>
+  <precio>50€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Londres, UK</destino>
+  <salida>
+    <dia>BIO • 05/11</dia>
+    <hora>22:30</hora>
+  </salida>
+  <llegada>
+    <dia>06/11</dia>
+    <hora>17:40</hora>
+  </llegada>
+  <duracion>15h 10min</duracion>
+  <compañia>
+    <nombre>Alsa</nombre>
+    <logo>ana.png</logo>
+  </compañia>
+  <precio>1000€</precio>
+</transporte>
+
+<transporte type="Avion">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 23/06</dia>
+    <hora>12:15</hora>
+  </salida>
+  <llegada>
+    <dia>23/06</dia>
+    <hora>16:25</hora>
+  </llegada>
+  <duracion>4h 10min</duracion>
+  <compañia>
+    <nombre>Iberia</nombre>
+    <logo>renfe.png</logo>
+  </compañia>
+  <precio>50€</precio>
+</transporte>
+
+<transporte type="Avion">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 12/11</dia>
+    <hora>22:00</hora>
+  </salida>
+  <llegada>
+    <dia>13/11</dia>
+    <hora>18:30</hora>
+  </llegada>
+  <duracion>16h 30min</duracion>
+  <compañia>
+    <nombre>Lufthansa</nombre>
+    <logo>ana.png</logo>
+  </compañia>
+  <precio>1200€</precio>
+</transporte>
+
+<transporte type="Avion">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 25/05</dia>
+    <hora>10:00</hora>
+  </salida>
+  <llegada>
+    <dia>26/05</dia>
+    <hora>15:30</hora>
+  </llegada>
+  <duracion>29h 30min</duracion>
+  <compañia>
+    <nombre>Air Europa</nombre>
+    <logo>flixbus.png</logo>
+  </compañia>
+  <precio>150€</precio>
+</transporte>
+
+<transporte type="Avion">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 08/07</dia>
+    <hora>09:00</hora>
+  </salida>
+  <llegada>
+    <dia>08/07</dia>
+    <hora>12:00</hora>
+  </llegada>
+  <duracion>3h 0min</duracion>
+  <compañia>
+    <nombre>Eurostar</nombre>
+    <logo>eurostar.png</logo>
+  </compañia>
+  <precio>80€</precio>
+</transporte>
+
+<transporte type="Tren">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 20/08</dia>
+    <hora>23:00</hora>
+  </salida>
+  <llegada>
+    <dia>21/08</dia>
+    <hora>09:00</hora>
+  </llegada>
+  <duracion>10h 0min</duracion>
+  <compañia>
+    <nombre>Ouigo</nombre>
+    <logo>qantas.png</logo>
+  </compañia>
+  <precio>1000€</precio>
+</transporte>
+
+<transporte type="Tren">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 24/05</dia>
+    <hora>09:00</hora>
+  </salida>
+  <llegada>
+    <dia>24/05</dia>
+    <hora>14:30</hora>
+  </llegada>
+  <duracion>5h 30min</duracion>
+  <compañia>
+    <nombre>SNCF</nombre>
+    <logo>SNCF.png</logo>
+  </compañia>
+  <precio>150€</precio>
+</transporte>
+
+<transporte tipo="Tren">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 17/08</dia>
+    <hora>10:00</hora>
+  </salida>
+  <llegada>
+    <dia>23/08</dia>
+    <hora>18:00</hora>
+  </llegada>
+  <duracion>6 días</duracion>
+  <compañia>
+    <nombre>Eurolines</nombre>
+    <logo>msc.png</logo>
+  </compañia>
+  <precio>900€</precio>
+</transporte>
+
+<transporte type="Tren">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 15/08</dia>
+    <hora>09:00</hora>
+  </salida>
+  <llegada>
+    <dia>15/08</dia>
+    <hora>18:30</hora>
+  </llegada>
+  <duracion>9h 30min</duracion>
+  <compañia>
+    <nombre>Renfe</nombre>
+    <logo>renfe.png</logo>
+  </compañia>
+  <precio>150€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 15/07</dia>
+    <hora>08:00</hora>
+  </salida>
+  <llegada>
+    <dia>15/07</dia>
+    <hora>14:30</hora>
+  </llegada>
+  <duracion>6h 30min</duracion>
+  <compañia>
+    <nombre>Flixbus</nombre>
+    <logo>trenitalia.png</logo>
+  </compañia>
+  <precio>120€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 04/09</dia>
+    <hora>16:00</hora>
+  </salida>
+  <llegada>
+    <dia>05/09</dia>
+    <hora>22:30</hora>
+  </llegada>
+  <duracion>15h 30min</duracion>
+  <compañia>
+    <nombre>Ouibus</nombre>
+    <logo>united.png</logo>
+  </compañia>
+  <precio>900€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 21/08</dia>
+    <hora>09:00</hora>
+  </salida>
+  <llegada>
+    <dia>21/08</dia>
+    <hora>12:30</hora>
+  </llegada>
+  <duracion>3h 30min</duracion>
+  <compañia>
+    <nombre>Eurolines</nombre>
+    <logo>SNCF.png</logo>
+  </compañia>
+  <precio>80€</precio>
+</transporte>
+
+<transporte type="Autobus">
+  <destino>Roma, IT</destino>
+  <salida>
+    <dia>BIO • 01/09</dia>
+    <hora>11:00</hora>
+  </salida>
+  <llegada>
+    <dia>01/09</dia>
+    <hora>15:45</hora>
+  </llegada>
+  <duracion>4h 45min</duracion>
+  <compañia>
+    <nombre>Flixbus</nombre>
+    <logo>renfe.png</logo>
+  </compañia>
+  <precio>50€</precio>
+</transporte>
+
+</transportes>

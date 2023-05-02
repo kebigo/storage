@@ -89,24 +89,49 @@ export function obtenerFiltros() {
     const filtroTipo = [];
     const filtroInstalaciones = [];
     const filtroPuntuacion = [];
+    const filtroTipoT = [];
+    const filtroCategoria = [];
+    const filtroPuntuacionT = [];
+
+    let paginaActual = window.location.href;
+
+  
 
     elementosFiltros.forEach(e => {
-        if (e.checked == true) {
-            if (e.classList.contains("tipo")) {
-                filtroTipo.push(e.value);
-            } else if (e.classList.contains("instalaciones")) {
-                filtroInstalaciones.push(e.value);
-            } else if (e.classList.contains("puntuacion")) {
-                filtroPuntuacion.push(e.value);
+        if(paginaActual.includes("alojamiento")){
+            if (e.checked == true) {
+                if (e.classList.contains("tipo")) {
+                    filtroTipo.push(e.value);
+                } else if (e.classList.contains("instalaciones")) {
+                    filtroInstalaciones.push(e.value);
+                } else if (e.classList.contains("puntuacion")) {
+                    filtroPuntuacion.push(e.value);
+                }
+            }
+
+            filtros.push(filtroTipo, filtroInstalaciones, filtroPuntuacion);
+
+
+        }else{
+            if (e.checked == true) {
+                if (e.classList.contains("tipoT")) {
+                    filtroTipoT.push(e.value);
+                } else if (e.classList.contains("categoria")) {
+                    filtroCategoria.push(e.value);
+                } else if (e.classList.contains("puntuacionT")) {
+                    filtroPuntuacionT.push(e.value);
+                }
+
+                filtros.push(filtroTipoT, filtroCategoria, filtroPuntuacionT);
+
             }
         }
+        
 
     })
 
-    filtros.push(filtroTipo, filtroInstalaciones, filtroPuntuacion);
-
-
     return filtros;
+
 }
 
 

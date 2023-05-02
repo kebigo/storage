@@ -26,27 +26,22 @@ export class HeaderPersonalizado extends HTMLElement {
         <ul class="list-unstyled text-white">
           <li class="py-3 d-flex align-items-center">
             <i class="icono_mobile bi bi-house-door-fill fs-2 me-2"></i>
-            <a class="text-decoration-none text-white" href="#">Inicio</a>
-          </li>
-
-          <li class="py-3 d-flex align-items-center">
-            <i class="icono_mobile bi bi-people-fill fs-2 me-2"></i>
-            <a class="text-decoration-none text-white href="#">Sobre nosotros</a>
+            <a class="text-decoration-none text-white" href="./index.html">Inicio</a>
           </li>
 
           <li class="py-3 d-flex align-items-center">
             <i class=" icono_mobile bi bi-building fs-2 me-2"></i>
-            <a class="text-decoration-none text-white href="../alojamiento.html">Alojamiento</a>
+            <a class="text-decoration-none text-white" href="./alojamiento.html">Alojamiento</a>
           </li>
 
           <li class="py-3 d-flex align-items-center">
             <i class="icono_mobile bi bi-airplane-fill fs-2 me-2"></i>
-            <a class="text-decoration-none text-white href="../tranporte.html">Transporte</a>
+            <a class="text-decoration-none text-white" href="./transporte.html">Transporte</a>
           </li>
           
           <li class="py-3 d-flex align-items-center">
             <i class=" icono_mobile bi bi-gift-fill fs-2 me-2"></i>
-            <a class="text-decoration-none text-white href="#">Ofertas</a>
+            <a class="text-decoration-none text-white" href="./paquetes.html">Paquetes</a>
           </li>
           
          
@@ -55,15 +50,15 @@ export class HeaderPersonalizado extends HTMLElement {
         <ul class="d-flex list-unstyled ">
        
           <a class="boton_login_mobile rounded-pill d-flex justify-content-center align-items-center" href="#">
-            <i class="bi bi-person"></i>
+            <i class="bi bi-person text-white"></i>
           </a>
 
           <a class="boton_carrito_mobile rounded-pill ms-2 d-flex justify-content-center align-items-center" href="#">
-            <i class="bi bi-cart"></i>
+            <i class="bi bi-cart text-white"></i>
           </a>
 
           <a class="boton_favoritos_mobile rounded-pill ms-2 d-flex justify-content-center align-items-center" href="#">
-            <i class="bi bi-heart"></i>
+            <i class="bi bi-heart text-white"></i>
           </a>
         </ul>
 
@@ -74,7 +69,7 @@ export class HeaderPersonalizado extends HTMLElement {
   </div>
 </div>
           <div class="navbar-brand d-block ">
-            <a href="#">
+            <a href="./index.html">
                 <img class= "logo_header" src="./assets/img/logo_header.png" alt="">
             </a>
          </div>
@@ -82,9 +77,6 @@ export class HeaderPersonalizado extends HTMLElement {
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre nosotros</a>
               </li>
 
               <li class="nav-item">
@@ -96,7 +88,7 @@ export class HeaderPersonalizado extends HTMLElement {
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
+                <a class="nav-link" href="paquetes.html">Paquetes</a>
               </li>
             </ul>
           </div>
