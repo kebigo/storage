@@ -40,7 +40,11 @@ public class factura implements facturacion, Serializable {
         this.fecha = "";
         this.lineasfactura = array;
     }
-
+/**
+ * Metodo que agrega el codigo del producto y el precio total de este
+ * @param Codigo Recoge un int para añadirlo como codigo
+ * @param Total Recoge el total de la suma del precio para agregarlo a la factura
+ */
     public void añadirLinea(int Codigo, double Total) {
         lineasfactura.add(new LineaFactura(Codigo, Total));
     }
@@ -64,6 +68,7 @@ public class factura implements facturacion, Serializable {
     @Override
     /**
      * Metodo que calcula el total de la factura
+     * @return total Devuelve el total de las operaciones junto al iva
      */
     public double calcularTotal() {
         double totalLinea = 0;
