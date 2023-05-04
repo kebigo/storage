@@ -3,6 +3,7 @@ package TodoElProyecto;
 import java.util.logging.Formatter;
 import java.util.logging.Handler;
 import java.util.logging.Level;
+import java.util.logging.*;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.FileHandler;
@@ -37,5 +38,11 @@ public class CustomLogger {
         public String format(java.util.logging.LogRecord record) {
             return record.getMessage() + "\n";
         }
+    }
+
+    public String format(LogRecord record) {
+        StringBuilder builder = new StringBuilder();
+        builder.append("[").append(record.getLevel()).append("] ");
+        return builder.toString();
     }
 }
