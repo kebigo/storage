@@ -117,10 +117,9 @@ public class empleado extends persona {
      */
     @Override
     public void leer(Scanner teclado) {
-        teclado.nextLine();
-        System.out.println("Nombre DNI");
+        System.out.println("DNI empleado");
         this.DNI = teclado.nextLine().toUpperCase();
-        System.out.println("Nombre empelado");
+        System.out.println("Nombre empleado");
         this.nombre = teclado.nextLine().toLowerCase();
         System.out.println("Apellido empleado");
         this.apellido = teclado.nextLine().toLowerCase();
@@ -151,6 +150,7 @@ public class empleado extends persona {
             }
         }
         System.out.println("En que departamento trabaja?");
+        teclado.nextLine();
         this.departamento = teclado.nextLine().toLowerCase();
         System.out.println("Que rol toma?");
         this.rol = teclado.nextLine().toLowerCase();

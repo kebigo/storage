@@ -10,6 +10,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.logging.*;
 /**
  * Esta es la clase principal del programa
  * Realiza las operaciones principales del programa.
@@ -20,10 +21,6 @@ import java.util.*;
 public class agenciamain {
 
     public static void main(String[] args) {
-        /**
-         * Principalmente recoge de la base de datos toda la informacion y la extrae a
-         * la aplicacion
-         */
         Scanner teclado = new Scanner(System.in);
         ArrayList<empleado> empleadosArray = new ArrayList<empleado>();
         ArrayList<transporte> transportesArray = new ArrayList<transporte>();
@@ -43,330 +40,19 @@ public class agenciamain {
         boolean Modificado = false;
         factura ac = new factura();
         ArrayList<factura> facturaArrayList = new ArrayList<factura>();
-        try {
-            FileInputStream fis = new FileInputStream("factura.dat");
-            ObjectInputStream ois = new ObjectInputStream(fis);
+        final Logger LOGGER = CustomLogger.getLogger();
+        BaseDeDatosFactura(facturaArrayList);
+        BaseDeDatosEmpleado(empleadosArray);
+        BaseDeDatosTransporte(transportesArray);
+        BaseDeDatosViajeros(viajerosArray);
+        BaseDeDatosAlojamientos(alojamientosArray);
+        BaseDeDatosPaquetes(paquetesArray);
+        BaseDeDatosReservaAlojamiento(reservaAlojamientos);
+        BaseDeDatosReservaTrasporte(reservaTransportes);
+        BaseDeDatosReservaPaquetes(reservaPaquetes);
 
-            while (fis.available() > 0) {
-                ac = (factura) ois.readObject();
-                facturaArrayList.add(ac);
-            }
-            fis.close();
-            ois.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM empleado;");
-            String DNI = "";
-            String nombre = "";
-            String apellido = "";
-            String email = "";
-            String telefono = "";
-            String contrasena = "";
-            String departamento = "";
-            String rol = "";
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    DNI = (String) rs.getObject("DNI");
-                    nombre = (String) rs.getObject("nombre");
-                    apellido = (String) rs.getObject("apellido");
-                    email = (String) rs.getObject("email");
-                    telefono = (String) rs.getObject("telefono");
-                    contrasena = (String) rs.getObject("contrasena");
-                    departamento = (String) rs.getObject("departamento");
-                    rol = (String) rs.getObject("rol");
-                    empleadosArray.add(new empleado(DNI, nombre, apellido, email, telefono, contrasena, departamento, rol));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM transporte;");
-            int idTransporte = 0;
-            double precio = 0;
-            String tipo = "";
-            String destino = "";
-            String origen = "";
-            int puntuacion = 0;
-            String extras = "";
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    idTransporte = (int) rs.getObject("IDTransporte");
-                    precio = (double) rs.getObject("precio");
-                    tipo = (String) rs.getObject("tipo");
-                    destino = (String) rs.getObject("destino");
-                    origen = (String) rs.getObject("origen");
-                    puntuacion = (int) rs.getObject("puntuacion");
-                    extras = (String) rs.getObject("extras");
-                    transportesArray
-                            .add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
-                }
-
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM viajero;");
-            String DNI = "";
-            String nombre = "";
-            String apellido = "";
-            String email = "";
-            String telefono = "";
-            String contrasena = "";
-            int vacunasCOVID = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    DNI = (String) rs.getObject("DNI");
-                    nombre = (String) rs.getObject("nombre");
-                    apellido = (String) rs.getObject("apellido");
-                    email = (String) rs.getObject("email");
-                    telefono = (String) rs.getObject("telefono");
-                    contrasena = (String) rs.getObject("contrasena");
-                    vacunasCOVID = (int) rs.getObject("vacunasCOVID");
-                    viajerosArray.add(new viajero(DNI, nombre, apellido, email, telefono, contrasena, vacunasCOVID));
-                }
-
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // recorro registro a registro el ResultSet
-
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM alojamiento;");
-            int idAlojamiento = 0;
-            double precio = 0;
-            String tipo = "";
-            String destino = "";
-            int puntuacion = 0;
-            String extra = "";
-            String instalaciones = "";
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    idAlojamiento = (int) rs.getObject("IDAlojamiento");
-                    precio = (double) rs.getObject("precio");
-                    tipo = (String) rs.getObject("tipo");
-                    destino = (String) rs.getObject("destino");
-                    puntuacion = (int) rs.getObject("puntuacion");
-                    extra = (String) rs.getObject("extras");
-                    instalaciones = (String) rs.getObject("instalaciones");
-                    alojamientosArray.add(
-                            new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM paquete;");
-            int idPaquete = 0;
-            int idTransporte = 0;
-            int idAlojamiento = 0;
-            double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    idPaquete = (int) rs.getObject("IDPaquete");
-                    idTransporte = (int) rs.getObject("IDTransporte");
-                    idAlojamiento = (int) rs.getObject("IDAlojamiento");
-                    precio = (double) rs.getObject("precio");
-                    paquetesArray.add(new paquete(idPaquete, idTransporte, idAlojamiento, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM reservaalojamiento;");
-            int IDAlojamiento = 0;
-            String DNI = "";
-            String Fecha = "";
-            double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    IDAlojamiento = (int) rs.getObject("IDAlojamiento");
-                    DNI = (String) rs.getObject("DNI");
-                    Fecha = (String) rs.getObject("fecha");
-                    precio = (double) rs.getObject("precio");
-                    reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, Fecha, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM reservatransporte;");
-            int IDTransporte = 0;
-            String DNI = "";
-            String Fecha = "";
-            double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    IDTransporte = (int) rs.getObject("IDTransporte");
-                    DNI = (String) rs.getObject("DNI");
-                    Fecha = (String) rs.getObject("fecha");
-                    precio = (double) rs.getObject("precio");
-                    reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, Fecha, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-        try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
-            // si se ha conectado correctamente
-            System.out.println("Conexión Correcta.");
-            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM reservapaquete;");
-            int IDPaquete = 0;
-            String DNI = "";
-            String Fecha = "";
-            double precio = 0;
-            if (rs.first()) {
-                // si hay registros
-                // vuelvo al primero
-                rs.beforeFirst();
-                // recorro registro a registro el ResultSet
-                while (rs.next()) {
-                    IDPaquete = (int) rs.getObject("IDPaquete");
-                    DNI = (String) rs.getObject("DNI");
-                    Fecha = (String) rs.getObject("fecha");
-                    precio = (double) rs.getObject("precio");
-                    reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, Fecha, precio));
-                }
-            } else {
-                // si no hay registros
-                System.out.println("La tabla no tiene Registros");
-            }
-            // cierro la conexion
-            rs.close();
-            conexion.close();
-        } catch (SQLException e) {
-            // si NO se ha conectado correctamente
-            e.printStackTrace();
-            System.out.println("Error de Conexión");
-        }
-
+        
+        
         int intentos = 3;
         boolean login = false;
         boolean empleado = false;
@@ -457,10 +143,12 @@ public class agenciamain {
                         try {
                             opcion = teclado.nextInt();
                         } catch (InputMismatchException e) {
+                        	LOGGER.log(Level.SEVERE, "Se ha producido un error inesperado.", e);
                             System.out.println("Ingrese un numero de 0 a 6 por favor");
                             teclado.nextLine();
                             opcion = -1;
                         }
+                        LOGGER.info("El usuario ha seleccionado la opcion: "+opcion);
                         if (opcion < 0 || opcion > 8) {
                             System.out.println("Por favor, elija una opcion valida por favor");
                         }
@@ -484,6 +172,7 @@ public class agenciamain {
                                     ModificadoEmpleado = true;
                                 }
                             }
+                            opcion = -1;
                             break;
                         case 2:
                             opcion = -1;
@@ -531,6 +220,14 @@ public class agenciamain {
                                         break;
                                     case 3:
                                         Paquete = new paquete();
+                                        System.out.println("************Alojamientos************");
+                                        for (alojamiento ra : alojamientosArray) {
+                                            ra.print();
+                                        }
+                                        System.out.println("************Transportes************");
+                                        for (transporte rt : transportesArray) {
+                                            rt.print();
+                                        }
                                         Paquete.leer(teclado);
                                         if (paquetesArray.contains(Paquete)) {
                                             System.out.println("El paquete ya existe");
@@ -936,23 +633,23 @@ public class agenciamain {
                                 LocalDate currentDate = LocalDate.now();
                                 String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
                                 
-                                factura f = new factura(cantidad, dni, formattedDate, new  ArrayList<LineaFactura>());
+                                ac = new factura(cantidad, dni, formattedDate, new  ArrayList<LineaFactura>());
                                 for (reservaPaquete p : reservaPaquetes) {
                                     if (dni.equals(p.getDNI())) {
-                                        f.anadirLinea(p.getIDPaquete(), p.getPrecio());
+                                        ac.anadirLinea(p.getIDPaquete(), p.getPrecio());
                                     }
                                 }
                                 for (reservaPaquete p : reservaPaquetes) {
                                     if (dni.equals(p.getDNI())) {
-                                        f.anadirLinea(p.getIDPaquete(), p.getPrecio());
+                                        ac.anadirLinea(p.getIDPaquete(), p.getPrecio());
                                     }
                                 }
                                 for (reservaPaquete p : reservaPaquetes) {
                                     if (dni.equals(p.getDNI())) {
-                                        f.anadirLinea(p.getIDPaquete(), p.getPrecio());
+                                        ac.anadirLinea(p.getIDPaquete(), p.getPrecio());
                                     }
                                 }
-                                facturaArrayList.add(f);
+                                facturaArrayList.add(ac);
                                 ModificadoFactura = true;
                                 Modificado = true;
                                 break;
@@ -1272,6 +969,356 @@ public class agenciamain {
                 e.printStackTrace();
                 System.out.println("Error de Conexión");
             }
+        }
+    }
+
+    private static void BaseDeDatosReservaPaquetes(ArrayList<reservaPaquete> reservaPaquetes) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM reservapaquete;");
+            int IDPaquete = 0;
+            String DNI = "";
+            String Fecha = "";
+            double precio = 0;
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    IDPaquete = (int) rs.getObject("IDPaquete");
+                    DNI = (String) rs.getObject("DNI");
+                    Fecha = (String) rs.getObject("fecha");
+                    precio = (double) rs.getObject("precio");
+                    reservaPaquetes.add(new reservaPaquete(IDPaquete, DNI, Fecha, precio));
+                }
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosReservaTrasporte(ArrayList<reservaTransporte> reservaTransportes) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM reservatransporte;");
+            int IDTransporte = 0;
+            String DNI = "";
+            String Fecha = "";
+            double precio = 0;
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    IDTransporte = (int) rs.getObject("IDTransporte");
+                    DNI = (String) rs.getObject("DNI");
+                    Fecha = (String) rs.getObject("fecha");
+                    precio = (double) rs.getObject("precio");
+                    reservaTransportes.add(new reservaTransporte(IDTransporte, DNI, Fecha, precio));
+                }
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosReservaAlojamiento(ArrayList<reservaAlojamiento> reservaAlojamientos) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM reservaalojamiento;");
+            int IDAlojamiento = 0;
+            String DNI = "";
+            String Fecha = "";
+            double precio = 0;
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    IDAlojamiento = (int) rs.getObject("IDAlojamiento");
+                    DNI = (String) rs.getObject("DNI");
+                    Fecha = (String) rs.getObject("fecha");
+                    precio = (double) rs.getObject("precio");
+                    reservaAlojamientos.add(new reservaAlojamiento(IDAlojamiento, DNI, Fecha, precio));
+                }
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosPaquetes(ArrayList<paquete> paquetesArray) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM paquete;");
+            int idPaquete = 0;
+            int idTransporte = 0;
+            int idAlojamiento = 0;
+            double precio = 0;
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    idPaquete = (int) rs.getObject("IDPaquete");
+                    idTransporte = (int) rs.getObject("IDTransporte");
+                    idAlojamiento = (int) rs.getObject("IDAlojamiento");
+                    precio = (double) rs.getObject("precio");
+                    paquetesArray.add(new paquete(idPaquete, idTransporte, idAlojamiento, precio));
+                }
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosAlojamientos(ArrayList<alojamiento> alojamientosArray) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM alojamiento;");
+            int idAlojamiento = 0;
+            double precio = 0;
+            String tipo = "";
+            String destino = "";
+            int puntuacion = 0;
+            String extra = "";
+            String instalaciones = "";
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    idAlojamiento = (int) rs.getObject("IDAlojamiento");
+                    precio = (double) rs.getObject("precio");
+                    tipo = (String) rs.getObject("tipo");
+                    destino = (String) rs.getObject("destino");
+                    puntuacion = (int) rs.getObject("puntuacion");
+                    extra = (String) rs.getObject("extras");
+                    instalaciones = (String) rs.getObject("instalaciones");
+                    alojamientosArray.add(
+                            new alojamiento(idAlojamiento, precio, tipo, destino, puntuacion, extra, instalaciones));
+                }
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosViajeros(ArrayList<viajero> viajerosArray) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM viajero;");
+            String DNI = "";
+            String nombre = "";
+            String apellido = "";
+            String email = "";
+            String telefono = "";
+            String contrasena = "";
+            int vacunasCOVID = 0;
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    DNI = (String) rs.getObject("DNI");
+                    nombre = (String) rs.getObject("nombre");
+                    apellido = (String) rs.getObject("apellido");
+                    email = (String) rs.getObject("email");
+                    telefono = (String) rs.getObject("telefono");
+                    contrasena = (String) rs.getObject("contrasena");
+                    vacunasCOVID = (int) rs.getObject("vacunasCOVID");
+                    viajerosArray.add(new viajero(DNI, nombre, apellido, email, telefono, contrasena, vacunasCOVID));
+                }
+
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+            // recorro registro a registro el ResultSet
+
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosTransporte(ArrayList<transporte> transportesArray) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM transporte;");
+            int idTransporte = 0;
+            double precio = 0;
+            String tipo = "";
+            String destino = "";
+            String origen = "";
+            int puntuacion = 0;
+            String extras = "";
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    idTransporte = (int) rs.getObject("IDTransporte");
+                    precio = (double) rs.getObject("precio");
+                    tipo = (String) rs.getObject("tipo");
+                    destino = (String) rs.getObject("destino");
+                    origen = (String) rs.getObject("origen");
+                    puntuacion = (int) rs.getObject("puntuacion");
+                    extras = (String) rs.getObject("extras");
+                    transportesArray
+                            .add(new transporte(idTransporte, precio, tipo, destino, origen, puntuacion, extras));
+                }
+
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosEmpleado(ArrayList<empleado> empleadosArray) {
+        try {
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/agenciadeviajes", "root", "");
+            // si se ha conectado correctamente
+            System.out.println("Conexión Correcta.");
+            Statement st = conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM empleado;");
+            String DNI = "";
+            String nombre = "";
+            String apellido = "";
+            String email = "";
+            String telefono = "";
+            String contrasena = "";
+            String departamento = "";
+            String rol = "";
+            if (rs.first()) {
+                // si hay registros
+                // vuelvo al primero
+                rs.beforeFirst();
+                // recorro registro a registro el ResultSet
+                while (rs.next()) {
+                    DNI = (String) rs.getObject("DNI");
+                    nombre = (String) rs.getObject("nombre");
+                    apellido = (String) rs.getObject("apellido");
+                    email = (String) rs.getObject("email");
+                    telefono = (String) rs.getObject("telefono");
+                    contrasena = (String) rs.getObject("contrasena");
+                    departamento = (String) rs.getObject("departamento");
+                    rol = (String) rs.getObject("rol");
+                    empleadosArray.add(new empleado(DNI, nombre, apellido, email, telefono, contrasena, departamento, rol));
+                }
+            } else {
+                // si no hay registros
+                System.out.println("La tabla no tiene Registros");
+            }
+
+            // cierro la conexion
+            rs.close();
+            conexion.close();
+        } catch (SQLException e) {
+            // si NO se ha conectado correctamente
+            e.printStackTrace();
+            System.out.println("Error de Conexión");
+        }
+    }
+
+    private static void BaseDeDatosFactura(ArrayList<factura> facturaArrayList) {
+        factura ac;
+        try {
+            FileInputStream fis = new FileInputStream("factura.dat");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            while (fis.available() > 0) {
+                ac = (factura) ois.readObject();
+                facturaArrayList.add(ac);
+            }
+            fis.close();
+            ois.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

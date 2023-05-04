@@ -6,8 +6,14 @@ import java.util.ArrayList;
  * Constructor para el factura
  */
 
-public class factura implements facturacion, Serializable {
-    protected int IDFactura;
+public class  factura  implements facturacion, Serializable {
+
+    
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1140385457372908481L;
+	protected int IDFactura;
     protected String DNI;
     protected String fecha;
     protected ArrayList<LineaFactura> lineasfactura = new ArrayList<>();

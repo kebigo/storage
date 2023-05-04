@@ -83,15 +83,15 @@ public class paquete {
      * @param teclado El parametro teclado define que la informacion será ingresada mediante un Scanner
      */
     public void leer(Scanner teclado){
-        System.out.println("Identificador del alojamiento");
+        System.out.println("Identificador del Paquete");
         this.idPaquete = teclado.nextInt();
-        System.out.println("tipo de alojamiento");
+        System.out.println("Identificador del Alojamiento");
         this.idTransporte = teclado.nextInt();
-        System.out.println("Donde Se Ubica El Alojamiento");
+        System.out.println("Identificador del Transporte");
         this.idAlojamiento = teclado.nextInt();
         System.out.println("precio?");
-        this.precio = teclado.nextInt();
-        System.out.println("Se agrego el usuario correctamente");
+        this.precio = teclado.nextDouble();
+        System.out.println("Se agrego el Paquete correctamente");
 }
 
 }
