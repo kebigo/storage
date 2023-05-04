@@ -45,7 +45,7 @@ public class factura implements facturacion, Serializable {
  * @param Codigo Recoge un int para añadirlo como codigo
  * @param Total Recoge el total de la suma del precio para agregarlo a la factura
  */
-    public void añadirLinea(int Codigo, double Total) {
+    public void anadirLinea(int Codigo, double Total) {
         lineasfactura.add(new LineaFactura(Codigo, Total));
     }
     /**

@@ -89,8 +89,7 @@ public class agenciamain {
                     contrasena = (String) rs.getObject("contrasena");
                     departamento = (String) rs.getObject("departamento");
                     rol = (String) rs.getObject("rol");
-                    empleadosArray
-                            .add(new empleado(DNI, nombre, apellido, email, telefono, contrasena, departamento, rol));
+                    empleadosArray.add(new empleado(DNI, nombre, apellido, email, telefono, contrasena, departamento, rol));
                 }
             } else {
                 // si no hay registros
@@ -372,7 +371,7 @@ public class agenciamain {
         boolean login = false;
         boolean empleado = false;
         String email = "";
-        String contraseña = "";
+        String contrasena = "";
         String nombre = "";
         int opcion = 10;
         boolean ModificadoAlojamiento = false;
@@ -407,10 +406,10 @@ public class agenciamain {
                 System.out.println("Email");
                 email = teclado.next();
                 System.out.println("Contraseña");
-                contraseña = teclado.next();
+                contrasena = teclado.next();
                 for (empleado e : empleadosArray) {
                     if (email.equals(e.getEmail())) {
-                        if (contraseña.equals(e.getContraseña())) {
+                        if (contrasena.equals(e.getContrasena())) {
                             login = true;
                             nombre = e.getNombre();
                             empleado = true;
@@ -423,7 +422,7 @@ public class agenciamain {
             }
             for (viajero e : viajerosArray) {
                 if (email.equals(e.getEmail())) {
-                    if (contraseña.equals(e.getContraseña())) {
+                    if (contrasena.equals(e.getContrasena())) {
                         login = true;
                         dni = e.getDNI();
                     }
@@ -940,17 +939,17 @@ public class agenciamain {
                                 factura f = new factura(cantidad, dni, formattedDate, new  ArrayList<LineaFactura>());
                                 for (reservaPaquete p : reservaPaquetes) {
                                     if (dni.equals(p.getDNI())) {
-                                        f.añadirLinea(p.getIDPaquete(), p.getPrecio());
+                                        f.anadirLinea(p.getIDPaquete(), p.getPrecio());
                                     }
                                 }
                                 for (reservaPaquete p : reservaPaquetes) {
                                     if (dni.equals(p.getDNI())) {
-                                        f.añadirLinea(p.getIDPaquete(), p.getPrecio());
+                                        f.anadirLinea(p.getIDPaquete(), p.getPrecio());
                                     }
                                 }
                                 for (reservaPaquete p : reservaPaquetes) {
                                     if (dni.equals(p.getDNI())) {
-                                        f.añadirLinea(p.getIDPaquete(), p.getPrecio());
+                                        f.anadirLinea(p.getIDPaquete(), p.getPrecio());
                                     }
                                 }
                                 facturaArrayList.add(f);
@@ -999,7 +998,7 @@ public class agenciamain {
                 String apellido = "";
                 String Email = "";
                 String telefono = "";
-                String contrasena = "";
+                String contrasenaa = "";
                 String departamento = "";
                 String rol = "";
 
@@ -1009,12 +1008,12 @@ public class agenciamain {
                     apellido = e.getApellido();
                     Email = e.getEmail();
                     telefono = e.getTelefono();
-                    contrasena = e.getContraseña();
+                    contrasenaa = e.getContrasena();
                     departamento = e.getDepartamento();
                     rol = e.getRol();
                     st.executeUpdate("CALL insertar_persona('" + DNI + "')");
                     st.executeUpdate("INSERT INTO empleado VALUES ('" + DNI + "','" + Nombre + "','" +
-                            apellido + "','" + Email + "','" + telefono + "','" + contrasena + "','" + departamento
+                            apellido + "','" + Email + "','" + telefono + "','" + contrasenaa + "','" + departamento
                             + "','" + rol + "')");
                 }
 
@@ -1072,7 +1071,7 @@ public class agenciamain {
                 String apellido = "";
                 String Email = "";
                 String telefono = "";
-                String contrasena = "";
+                contrasena = "";
                 int vacunasCOVID = 0;
 
                 for (viajero v : viajerosArray) {
@@ -1081,7 +1080,7 @@ public class agenciamain {
                     apellido = v.getApellido();
                     Email = v.getEmail();
                     telefono = v.getTelefono();
-                    contrasena = v.getContraseña();
+                    contrasena = v.getContrasena();
                     vacunasCOVID = v.getVacunasCOVID();
                     st.executeUpdate("CALL insertar_persona('" + DNI + "')");
                     st.executeUpdate("INSERT INTO viajero VALUES ('" + DNI + "','" + Nombre + "','" +

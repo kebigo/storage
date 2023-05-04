@@ -8,7 +8,7 @@ public class viajero extends persona {
     protected String apellido;
     protected String email;
     protected String telefono;
-    protected String Contraseña;
+    protected String Contrasena;
     protected int vacunasCOVID;
 
     /**
@@ -20,7 +20,7 @@ public class viajero extends persona {
         this.apellido = "";
         this.email = "";
         this.telefono = "";
-        this.Contraseña = "";
+        this.Contrasena = "";
         this.vacunasCOVID = 0;
     }
 
@@ -30,7 +30,7 @@ public class viajero extends persona {
         this.apellido = v.apellido;
         this.email = v.email;
         this.telefono = v.telefono;
-        this.Contraseña = v.Contraseña;
+        this.Contrasena = v.Contrasena;
         this.vacunasCOVID = v.vacunasCOVID;
     }
 
@@ -40,7 +40,7 @@ public class viajero extends persona {
         this.apellido = a;
         this.email = e;
         this.telefono = t;
-        this.Contraseña = c;
+        this.Contrasena = c;
         this.vacunasCOVID = v;
     }
 
@@ -84,12 +84,12 @@ public class viajero extends persona {
         this.telefono = telefono;
     }
 
-    public String getContraseña() {
-        return this.Contraseña;
+    public String getContrasena() {
+        return this.Contrasena;
     }
 
-    public void setContraseña(String Contraseña) {
-        this.Contraseña = Contraseña;
+    public void setContrasena(String Contrasena) {
+        this.Contrasena = Contrasena;
     }
 
     @Override
@@ -117,7 +117,7 @@ public class viajero extends persona {
         System.out.println("Email viajero");
         this.email = teclado.nextLine().toLowerCase();
         System.out.println("Constraseña viajero");
-        this.Contraseña = teclado.nextLine();
+        this.Contrasena = teclado.nextLine();
         System.out.println("Telefono viajero");
         this.telefono = teclado.nextLine().toLowerCase();
         System.out.println("VacunasCOVID viajero");

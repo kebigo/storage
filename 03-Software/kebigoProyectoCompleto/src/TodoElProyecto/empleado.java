@@ -9,7 +9,7 @@ public class empleado extends persona {
     protected String apellido;
     protected String email;
     protected String telefono;
-    protected String Contraseña;
+    protected String Contrasena;
     protected String departamento;
     protected String rol;
 
@@ -19,7 +19,7 @@ public class empleado extends persona {
         this.apellido = "";
         this.email = "";
         this.telefono = "";
-        this.Contraseña = "";
+        this.Contrasena = "";
         this.departamento = "";
         this.rol = "";
     }
@@ -30,7 +30,7 @@ public class empleado extends persona {
         this.apellido = e.apellido;
         this.email = e.email;
         this.telefono = e.telefono;
-        this.Contraseña = e.Contraseña;
+        this.Contrasena = e.Contrasena;
         this.departamento = e.departamento;
         this.rol = e.rol;
     }
@@ -41,7 +41,7 @@ public class empleado extends persona {
         this.apellido = a;
         this.email = e;
         this.telefono = t;
-        this.Contraseña = c;
+        this.Contrasena = c;
         this.departamento = de;
         this.rol = r;
     }
@@ -94,12 +94,12 @@ public class empleado extends persona {
         this.telefono = telefono;
     }
 
-    public String getContraseña() {
-        return this.Contraseña;
+    public String getContrasena() {
+        return this.Contrasena;
     }
 
-    public void setContraseña(String Contraseña) {
-        this.Contraseña = Contraseña;
+    public void setContrasena(String Contrasena) {
+        this.Contrasena = Contrasena;
     }
     /**
      * Metodo para pasar la informacion del empleado por pantalla
@@ -108,7 +108,7 @@ public class empleado extends persona {
     public void print() {
         System.out.println(super.toString() + "Nombre: " + nombre + "\n" +
                 "Apellido: " + apellido + "\n" + "Email: " + email + "\n" + "Telefono: " + telefono + "\n"
-                +"Contraseña"+Contraseña+"\n"+ "Departamento: " + departamento + "\n" + "Rol: " + rol + "]");
+                +"Contraseña"+Contrasena+"\n"+ "Departamento: " + departamento + "\n" + "Rol: " + rol + "]");
         System.out.println("**********************************************");
     }
     /**
@@ -128,25 +128,25 @@ public class empleado extends persona {
         this.email = teclado.nextLine().toLowerCase();
         System.out.println("Telefono");
         this.telefono = teclado.nextLine().toLowerCase();
-        String Contraseña1,Contraseña2;
+        String Contrasena1,Contrasena2;
         boolean Coincide = false;
-        while (Contraseña.isEmpty() || !Coincide) {
+        while (Contrasena.isEmpty() || !Coincide) {
             System.out.println("Contraseña Usuario");
-            Contraseña1 = teclado.next();
-            if (!Contraseña1.isEmpty()) {
+            Contrasena1 = teclado.next();
+            if (!Contrasena1.isEmpty()) {
                 System.out.println("Escriba de nuevo su contraseña");
-                Contraseña2 = teclado.next();
-                if (Contraseña1.equals(Contraseña2)) {
+                Contrasena2 = teclado.next();
+                if (Contrasena1.equals(Contrasena2)) {
                     System.out.println("Se ha agregado su contraseña correctamente");
-                    this.Contraseña = Contraseña1;
+                    this.Contrasena = Contrasena1;
                     Coincide = true;
                 }
                 else{
                     System.out.println("La contraseña no coincide");
                     System.out.println("Vuelva a intentarlo");;
                     Coincide = false;
-                    Contraseña1 = "";
-                    Contraseña2 = "";
+                    Contrasena1 = "";
+                    Contrasena2 = "";
                 }
             }
         }
